@@ -1,0 +1,347 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.Form..Create(BaseForm)
+Gui.Form..Caption("Dir Maintenance")
+Gui.Form..Size(571,290)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..AlwaysOnTop(False)
+Gui.Form..FontName("Tahoma")
+Gui.Form..FontSize(8.25)
+Gui.Form..ControlBox(True)
+Gui.Form..MaxButton(True)
+Gui.Form..MinButton(True)
+Gui.Form..MousePointer(0)
+Gui.Form..Moveable(True)
+Gui.Form..Sizeable(True)
+Gui.Form..ShowInTaskBar(True)
+Gui.Form..TitleBar(True)
+Gui.Form..Event(UnLoad,Form_UnLoad)
+Gui.Form.txt1.Create(TextBox,"",True,294,20,0,80,22,True,0,"Tahoma",8.25,,1)
+Gui.Form.cmd1.Create(Button)
+Gui.Form.cmd1.Enabled(True)
+Gui.Form.cmd1.Visible(True)
+Gui.Form.cmd1.Zorder(0)
+Gui.Form.cmd1.Size(29,23)
+Gui.Form.cmd1.Position(378,20)
+Gui.Form.cmd1.Caption("^")
+Gui.Form.cmd1.FontName("Tahoma")
+Gui.Form.cmd1.FontSize(8.25)
+Gui.Form.cmd1.Event(Click,cmd1_Click)
+Gui.Form.cmd2.Create(Button)
+Gui.Form.cmd2.Enabled(True)
+Gui.Form.cmd2.Visible(True)
+Gui.Form.cmd2.Zorder(0)
+Gui.Form.cmd2.Size(75,23)
+Gui.Form.cmd2.Position(412,20)
+Gui.Form.cmd2.Caption("Save")
+Gui.Form.cmd2.FontName("Tahoma")
+Gui.Form.cmd2.FontSize(8.25)
+Gui.Form.cmd2.Event(Click,cmd2_Click)
+Gui.Form.lbl1.Create(Label,"Group",True,29,13,0,4,4,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl1.BorderStyle(0)
+Gui.Form.lbl2.Create(Label,"Folder Location",True,73,13,0,80,4,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl2.BorderStyle(0)
+Gui.Form.txt2.Create(TextBox,"",True,69,20,0,4,22,True,0,"Tahoma",8.25,,1)
+Gui.Form.cmdDelete.Create(Button)
+Gui.Form.cmdDelete.Enabled(True)
+Gui.Form.cmdDelete.Visible(True)
+Gui.Form.cmdDelete.Zorder(0)
+Gui.Form.cmdDelete.Size(75,23)
+Gui.Form.cmdDelete.Position(491,20)
+Gui.Form.cmdDelete.Caption("Delete")
+Gui.Form.cmdDelete.FontName("Tahoma")
+Gui.Form.cmdDelete.FontSize(8.25)
+Gui.Form.cmdDelete.Event(Click,cmdDelete_Click)
+Gui.Form.GsGcDisplay.Create(GsGridControl)
+Gui.Form.GsGcDisplay.Enabled(True)
+Gui.Form.GsGcDisplay.Visible(True)
+Gui.Form.GsGcDisplay.Zorder(0)
+Gui.Form.GsGcDisplay.Size(561,207)
+Gui.Form.GsGcDisplay.Position(5,47)
+Gui.Form.GsGcDisplay.Anchor(15)
+Gui.Form.GsGcDisplay.Event(RowClick,GsGcDisplay_RowClick)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+f.Intrinsic.Control.CallSub(createDisplayDT)
+f.Intrinsic.Control.CallSub(loadGridProperties)
+gui.Form..Show
+Program.Sub.Main.End
+
+Program.Sub.Form_UnLoad.Start
+f.Intrinsic.Control.Try
+'Try something
+	f.Intrinsic.Control.End
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.cmd1_Click.Start
+v.Local.sRet.Declare
+f.Intrinsic.Control.Try
+'Try something
+	f.Intrinsic.UI.FolderBrowser("Directory Maintenance", , v.Local.sRet)
+	f.Intrinsic.Control.If(v.Local.sRet.Trim, <>, "***CANCEL***")
+		gui.Form.txt1.Text(v.Local.sRet.Trim)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmd1_Click.End
+
+Program.Sub.cmd2_Click.Start
+v.Local.sGroup.Declare
+v.Local.sDirVar.Declare
+v.Local.sRet.Declare
+v.Local.sSQL.Declare
+
+v.Local.iD.Declare
+v.Local.sGroupDesc.Declare
+f.Intrinsic.Control.Try
+'Try something
+
+	v.Local.sGroup.Set(v.Screen.Form!txt2.Text)
+	f.Intrinsic.String.UCase(v.Local.sGroup, v.Local.sGroup)
+	
+	f.Intrinsic.Control.If(v.Local.sGroup.Trim, =, "")
+		f.Intrinsic.UI.Msgbox("Please Type in a Group")
+	f.Intrinsic.Control.EndIf
+	
+	v.Local.sDirVar.Set(v.Screen.Form!txt1.Text)
+	f.Intrinsic.Control.If(v.Local.sDirVar.Trim, =, "")
+		f.Intrinsic.UI.Msgbox("Please Select a Directory")
+	f.Intrinsic.Control.EndIf
+	
+	'Create Save table to use SAVE TO DB TO INSER/UPDATE
+	f.Data.Datatable.Create("saveDT")
+	f.Data.Datatable.AddColumn("saveDT", "GroupName", "String")
+	f.Data.Datatable.AddColumn("saveDT", "DirVar", "String")
+	
+	f.Data.Datatable.AddRow("saveDT", "GroupName", v.Local.sGroup, "DirVar", v.Local.sDirVar)
+		
+	f.ODBC.Connection!con.OpenCompanyConnection
+'		f.Intrinsic.String.Build("Insert into  GCG_6186_DirMaint (DirVal) Values ({0})", v.Local.sRet.Trim, v.Local.sSQL)
+'		f.ODBC.Connection!con.Execute("Delete From GCG_6186_DirMaint")
+'		f.ODBC.Connection!con.Execute(v.Local.sSQL)
+		f.Data.Datatable.SaveToDB("saveDT", "con", "GCG_6186_DirMaint", "GroupName", 256)
+		f.Data.Datatable.Close("saveDT")
+		f.Intrinsic.String.Build("Select top 1 grp_id from GCG_6186_DirMaint where GroupName = '{0}'", v.Local.sGroup, v.Local.sSQL)
+		f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL, v.Local.iD)
+		
+		f.Intrinsic.String.Build("Select top 1 pathid from ATG_DOC_PATH where pathid = '{0}'", v.Local.iD, v.Local.sSQL)
+		f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRet)
+		
+		f.Intrinsic.Control.If(v.Local.iD, =, v.Local.sRet)
+			f.Intrinsic.String.Build("Update ATG_DOC_PATH Set Path = '{0}' Where pathid = '{1}'", v.Local.sDirVar, v.Local.iD, v.Local.sSQL)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Build("Insert into  ATG_DOC_PATH (pathid, doctype, path) Values ('{0}', 'PDF', '{1}')", v.Local.iD, v.Local.sDirVar, v.Local.sSQL)
+		f.Intrinsic.Control.EndIf
+		f.ODBC.Connection!con.Execute(v.Local.sSQL)
+
+		f.Intrinsic.String.Build("Select top 1 grp_id from ATG_DOC_GRP where grp_id = '{0}'", v.Local.iD, v.Local.sSQL)
+		f.Intrinsic.Control.If(v.Local.iD, =, v.Local.sRet)
+			f.Intrinsic.String.Build("Update ATG_DOC_GRP Set grp_name = '{0}' Where grp_id = '{1}'", v.Local.sGroup, v.Local.iD, v.Local.sSQL)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Build("Insert into  ATG_DOC_GRP (grp_id, grp_name, grp_desc) Values ('{0}', '{1}', '{1}')", v.Local.iD, v.Local.sGroup, v.Local.sSQL)
+		f.Intrinsic.Control.EndIf
+		f.ODBC.Connection!con.Execute(v.Local.sSQL)
+		
+		'f.Intrinsic.String.Build("Update ATG_DOC_ASSOC Set PATH = '{0}' Where grp_id = '{1}'", v.Local.sDirVar, v.Local.iD, v.Local.sSQL)
+		'f.ODBC.Connection!con.Execute(v.Local.sSQL)
+		
+'		f.Intrinsic.String.Build("Select top 1 grp_id as PATHID, DirVar as PATH from GCG_6186_DirMaint where GroupName = '{0}'", v.Local.sGroup, v.Local.sSQL)
+'		f.Data.Datatable.CreateFromSQL("saveDT", "con", v.Local.sSQL)
+'		f.Data.Datatable.SaveToDB("saveDT", "con", "ATG_DOC_PATH", "PATHID", 256)
+'		f.Data.Datatable.Close("saveDT")
+		
+		'f.Intrinsic.String.Build("Select top 1 grp_id, DirVar as PATH from GCG_6186_DirMaint where GroupName = '{0}'", v.Local.sGroup, v.Local.sSQL)
+		'f.Data.Datatable.CreateFromSQL("saveDT", "con", v.Local.sSQL)
+'		f.Intrinsic.String.Build("Select top 1 grp_id from GCG_6186_DirMaint where GroupName = '{0}'", v.Local.sGroup, v.Local.sSQL)
+'		f.Data.Datatable.CreateFromSQL("saveDT", "con", v.Local.sSQL)
+'		f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL, v.Local.iD)
+'		
+'	
+'		
+'	
+'		f.Data.Datatable.SaveToDB("saveDT", "con", "ATG_DOC_ASSOC", "grp_id", 256)
+'		f.Data.Datatable.Close("saveDT")
+'		Function.Intrinsic.Debug.Stop
+'		
+'		f.Intrinsic.String.Build("Select top 1 grp_id, groupName as grp_name from GCG_6186_DirMaint where GroupName = '{0}'", v.Local.sGroup, v.Local.sSQL)
+'		f.Data.Datatable.CreateFromSQL("saveDT", "con", v.Local.sSQL)
+'		f.Data.Datatable.SaveToDB("saveDT", "con", "ATG_DOC_GRP", "grp_id", 256)
+'		f.Data.Datatable.Close("saveDT")
+	f.ODBC.Connection!con.Close
+	
+	
+	
+	'Reload
+	f.Intrinsic.Control.CallSub("reloadDT")
+	
+	f.Intrinsic.ui.Msgbox("Save Complete")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmd2_Click.End
+
+'Program.Sub.laodValue.Start
+'v.Local.sRet.Declare
+'f.Intrinsic.Control.Try
+''Try something
+'	f.ODBC.Connection!con.OpenCompanyConnection
+'	 	f.ODBC.Connection!con.ExecuteAndReturn("Select top 1 DirVal from GCG_6186_DirMaint", v.Local.sRet)
+'	f.ODBC.Connection!con.Close
+'	gui.Form.txt1.Text(v.Local.sRet)
+'f.Intrinsic.Control.Catch
+'	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+'f.Intrinsic.Control.EndTry
+'Program.Sub.laodValue.End
+
+Program.Sub.GsGcDisplay_RowClick.Start
+v.Local.sGroup.Declare
+v.Local.sDirVar.Declare
+f.Intrinsic.Control.Try
+'Try something
+	v.Local.sGroup.Set(v.DataTable.displayDT(v.Args.RowIndex).GroupName!FieldValTrim)
+	v.Local.sDirVar.Set(v.DataTable.displayDT(v.Args.RowIndex).DirVar!FieldValTrim)
+	
+	gui.Form.txt2.Text(v.Local.sGroup)
+	gui.Form.txt1.Text(v.Local.sDirVar)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.GsGcDisplay_RowClick.End
+
+Program.Sub.cmdDelete_Click.Start
+v.Local.sGroup.Declare
+v.Local.sDirVar.Declare
+v.Local.sRet.Declare
+v.Local.sSQL.Declare
+f.Intrinsic.Control.Try
+'Try something
+	v.Local.sGroup.Set(v.Screen.Form!txt2.Text)
+	f.Intrinsic.String.UCase(v.Local.sGroup, v.Local.sGroup)
+	
+	f.Intrinsic.Control.If(v.Local.sGroup.Trim, =, "")
+		f.Intrinsic.UI.Msgbox("Please Select a Group")
+	f.Intrinsic.Control.EndIf
+	
+	f.ODBC.Connection!con.OpenCompanyConnection
+	 	f.Intrinsic.String.Build("Delete From GCG_6186_DirMaint Where GroupName = '{0}'", v.Local.sGroup, v.Local.sSQL)
+	 	f.ODBC.Connection!con.Execute(v.Local.sSQL)
+	f.ODBC.Connection!con.Close
+	
+	'Reload
+	f.Intrinsic.Control.CallSub("reloadDT")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdDelete_Click.End
+
+Program.Sub.createDisplayDT.Start
+f.Intrinsic.Control.Try
+	'f.Data.DataTable.Create("displayDT", true)
+	'f.Data.DataTable.AddColumn("displayDT", "colName", "colType")
+	
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.Datatable.CreateFromSQL("displayDT", "con", "Select * from GCG_6186_DirMaint order by grp_id asc", True) 
+	f.ODBC.Connection!con.Close
+	
+	f.Data.DataView.Create("displayDT", "displayDV", 22)
+	gui.Form.GsGcDisplay.AddGridviewFromDataview("displayGV", "displayDT", "displayDV")
+	gui.Form.GsGcDisplay.MainView("displayGV")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.createDisplayDT.End
+
+Program.Sub.loadGridProperties.Start
+v.Local.iCnt.Declare
+v.Local.sFields.Declare
+v.Local.iVisibleIndex.Declare
+
+f.Intrinsic.Control.Try
+	f.Intrinsic.String.Split(v.DataTable.displayDT.FieldNames, "*!*", v.Local.sFields)
+	f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sFields.UBound, 1)
+		gui.Form.GsGcDisplay.SetColumnProperty("displayGV", v.Local.sFields(v.Local.iCnt), "HeaderFontBold", True)
+		gui.Form.GsGcDisplay.SetColumnProperty("displayGV", v.Local.sFields(v.Local.iCnt), "Visible", True)
+		gui.Form.GsGcDisplay.SetColumnProperty("displayGV", v.Local.sFields(v.Local.iCnt), "ReadOnly", True)
+		gui.Form.GsGcDisplay.SetColumnProperty("displayGV", v.Local.sFields(v.Local.iCnt), "AllowEdit", False)
+		gui.Form.GsGcDisplay.SetColumnProperty("displayGV", v.Local.sFields(v.Local.iCnt), "HeaderHAlignment", "Near")
+		gui.Form.GsGcDisplay.SetColumnProperty("displayGV", v.Local.sFields(v.Local.iCnt), "CellHAlignment", "Near")
+		gui.Form.GsGcDisplay.SetColumnProperty("displayGV", v.Local.sFields(v.Local.iCnt), "HeaderBackColor", v.Color.GSS)
+		gui.Form.GsGcDisplay.SetColumnProperty("displayGV", v.Local.sFields(v.Local.iCnt), "HeaderForeColor", v.Color.White)
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	'GridView Properties
+	gui.Form.GsGcDisplay.BestFitColumns("displayGV")
+	gui.Form.GsGcDisplay.SetGridviewProperty("displayGV", "OptionsViewColumnAutoWidth", False)
+	'gui.Form.GsGcDisplay.SetGridviewProperty("displayGV", "OptionsViewShowAutoFilterRow", True)
+	'gui.Form.GsGcDisplay.SetGridviewProperty("displayGV", "OptionsFindAlwaysVisible", True)
+	'gui.Form.GsGcDisplay.SetGridviewProperty("displayGV", "Showgrouppanel", True)
+	
+	'Possible Column Properties 
+	'gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "Default", "ReadOnly", False)
+	'gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "Default", "AllowEdit", True)
+	'gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "Default", "HeaderHAlignment", "Center")
+	'gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "Default", "CellHAlignment", "Center")
+	'gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "Default", "Caption", "Default")
+	gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "GRP_ID", "Visible", False)
+	'gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "Default", "DisplayCustomDatetime", "d")
+	
+	gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "GroupName", "Caption", "Group")
+	gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "DirVar", "Caption", "Directory")
+	
+	'VisibleIndex
+	'gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "Default", "VisibleIndex", v.Local.iVisibleIndex)
+	'gui.Form.GsGcDisplay.SetColumnProperty("displayGV", "Default", "VisibleIndex", v.Local.iVisibleIndex.++)
+	
+	'Conditional Formatting
+	'gui.Form.GsGcDisplay.AddStyleFormatCondition("displayGV", "columnName", "TagName", "EQUAL", 1)
+	'gui.Form.GsGcDisplay.SetStyleFormatConditionProperty("displayGV", "columnName", "TagName", "ApplyToRow", True) 
+	'gui.Form.GsGcDisplay.SetStyleFormatConditionProperty("displayGV", "columnName", "TagName", "BackColor", "Color") 
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.loadGridProperties.End
+
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+
+'Closes ODBC connection, default to connection : "con"
+f.Intrinsic.Control.If(v.ODBC!con.State, =, 1)
+	f.ODBC.Connection!con.Close
+f.Intrinsic.Control.EndIf
+
+'Generic Error message.
+f.Intrinsic.String.Build("Project ProjectName.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.reloadDT.Start
+f.Intrinsic.Control.Try
+'Try something
+	f.ODBC.Connection!con.OpenCompanyConnection
+		f.Data.Datatable.CreateFromSQL("tempDt", "con", "Select * from GCG_6186_DirMaint order by grp_id asc") 
+	f.ODBC.Connection!con.Close
+	f.Data.Datatable.DeleteRow("displayDT")
+	f.Data.Datatable.AcceptChanges("displayDT")
+	f.Data.Datatable.Merge("tempDt", "displayDT", false, 2)
+	f.Data.Datatable.AcceptChanges("displayDT")
+	f.Data.Datatable.Close("tempDt")
+	gui.Form.GsGcDisplay.BestFitColumns("displayGV")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.reloadDT.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$aanazco$}$20201223113451477$}$7aQAV3Tor/tR9bkuakHbuzQlHVuXCGOzDcjMueDtm6LsU/LdZXrsHo1BpWwSwZxa81/1GVYE2S8=
+Program.Sub.Comments.End
