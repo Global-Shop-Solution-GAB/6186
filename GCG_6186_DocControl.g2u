@@ -1,0 +1,3740 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.f_advance..create(BaseForm)
+Gui.f_advance..caption("GSS Document Control")
+Gui.f_advance..size(14715,9825)
+Gui.f_advance..minx(0)
+Gui.f_advance..miny(0)
+Gui.f_advance..position(0,0)
+Gui.f_advance..event(Resize,F_Advance_resize)
+Gui.f_advance..event(UnLoad,F_Advance_unload)
+Gui.f_advance..alwaysontop(False)
+Gui.f_advance..fontname("Arial")
+Gui.f_advance..fontsize(8)
+Gui.f_advance..forecolor(0)
+Gui.f_advance..BackColor(-2147483633)
+Gui.f_advance..controlbox(True)
+Gui.f_advance..maxbutton(True)
+Gui.f_advance..minbutton(True)
+Gui.f_advance..mousepointer(0)
+Gui.f_advance..moveable(True)
+Gui.f_advance..sizeable(True)
+Gui.f_advance..ShowInTaskBar(True)
+Gui.f_advance..titlebar(True)
+Gui.f_advance.frmX.create(frame)
+Gui.f_advance.frmX.caption("")
+Gui.f_advance.frmX.size(2970,1020)
+Gui.f_advance.frmX.position(135,8235)
+Gui.f_advance.frmX.visible(True)
+Gui.f_advance.frmX.borderstyle(0)
+Gui.f_advance.frmX.fontname("Arial")
+Gui.f_advance.frmX.fontsize(8)
+Gui.f_advance.frmX.Enabled(True)
+Gui.f_advance.frmX.Zorder(0)
+Gui.f_advance.cmdAdd.create(button)
+Gui.f_advance.cmdAdd.caption("Add")
+Gui.f_advance.cmdAdd.visible(True)
+Gui.f_advance.cmdAdd.size(885,375)
+Gui.f_advance.cmdAdd.zorder(0)
+Gui.f_advance.cmdAdd.position(1900,600)
+Gui.f_advance.cmdAdd.enabled(True)
+Gui.f_advance.cmdAdd.parent("frmX")
+Gui.f_advance.cmdAdd.fontname("Arial")
+Gui.f_advance.cmdAdd.fontsize(8)
+Gui.f_advance.cmdAdd.event(Click,cmdadd_click)
+Gui.f_advance.cmdAdd.defaultvalue("")
+Gui.f_advance.cmdAdd.controlgroup(0)
+Gui.f_advance.cmdEmail.create(button)
+Gui.f_advance.cmdEmail.caption("Email")
+Gui.f_advance.cmdEmail.visible(True)
+Gui.f_advance.cmdEmail.size(885,375)
+Gui.f_advance.cmdEmail.zorder(0)
+Gui.f_advance.cmdEmail.position(950,600)
+Gui.f_advance.cmdEmail.enabled(True)
+Gui.f_advance.cmdEmail.parent("frmX")
+Gui.f_advance.cmdEmail.fontname("Arial")
+Gui.f_advance.cmdEmail.fontsize(8)
+Gui.f_advance.cmdEmail.event(Click,cmdemail_click)
+Gui.f_advance.cmdEmail.defaultvalue("")
+Gui.f_advance.cmdEmail.controlgroup(0)
+Gui.f_advance.cmdEmail.tabstop(True)
+Gui.f_advance.cmdEmail.tabindex(8)
+Gui.f_advance.cmdPrint.create(button)
+Gui.f_advance.cmdPrint.caption("Print")
+Gui.f_advance.cmdPrint.visible(True)
+Gui.f_advance.cmdPrint.size(885,375)
+Gui.f_advance.cmdPrint.zorder(0)
+Gui.f_advance.cmdPrint.position(0,600)
+Gui.f_advance.cmdPrint.enabled(True)
+Gui.f_advance.cmdPrint.parent("frmX")
+Gui.f_advance.cmdPrint.fontname("Arial")
+Gui.f_advance.cmdPrint.fontsize(8)
+Gui.f_advance.cmdPrint.event(Click,cmdprint_click)
+Gui.f_advance.cmdPrint.defaultvalue("")
+Gui.f_advance.cmdPrint.controlgroup(0)
+Gui.f_advance.cmdPrint.tabstop(True)
+Gui.f_advance.cmdPrint.tabindex(7)
+Gui.f_advance.cmdEdit.create(button)
+Gui.f_advance.cmdEdit.caption("Edit")
+Gui.f_advance.cmdEdit.visible(True)
+Gui.f_advance.cmdEdit.size(885,375)
+Gui.f_advance.cmdEdit.zorder(0)
+Gui.f_advance.cmdEdit.position(0,100)
+Gui.f_advance.cmdEdit.enabled(True)
+Gui.f_advance.cmdEdit.parent("frmX")
+Gui.f_advance.cmdEdit.fontname("Arial")
+Gui.f_advance.cmdEdit.fontsize(8)
+Gui.f_advance.cmdEdit.event(Click,cmdedit_click)
+Gui.f_advance.cmdEdit.defaultvalue("")
+Gui.f_advance.cmdEdit.controlgroup(0)
+Gui.f_advance.cmdEdit.tabstop(True)
+Gui.f_advance.cmdEdit.tabindex(4)
+Gui.f_advance.cmdRemove.create(button)
+Gui.f_advance.cmdRemove.caption("Delete")
+Gui.f_advance.cmdRemove.visible(True)
+Gui.f_advance.cmdRemove.size(885,375)
+Gui.f_advance.cmdRemove.zorder(0)
+Gui.f_advance.cmdRemove.position(945,105)
+Gui.f_advance.cmdRemove.enabled(True)
+Gui.f_advance.cmdRemove.parent("frmX")
+Gui.f_advance.cmdRemove.fontname("Arial")
+Gui.f_advance.cmdRemove.fontsize(8)
+Gui.f_advance.cmdRemove.event(Click,cmdremove_click)
+Gui.f_advance.cmdRemove.defaultvalue("")
+Gui.f_advance.cmdRemove.controlgroup(0)
+Gui.f_advance.cmdRemove.tabstop(True)
+Gui.f_advance.cmdRemove.tabindex(5)
+Gui.f_advance.cmdVMS.create(button)
+Gui.f_advance.cmdVMS.caption("VMS")
+Gui.f_advance.cmdVMS.visible(True)
+Gui.f_advance.cmdVMS.size(885,375)
+Gui.f_advance.cmdVMS.zorder(0)
+Gui.f_advance.cmdVMS.position(1900,100)
+Gui.f_advance.cmdVMS.enabled(True)
+Gui.f_advance.cmdVMS.parent("frmX")
+Gui.f_advance.cmdVMS.fontname("Arial")
+Gui.f_advance.cmdVMS.fontsize(8)
+Gui.f_advance.cmdVMS.event(Click,cmdvms_click)
+Gui.f_advance.cmdVMS.defaultvalue("")
+Gui.f_advance.cmdVMS.controlgroup(0)
+Gui.f_advance.cmdVMS.tabstop(True)
+Gui.f_advance.cmdVMS.tabindex(6)
+Gui.f_advance.tabx1.create(tab)
+Gui.f_advance.tabx1.size(11100,8415)
+Gui.f_advance.tabx1.position(3195,360)
+Gui.f_advance.tabx1.visible(True)
+Gui.f_advance.tabx1.fontname("Arial")
+Gui.f_advance.tabx1.fontsize(8)
+Gui.f_advance.tabx1.Enabled(True)
+Gui.f_advance.tabx1.Zorder(0)
+Gui.f_advance.tabx1.Tabs(2)
+Gui.f_advance.tabx1.SetTab(0)
+Gui.f_advance.tabx1.Caption("File")
+Gui.f_advance.tabx1.SetTab(1)
+Gui.f_advance.tabx1.Caption("Link Comment")
+Gui.f_advance.frmComment.create(frame)
+Gui.f_advance.frmComment.caption("")
+Gui.f_advance.frmComment.parent("tabx1",1)
+Gui.f_advance.frmComment.size(930,405)
+Gui.f_advance.frmComment.position(60,7530)
+Gui.f_advance.frmComment.visible(True)
+Gui.f_advance.frmComment.borderstyle(0)
+Gui.f_advance.frmComment.fontname("Arial")
+Gui.f_advance.frmComment.fontsize(8)
+Gui.f_advance.frmComment.Enabled(True)
+Gui.f_advance.frmComment.Zorder(0)
+Gui.f_advance.cmdSaveComment.create(button)
+Gui.f_advance.cmdSaveComment.caption("Save")
+Gui.f_advance.cmdSaveComment.visible(True)
+Gui.f_advance.cmdSaveComment.size(885,375)
+Gui.f_advance.cmdSaveComment.zorder(0)
+Gui.f_advance.cmdSaveComment.position(0,15)
+Gui.f_advance.cmdSaveComment.enabled(True)
+Gui.f_advance.cmdSaveComment.parent("frmComment")
+Gui.f_advance.cmdSaveComment.fontname("Arial")
+Gui.f_advance.cmdSaveComment.fontsize(8)
+Gui.f_advance.cmdSaveComment.event(Click,cmdsavecomment_click)
+Gui.f_advance.cmdSaveComment.defaultvalue("")
+Gui.f_advance.cmdSaveComment.controlgroup(0)
+Gui.f_advance.cmdSaveComment.tabstop(True)
+Gui.f_advance.cmdSaveComment.tabindex(15)
+Gui.f_advance.htmlX.create(htmlcontainer)
+Gui.f_advance.htmlX.visible(True)
+Gui.f_advance.htmlX.size(10950,7875)
+Gui.f_advance.htmlX.zorder(0)
+Gui.f_advance.htmlX.position(0,-10)
+Gui.f_advance.htmlX.parent("tabx1",0)
+Gui.f_advance.htmlX.tabindex(10)
+Gui.f_advance.TxtComent.create(textboxm)
+Gui.f_advance.TxtComent.visible(True)
+Gui.f_advance.TxtComent.size(11070,7395)
+Gui.f_advance.TxtComent.zorder(0)
+Gui.f_advance.TxtComent.position(0,0)
+Gui.f_advance.TxtComent.enabled(True)
+Gui.f_advance.TxtComent.parent("tabx1",1)
+Gui.f_advance.TxtComent.fontname("Arial")
+Gui.f_advance.TxtComent.fontsize(10)
+Gui.f_advance.TxtComent.numericonly(0)
+Gui.f_advance.TxtComent.BackColor(-2147483643)
+Gui.f_advance.TxtComent.defaultvalue("")
+Gui.f_advance.TxtComent.controlgroup(0)
+Gui.f_advance.TxtComent.tabstop(True)
+Gui.f_advance.TxtComent.tabindex(14)
+Gui.f_advance.TxtComent.Dock(0)
+Gui.f_advance.trvData.create(treeview)
+Gui.f_advance.trvData.visible(True)
+Gui.f_advance.trvData.size(3045,7785)
+Gui.f_advance.trvData.zorder(0)
+Gui.f_advance.trvData.position(105,420)
+Gui.f_advance.trvData.enabled(True)
+Gui.f_advance.trvData.fontname("Arial")
+Gui.f_advance.trvData.fontsize(8)
+Gui.f_advance.trvData.event(NodeClick,trvdata_nodeclick)
+Gui.f_advance.trvData.tabstop(True)
+Gui.f_advance.trvData.tabindex(9)
+Gui.f_advance.lblInfo.create(label,"",True,11040,255,1,3195,45,True,0,"Arial",10,-2147483633,0,0)
+Gui.f_advance.lblInfo.defaultvalue("")
+Gui.f_advance.lblInfo.controlgroup(0)
+Gui.f_advance.lblInfo.BorderStyle(0)
+Gui.f_advance.lbl2.create(label,"File Associations",True,1935,255,1,135,120,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_advance.lbl2.defaultvalue("")
+Gui.f_advance.lbl2.controlgroup(0)
+Gui.f_advance.lbl2.BorderStyle(0)
+Gui.f_advance.lblLoading.create(label,"",True,2760,255,1,3195,8895,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_advance.lblLoading.defaultvalue("")
+Gui.f_advance.lblLoading.controlgroup(0)
+Gui.f_advance.lblLoading.BorderStyle(0)
+Gui.f_advance.cmdOpen.create(button)
+Gui.f_advance.cmdOpen.caption("Open Externally")
+Gui.f_advance.cmdOpen.visible(True)
+Gui.f_advance.cmdOpen.size(1620,375)
+Gui.f_advance.cmdOpen.zorder(0)
+Gui.f_advance.cmdOpen.position(12735,8835)
+Gui.f_advance.cmdOpen.enabled(True)
+Gui.f_advance.cmdOpen.fontname("Arial")
+Gui.f_advance.cmdOpen.fontsize(8)
+Gui.f_advance.cmdOpen.event(Click,cmdopen_click)
+Gui.f_advance.cmdOpen.defaultvalue("")
+Gui.f_advance.cmdOpen.controlgroup(0)
+Gui.f_print..create(BaseForm)
+Gui.f_print..caption("Print Files")
+Gui.f_print..size(5280,6495)
+Gui.f_print..minx(0)
+Gui.f_print..miny(0)
+Gui.f_print..position(0,0)
+Gui.f_print..event(UnLoad,f_print_unload)
+Gui.f_print..alwaysontop(False)
+Gui.f_print..fontname("arial")
+Gui.f_print..fontsize(8)
+Gui.f_print..forecolor(0)
+Gui.f_print..BackColor(-2147483633)
+Gui.f_print..controlbox(True)
+Gui.f_print..maxbutton(False)
+Gui.f_print..minbutton(False)
+Gui.f_print..mousepointer(0)
+Gui.f_print..moveable(True)
+Gui.f_print..sizeable(False)
+Gui.f_print..ShowInTaskBar(True)
+Gui.f_print..titlebar(True)
+Gui.f_print.frmPrint.create(frame)
+Gui.f_print.frmPrint.caption("")
+Gui.f_print.frmPrint.size(4680,5340)
+Gui.f_print.frmPrint.position(100,100)
+Gui.f_print.frmPrint.visible(True)
+Gui.f_print.frmPrint.borderstyle(0)
+Gui.f_print.frmPrint.fontname("Arial")
+Gui.f_print.frmPrint.fontsize(8)
+Gui.f_print.frmPrint.Enabled(True)
+Gui.f_print.frmPrint.Zorder(0)
+Gui.f_print.lvw1.create(listview)
+Gui.f_print.lvw1.view(3)
+Gui.f_print.lvw1.addlistviewcolumn("Link Documents",3990,0)
+Gui.f_print.lvw1.visible(True)
+Gui.f_print.lvw1.size(4350,3405)
+Gui.f_print.lvw1.zorder(0)
+Gui.f_print.lvw1.position(105,1500)
+Gui.f_print.lvw1.enabled(True)
+Gui.f_print.lvw1.parent("frmPrint")
+Gui.f_print.lvw1.fontname("Arial")
+Gui.f_print.lvw1.fontsize(8)
+Gui.f_print.lvw1.tabstop(True)
+Gui.f_print.lvw1.tabindex(2)
+Gui.f_print.lvw1.Multiselect(False)
+Gui.f_print.lvw1.CheckBoxes(False)
+Gui.f_print.optCurrent.create(option)
+Gui.f_print.optCurrent.caption("Print Current File")
+Gui.f_print.optCurrent.visible(True)
+Gui.f_print.optCurrent.size(4110,255)
+Gui.f_print.optCurrent.zorder(0)
+Gui.f_print.optCurrent.position(105,105)
+Gui.f_print.optCurrent.enabled(True)
+Gui.f_print.optCurrent.parent("frmPrint")
+Gui.f_print.optCurrent.fontname("Arial")
+Gui.f_print.optCurrent.fontsize(8)
+Gui.f_print.optCurrent.event(Click,optcomment_click)
+Gui.f_print.optCurrent.defaultvalue(False)
+Gui.f_print.optCurrent.controlgroup(0)
+Gui.f_print.optCurrent.tabindex(3)
+Gui.f_print.optAll.create(option)
+Gui.f_print.optAll.caption("Print All Link Files")
+Gui.f_print.optAll.visible(True)
+Gui.f_print.optAll.size(3885,255)
+Gui.f_print.optAll.zorder(0)
+Gui.f_print.optAll.position(105,450)
+Gui.f_print.optAll.enabled(True)
+Gui.f_print.optAll.parent("frmPrint")
+Gui.f_print.optAll.fontname("Arial")
+Gui.f_print.optAll.fontsize(8)
+Gui.f_print.optAll.event(Click,optcomment_click)
+Gui.f_print.optAll.controlgroup(0)
+Gui.f_print.optAll.tabindex(4)
+Gui.f_print.optPrintSelected.create(option)
+Gui.f_print.optPrintSelected.caption("Print Selected File")
+Gui.f_print.optPrintSelected.visible(True)
+Gui.f_print.optPrintSelected.size(3630,255)
+Gui.f_print.optPrintSelected.zorder(0)
+Gui.f_print.optPrintSelected.position(105,795)
+Gui.f_print.optPrintSelected.enabled(True)
+Gui.f_print.optPrintSelected.parent("frmPrint")
+Gui.f_print.optPrintSelected.fontname("Arial")
+Gui.f_print.optPrintSelected.fontsize(8)
+Gui.f_print.optPrintSelected.event(Click,optprintselected_click)
+Gui.f_print.optPrintSelected.controlgroup(0)
+Gui.f_print.optPrintSelected.tabindex(5)
+Gui.f_print.optComment.create(option)
+Gui.f_print.optComment.caption("Comment")
+Gui.f_print.optComment.visible(True)
+Gui.f_print.optComment.size(1575,255)
+Gui.f_print.optComment.zorder(0)
+Gui.f_print.optComment.position(105,1140)
+Gui.f_print.optComment.enabled(True)
+Gui.f_print.optComment.parent("frmPrint")
+Gui.f_print.optComment.fontname("Arial")
+Gui.f_print.optComment.fontsize(8)
+Gui.f_print.optComment.event(Click,optcomment_click)
+Gui.f_print.optComment.controlgroup(0)
+Gui.f_print.optComment.tabindex(6)
+Gui.f_print.cmdPrintFiles.create(button)
+Gui.f_print.cmdPrintFiles.caption("Print")
+Gui.f_print.cmdPrintFiles.visible(True)
+Gui.f_print.cmdPrintFiles.size(975,375)
+Gui.f_print.cmdPrintFiles.zorder(0)
+Gui.f_print.cmdPrintFiles.position(115,5500)
+Gui.f_print.cmdPrintFiles.enabled(True)
+Gui.f_print.cmdPrintFiles.fontname("Arial")
+Gui.f_print.cmdPrintFiles.fontsize(8)
+Gui.f_print.cmdPrintFiles.event(Click,cmdprintfiles_click)
+Gui.f_print.cmdPrintFiles.defaultvalue("")
+Gui.f_print.cmdPrintFiles.controlgroup(0)
+Gui.f_print.cmdPrintFiles.tabstop(True)
+Gui.f_print.cmdPrintFiles.tabindex(1)
+Gui.f_email..create(BaseForm)
+Gui.f_email..caption("Email Files")
+Gui.f_email..size(5415,7095)
+Gui.f_email..minx(0)
+Gui.f_email..miny(0)
+Gui.f_email..position(0,0)
+Gui.f_email..event(UnLoad,f_email_unload)
+Gui.f_email..alwaysontop(False)
+Gui.f_email..fontname("arial")
+Gui.f_email..fontsize(8)
+Gui.f_email..forecolor(0)
+Gui.f_email..BackColor(-2147483633)
+Gui.f_email..controlbox(True)
+Gui.f_email..maxbutton(False)
+Gui.f_email..minbutton(False)
+Gui.f_email..mousepointer(0)
+Gui.f_email..moveable(True)
+Gui.f_email..sizeable(False)
+Gui.f_email..ShowInTaskBar(True)
+Gui.f_email..titlebar(True)
+Gui.f_email.frmemail.create(frame)
+Gui.f_email.frmemail.caption("")
+Gui.f_email.frmemail.size(5010,5895)
+Gui.f_email.frmemail.position(105,105)
+Gui.f_email.frmemail.visible(True)
+Gui.f_email.frmemail.borderstyle(0)
+Gui.f_email.frmemail.fontname("Arial")
+Gui.f_email.frmemail.fontsize(8)
+Gui.f_email.frmemail.Enabled(True)
+Gui.f_email.frmemail.Zorder(0)
+Gui.f_email.lvw1.create(listview)
+Gui.f_email.lvw1.view(3)
+Gui.f_email.lvw1.addlistviewcolumn("Documents",4410,0)
+Gui.f_email.lvw1.visible(True)
+Gui.f_email.lvw1.size(4755,3375)
+Gui.f_email.lvw1.zorder(0)
+Gui.f_email.lvw1.position(105,1200)
+Gui.f_email.lvw1.enabled(True)
+Gui.f_email.lvw1.parent("frmemail")
+Gui.f_email.lvw1.fontname("Arial")
+Gui.f_email.lvw1.fontsize(8)
+Gui.f_email.lvw1.tabstop(True)
+Gui.f_email.lvw1.tabindex(2)
+Gui.f_email.lvw1.Multiselect(False)
+Gui.f_email.lvw1.CheckBoxes(False)
+Gui.f_email.optCurrent.create(option)
+Gui.f_email.optCurrent.caption("Email Current File")
+Gui.f_email.optCurrent.visible(True)
+Gui.f_email.optCurrent.size(4110,255)
+Gui.f_email.optCurrent.zorder(0)
+Gui.f_email.optCurrent.position(105,105)
+Gui.f_email.optCurrent.enabled(True)
+Gui.f_email.optCurrent.parent("frmemail")
+Gui.f_email.optCurrent.fontname("Arial")
+Gui.f_email.optCurrent.fontsize(8)
+Gui.f_email.optCurrent.controlgroup(0)
+Gui.f_email.optCurrent.tabindex(3)
+Gui.f_email.optAll.create(option)
+Gui.f_email.optAll.caption("Email All Files")
+Gui.f_email.optAll.visible(True)
+Gui.f_email.optAll.size(3885,255)
+Gui.f_email.optAll.zorder(0)
+Gui.f_email.optAll.position(105,450)
+Gui.f_email.optAll.enabled(True)
+Gui.f_email.optAll.parent("frmemail")
+Gui.f_email.optAll.fontname("Arial")
+Gui.f_email.optAll.fontsize(8)
+Gui.f_email.optAll.controlgroup(0)
+Gui.f_email.optAll.tabindex(4)
+Gui.f_email.optemailSelected.create(option)
+Gui.f_email.optemailSelected.caption("Email Selected Files")
+Gui.f_email.optemailSelected.visible(True)
+Gui.f_email.optemailSelected.size(3630,255)
+Gui.f_email.optemailSelected.zorder(0)
+Gui.f_email.optemailSelected.position(105,795)
+Gui.f_email.optemailSelected.enabled(True)
+Gui.f_email.optemailSelected.parent("frmemail")
+Gui.f_email.optemailSelected.fontname("Arial")
+Gui.f_email.optemailSelected.fontsize(8)
+Gui.f_email.optemailSelected.controlgroup(0)
+Gui.f_email.optemailSelected.tabindex(5)
+Gui.f_email.txtSender.create(textbox,"",True,4680,300,0,100,4945,True,0,"Arial",8,-2147483643,1)
+Gui.f_email.txtSender.parent("frmemail")
+Gui.f_email.txtSender.defaultvalue("")
+Gui.f_email.txtSender.controlgroup(0)
+Gui.f_email.txtSender.tabstop(True)
+Gui.f_email.txtSender.tabindex(6)
+Gui.f_email.txtRecipient.create(textbox,"",True,4095,300,0,105,5535,True,0,"Arial",8,-2147483643,1)
+Gui.f_email.txtRecipient.parent("frmemail")
+Gui.f_email.txtRecipient.defaultvalue("")
+Gui.f_email.txtRecipient.controlgroup(0)
+Gui.f_email.txtRecipient.tabstop(True)
+Gui.f_email.txtRecipient.tabindex(7)
+Gui.f_email.lbl1.create(label,"Sender",True,1935,255,1,105,4650,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_email.lbl1.parent("frmemail")
+Gui.f_email.lbl1.defaultvalue("")
+Gui.f_email.lbl1.controlgroup(0)
+Gui.f_email.lbl1.BorderStyle(0)
+Gui.f_email.lbl2.create(label,"Recipient(s)",True,960,255,1,100,5255,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_email.lbl2.parent("frmemail")
+Gui.f_email.lbl2.defaultvalue("")
+Gui.f_email.lbl2.controlgroup(0)
+Gui.f_email.lbl2.BorderStyle(0)
+Gui.f_email.cmdBrowseRecp.create(button)
+Gui.f_email.cmdBrowseRecp.caption("^")
+Gui.f_email.cmdBrowseRecp.visible(True)
+Gui.f_email.cmdBrowseRecp.size(360,300)
+Gui.f_email.cmdBrowseRecp.zorder(0)
+Gui.f_email.cmdBrowseRecp.position(4305,5535)
+Gui.f_email.cmdBrowseRecp.enabled(True)
+Gui.f_email.cmdBrowseRecp.parent("frmemail")
+Gui.f_email.cmdBrowseRecp.fontname("Arial")
+Gui.f_email.cmdBrowseRecp.fontsize(8)
+Gui.f_email.cmdBrowseRecp.event(Click,cmdbrowserecp_click)
+Gui.f_email.cmdBrowseRecp.defaultvalue("")
+Gui.f_email.cmdBrowseRecp.controlgroup(0)
+Gui.f_email.cmdBrowseRecp.tabstop(True)
+Gui.f_email.cmdBrowseRecp.tabindex(10)
+Gui.f_email.cmdemailFiles.create(button)
+Gui.f_email.cmdemailFiles.caption("Send")
+Gui.f_email.cmdemailFiles.visible(True)
+Gui.f_email.cmdemailFiles.size(975,375)
+Gui.f_email.cmdemailFiles.zorder(0)
+Gui.f_email.cmdemailFiles.position(195,6105)
+Gui.f_email.cmdemailFiles.enabled(True)
+Gui.f_email.cmdemailFiles.fontname("Arial")
+Gui.f_email.cmdemailFiles.fontsize(8)
+Gui.f_email.cmdemailFiles.event(Click,cmdemailfiles_click)
+Gui.f_email.cmdemailFiles.defaultvalue("")
+Gui.f_email.cmdemailFiles.controlgroup(0)
+Gui.f_email.cmdemailFiles.tabstop(True)
+Gui.f_email.cmdemailFiles.tabindex(1)
+Gui.f_add..create(BaseForm)
+Gui.f_add..caption("File Association")
+Gui.f_add..size(10575,3120)
+Gui.f_add..minx(0)
+Gui.f_add..miny(0)
+Gui.f_add..position(0,0)
+Gui.f_add..event(UnLoad,f_add_unload)
+Gui.f_add..alwaysontop(False)
+Gui.f_add..fontname("Arial")
+Gui.f_add..fontsize(8)
+Gui.f_add..forecolor(0)
+Gui.f_add..BackColor(-2147483633)
+Gui.f_add..controlbox(True)
+Gui.f_add..maxbutton(False)
+Gui.f_add..minbutton(True)
+Gui.f_add..mousepointer(0)
+Gui.f_add..moveable(True)
+Gui.f_add..sizeable(False)
+Gui.f_add..ShowInTaskBar(True)
+Gui.f_add..titlebar(True)
+Gui.f_add.txtFile.create(textbox,"",True,9765,300,0,195,585,True,0,"Arial",8,16777215,1)
+Gui.f_add.txtFile.maxLength(400)
+Gui.f_add.txtFile.defaultvalue("")
+Gui.f_add.txtFile.controlgroup(0)
+Gui.f_add.cmdBrowseFile.create(button)
+Gui.f_add.cmdBrowseFile.caption("^")
+Gui.f_add.cmdBrowseFile.visible(True)
+Gui.f_add.cmdBrowseFile.size(390,390)
+Gui.f_add.cmdBrowseFile.zorder(0)
+Gui.f_add.cmdBrowseFile.position(10065,555)
+Gui.f_add.cmdBrowseFile.enabled(True)
+Gui.f_add.cmdBrowseFile.fontname("Arial")
+Gui.f_add.cmdBrowseFile.fontsize(8)
+Gui.f_add.cmdBrowseFile.event(Click,cmdbrowsefile_click)
+Gui.f_add.cmdBrowseFile.defaultvalue("")
+Gui.f_add.cmdBrowseFile.controlgroup(0)
+Gui.f_add.cmdBrowseFile.tabstop(True)
+Gui.f_add.cmdBrowseFile.tabindex(1)
+Gui.f_add.txtDescription.create(textbox,"",True,9735,300,0,195,1200,True,0,"Arial",8,16777215,1)
+Gui.f_add.txtDescription.maxLength(30)
+Gui.f_add.txtDescription.defaultvalue("")
+Gui.f_add.txtDescription.controlgroup(0)
+Gui.f_add.txtDescription.tabstop(True)
+Gui.f_add.txtDescription.tabindex(2)
+Gui.f_add.lbl2.create(label,"Description",True,810,210,1,195,960,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_add.lbl2.defaultvalue("")
+Gui.f_add.lbl2.controlgroup(0)
+Gui.f_add.lbl2.BorderStyle(0)
+Gui.f_add.dpGrp.create(dropdownlist)
+Gui.f_add.dpGrp.visible(True)
+Gui.f_add.dpGrp.size(9705,300)
+Gui.f_add.dpGrp.zorder(0)
+Gui.f_add.dpGrp.position(195,1845)
+Gui.f_add.dpGrp.enabled(True)
+Gui.f_add.dpGrp.fontname("Arial")
+Gui.f_add.dpGrp.fontsize(8)
+Gui.f_add.dpGrp.defaultvalue("")
+Gui.f_add.dpGrp.controlgroup(0)
+Gui.f_add.dpGrp.tabstop(True)
+Gui.f_add.dpGrp.tabindex(4)
+Gui.f_add.cmdSaveFile.create(button)
+Gui.f_add.cmdSaveFile.caption("Save")
+Gui.f_add.cmdSaveFile.visible(True)
+Gui.f_add.cmdSaveFile.size(885,360)
+Gui.f_add.cmdSaveFile.zorder(0)
+Gui.f_add.cmdSaveFile.position(195,2235)
+Gui.f_add.cmdSaveFile.enabled(True)
+Gui.f_add.cmdSaveFile.fontname("Arial")
+Gui.f_add.cmdSaveFile.fontsize(8)
+Gui.f_add.cmdSaveFile.event(Click,cmdsavefile_click)
+Gui.f_add.cmdSaveFile.defaultvalue("")
+Gui.f_add.cmdSaveFile.controlgroup(0)
+Gui.f_add.cmdSaveFile.tabstop(True)
+Gui.f_add.cmdSaveFile.tabindex(5)
+Gui.f_add.lbl3.create(label,"Group",True,450,210,1,195,1605,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_add.lbl3.defaultvalue("")
+Gui.f_add.lbl3.controlgroup(0)
+Gui.f_add.lbl3.BorderStyle(0)
+Gui.f_add.txtFileNum.create(textbox,"",False,1215,300,0,1305,2250,True,0,"Arial",8,255,1)
+Gui.f_add.txtFileNum.defaultvalue("")
+Gui.f_add.txtFileNum.controlgroup(0)
+Gui.f_add.txtFileNum.tabstop(True)
+Gui.f_add.txtFileNum.tabindex(7)
+Gui.f_add.optFile.create(option)
+Gui.f_add.optFile.caption("File")
+Gui.f_add.optFile.visible(True)
+Gui.f_add.optFile.size(1185,255)
+Gui.f_add.optFile.zorder(0)
+Gui.f_add.optFile.position(195,105)
+Gui.f_add.optFile.enabled(True)
+Gui.f_add.optFile.fontname("Arial")
+Gui.f_add.optFile.fontsize(8)
+Gui.f_add.optFile.event(Click,optlink_click)
+Gui.f_add.optFile.controlgroup(0)
+Gui.f_add.optFile.tabindex(8)
+Gui.f_add.optLink.create(option)
+Gui.f_add.optLink.caption("Hyperlink")
+Gui.f_add.optLink.visible(True)
+Gui.f_add.optLink.size(2415,255)
+Gui.f_add.optLink.zorder(0)
+Gui.f_add.optLink.position(1575,105)
+Gui.f_add.optLink.enabled(True)
+Gui.f_add.optLink.fontname("Arial")
+Gui.f_add.optLink.fontsize(8)
+Gui.f_add.optLink.event(Click,optlink_click)
+Gui.f_add.optLink.controlgroup(0)
+Gui.f_add.optLink.tabindex(9)
+Gui.f_add.chkRev.create(checkbox)
+Gui.f_add.chkRev.caption("Non-Rev Document")
+Gui.f_add.chkRev.visible(True)
+Gui.f_add.chkRev.size(2790,300)
+Gui.f_add.chkRev.zorder(0)
+Gui.f_add.chkRev.position(7650,120)
+Gui.f_add.chkRev.enabled(True)
+Gui.f_add.chkRev.fontname("Arial")
+Gui.f_add.chkRev.fontsize(8)
+Gui.f_add.chkRev.controlgroup(0)
+Gui.f_add.chkRev.tabstop(True)
+Gui.f_add.chkRev.tabindex(10)
+Gui.f_recp..create(BaseForm)
+Gui.f_recp..caption("Select Recipient")
+Gui.f_recp..size(5790,6405)
+Gui.f_recp..minx(0)
+Gui.f_recp..miny(0)
+Gui.f_recp..position(0,0)
+Gui.f_recp..event(UnLoad,f_recp_unload)
+Gui.f_recp..alwaysontop(False)
+Gui.f_recp..fontname("Arial")
+Gui.f_recp..fontsize(8)
+Gui.f_recp..forecolor(0)
+Gui.f_recp..BackColor(-2147483633)
+Gui.f_recp..controlbox(True)
+Gui.f_recp..maxbutton(False)
+Gui.f_recp..minbutton(True)
+Gui.f_recp..mousepointer(0)
+Gui.f_recp..moveable(True)
+Gui.f_recp..sizeable(False)
+Gui.f_recp..ShowInTaskBar(True)
+Gui.f_recp..titlebar(True)
+Gui.f_recp.lvwAddress.create(listview)
+Gui.f_recp.lvwAddress.view(3)
+Gui.f_recp.lvwAddress.addlistviewcolumn("Contact",1980,0)
+Gui.f_recp.lvwAddress.addlistviewcolumn("Email",2790,0)
+Gui.f_recp.lvwAddress.visible(True)
+Gui.f_recp.lvwAddress.size(5145,4215)
+Gui.f_recp.lvwAddress.zorder(0)
+Gui.f_recp.lvwAddress.position(180,975)
+Gui.f_recp.lvwAddress.enabled(True)
+Gui.f_recp.lvwAddress.fontname("Arial")
+Gui.f_recp.lvwAddress.fontsize(8)
+Gui.f_recp.lvwAddress.Multiselect(False)
+Gui.f_recp.lvwAddress.CheckBoxes(False)
+Gui.f_recp.txtCustomer.create(textbox,"",True,4620,300,0,225,585,True,0,"Arial",8,-2147483643,1)
+Gui.f_recp.txtCustomer.defaultvalue("")
+Gui.f_recp.txtCustomer.controlgroup(0)
+Gui.f_recp.txtCustomer.tabstop(True)
+Gui.f_recp.txtCustomer.tabindex(1)
+Gui.f_recp.cmdBwrCustVend.create(button)
+Gui.f_recp.cmdBwrCustVend.caption("^")
+Gui.f_recp.cmdBwrCustVend.visible(True)
+Gui.f_recp.cmdBwrCustVend.size(405,300)
+Gui.f_recp.cmdBwrCustVend.zorder(0)
+Gui.f_recp.cmdBwrCustVend.position(4920,615)
+Gui.f_recp.cmdBwrCustVend.enabled(True)
+Gui.f_recp.cmdBwrCustVend.fontname("Arial")
+Gui.f_recp.cmdBwrCustVend.fontsize(8)
+Gui.f_recp.cmdBwrCustVend.event(Click,cmdbwrcustvend_click)
+Gui.f_recp.cmdBwrCustVend.defaultvalue("")
+Gui.f_recp.cmdBwrCustVend.controlgroup(0)
+Gui.f_recp.cmdBwrCustVend.tabstop(True)
+Gui.f_recp.cmdBwrCustVend.tabindex(2)
+Gui.f_recp.optCust.create(option)
+Gui.f_recp.optCust.caption("Customer")
+Gui.f_recp.optCust.visible(True)
+Gui.f_recp.optCust.size(1260,300)
+Gui.f_recp.optCust.zorder(0)
+Gui.f_recp.optCust.position(225,195)
+Gui.f_recp.optCust.enabled(True)
+Gui.f_recp.optCust.fontname("Arial")
+Gui.f_recp.optCust.fontsize(8)
+Gui.f_recp.optCust.controlgroup(0)
+Gui.f_recp.optCust.tabindex(3)
+Gui.f_recp.optVend.create(option)
+Gui.f_recp.optVend.caption("Vendor")
+Gui.f_recp.optVend.visible(True)
+Gui.f_recp.optVend.size(1290,285)
+Gui.f_recp.optVend.zorder(0)
+Gui.f_recp.optVend.position(1530,195)
+Gui.f_recp.optVend.enabled(True)
+Gui.f_recp.optVend.fontname("Arial")
+Gui.f_recp.optVend.fontsize(8)
+Gui.f_recp.optVend.controlgroup(0)
+Gui.f_recp.optVend.tabindex(4)
+Gui.f_recp.cmdSaveRecp.create(button)
+Gui.f_recp.cmdSaveRecp.caption("Save")
+Gui.f_recp.cmdSaveRecp.visible(True)
+Gui.f_recp.cmdSaveRecp.size(885,375)
+Gui.f_recp.cmdSaveRecp.zorder(0)
+Gui.f_recp.cmdSaveRecp.position(210,5300)
+Gui.f_recp.cmdSaveRecp.enabled(True)
+Gui.f_recp.cmdSaveRecp.fontname("Arial")
+Gui.f_recp.cmdSaveRecp.fontsize(8)
+Gui.f_recp.cmdSaveRecp.event(Click,cmdsaverecp_click)
+Gui.f_recp.cmdSaveRecp.defaultvalue("")
+Gui.f_recp.cmdSaveRecp.controlgroup(0)
+Gui.f_recp.cmdSaveRecp.tabstop(True)
+Gui.f_recp.cmdSaveRecp.tabindex(5)
+Gui.f_vmsadd..create(BaseForm)
+Gui.f_vmsadd..caption("Add to VMS")
+Gui.f_vmsadd..size(5865,4935)
+Gui.f_vmsadd..minx(0)
+Gui.f_vmsadd..miny(0)
+Gui.f_vmsadd..position(0,0)
+Gui.f_vmsadd..event(UnLoad,f_vmsadd_unload)
+Gui.f_vmsadd..alwaysontop(False)
+Gui.f_vmsadd..fontname("Arial")
+Gui.f_vmsadd..fontsize(8)
+Gui.f_vmsadd..forecolor(0)
+Gui.f_vmsadd..BackColor(-2147483633)
+Gui.f_vmsadd..controlbox(True)
+Gui.f_vmsadd..maxbutton(True)
+Gui.f_vmsadd..minbutton(True)
+Gui.f_vmsadd..mousepointer(0)
+Gui.f_vmsadd..moveable(True)
+Gui.f_vmsadd..sizeable(True)
+Gui.f_vmsadd..ShowInTaskBar(True)
+Gui.f_vmsadd..titlebar(True)
+Gui.f_vmsadd.txtFileName.create(textbox,"",True,5000,300,0,200,460,True,0,"Arial",8,-2147483643,1)
+Gui.f_vmsadd.txtFileName.defaultvalue("")
+Gui.f_vmsadd.txtFileName.controlgroup(0)
+Gui.f_vmsadd.lbl1.create(label,"File Name",True,1935,255,1,200,200,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_vmsadd.lbl1.defaultvalue("")
+Gui.f_vmsadd.lbl1.controlgroup(0)
+Gui.f_vmsadd.lbl1.BorderStyle(0)
+Gui.f_vmsadd.lbl2.create(label,"Notes",True,1935,255,1,200,900,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_vmsadd.lbl2.defaultvalue("")
+Gui.f_vmsadd.lbl2.controlgroup(0)
+Gui.f_vmsadd.lbl2.BorderStyle(0)
+Gui.f_vmsadd.txtNotes.create(textboxm)
+Gui.f_vmsadd.txtNotes.visible(True)
+Gui.f_vmsadd.txtNotes.size(5000,1740)
+Gui.f_vmsadd.txtNotes.zorder(0)
+Gui.f_vmsadd.txtNotes.position(200,1200)
+Gui.f_vmsadd.txtNotes.enabled(True)
+Gui.f_vmsadd.txtNotes.fontname("Arial")
+Gui.f_vmsadd.txtNotes.fontsize(8)
+Gui.f_vmsadd.txtNotes.numericonly(0)
+Gui.f_vmsadd.txtNotes.BackColor(-2147483643)
+Gui.f_vmsadd.txtNotes.defaultvalue("")
+Gui.f_vmsadd.txtNotes.controlgroup(0)
+Gui.f_vmsadd.txtNotes.tabstop(True)
+Gui.f_vmsadd.txtNotes.tabindex(3)
+Gui.f_vmsadd.chkDelete.create(checkbox)
+Gui.f_vmsadd.chkDelete.caption("Delete Source File")
+Gui.f_vmsadd.chkDelete.visible(True)
+Gui.f_vmsadd.chkDelete.size(1935,300)
+Gui.f_vmsadd.chkDelete.zorder(0)
+Gui.f_vmsadd.chkDelete.position(200,3100)
+Gui.f_vmsadd.chkDelete.enabled(True)
+Gui.f_vmsadd.chkDelete.fontname("Arial")
+Gui.f_vmsadd.chkDelete.fontsize(7)
+Gui.f_vmsadd.chkDelete.controlgroup(0)
+Gui.f_vmsadd.chkDelete.tabstop(True)
+Gui.f_vmsadd.chkDelete.tabindex(4)
+Gui.f_vmsadd.cmdAdd.create(button)
+Gui.f_vmsadd.cmdAdd.caption("Add")
+Gui.f_vmsadd.cmdAdd.visible(True)
+Gui.f_vmsadd.cmdAdd.size(885,375)
+Gui.f_vmsadd.cmdAdd.zorder(0)
+Gui.f_vmsadd.cmdAdd.position(200,3585)
+Gui.f_vmsadd.cmdAdd.enabled(True)
+Gui.f_vmsadd.cmdAdd.fontname("Arial")
+Gui.f_vmsadd.cmdAdd.fontsize(8)
+Gui.f_vmsadd.cmdAdd.event(Click,cmdvmsadd_click)
+Gui.f_vmsadd.cmdAdd.defaultvalue("")
+Gui.f_vmsadd.cmdAdd.controlgroup(0)
+Gui.f_vmsadd.cmdAdd.tabstop(True)
+Gui.f_vmsadd.cmdAdd.tabindex(5)
+Gui.f_vmsopt..create(BaseForm)
+Gui.f_vmsopt..caption("VMS Options")
+Gui.f_vmsopt..size(5115,2895)
+Gui.f_vmsopt..minx(0)
+Gui.f_vmsopt..miny(0)
+Gui.f_vmsopt..position(0,0)
+Gui.f_vmsopt..event(UnLoad,f_vmsopt_unload)
+Gui.f_vmsopt..alwaysontop(False)
+Gui.f_vmsopt..fontname("Arial")
+Gui.f_vmsopt..fontsize(8)
+Gui.f_vmsopt..forecolor(0)
+Gui.f_vmsopt..BackColor(-2147483633)
+Gui.f_vmsopt..controlbox(True)
+Gui.f_vmsopt..maxbutton(True)
+Gui.f_vmsopt..minbutton(True)
+Gui.f_vmsopt..mousepointer(0)
+Gui.f_vmsopt..moveable(True)
+Gui.f_vmsopt..sizeable(True)
+Gui.f_vmsopt..ShowInTaskBar(True)
+Gui.f_vmsopt..titlebar(True)
+Gui.f_vmsopt.cmd_Ok.create(button)
+Gui.f_vmsopt.cmd_Ok.caption("OK")
+Gui.f_vmsopt.cmd_Ok.visible(True)
+Gui.f_vmsopt.cmd_Ok.size(885,375)
+Gui.f_vmsopt.cmd_Ok.zorder(0)
+Gui.f_vmsopt.cmd_Ok.position(200,1040)
+Gui.f_vmsopt.cmd_Ok.enabled(True)
+Gui.f_vmsopt.cmd_Ok.fontname("Arial")
+Gui.f_vmsopt.cmd_Ok.fontsize(8)
+Gui.f_vmsopt.cmd_Ok.event(Click,cmd_vmsok_click)
+Gui.f_vmsopt.cmd_Ok.defaultvalue("")
+Gui.f_vmsopt.cmd_Ok.controlgroup(0)
+Gui.f_vmsopt.dlstOptions.create(dropdownlist)
+Gui.f_vmsopt.dlstOptions.visible(True)
+Gui.f_vmsopt.dlstOptions.size(3330,330)
+Gui.f_vmsopt.dlstOptions.zorder(0)
+Gui.f_vmsopt.dlstOptions.position(200,445)
+Gui.f_vmsopt.dlstOptions.enabled(True)
+Gui.f_vmsopt.dlstOptions.fontname("Arial")
+Gui.f_vmsopt.dlstOptions.fontsize(8)
+Gui.f_vmsopt.dlstOptions.event(Change,dlstoptions_change)
+Gui.f_vmsopt.dlstOptions.defaultvalue("")
+Gui.f_vmsopt.dlstOptions.controlgroup(0)
+Gui.f_vmsopt.dlstOptions.tabstop(True)
+Gui.f_vmsopt.dlstOptions.tabindex(1)
+Gui.f_vmsopt.lbl1.create(label,"Selection an Option",True,1575,255,1,200,200,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_vmsopt.lbl1.defaultvalue("")
+Gui.f_vmsopt.lbl1.controlgroup(0)
+Gui.f_vmsopt.lbl1.BorderStyle(0)
+Gui.F_Notes..create(BaseForm)
+Gui.F_Notes..caption("Document Change Notes")
+Gui.F_Notes..size(12000,8175)
+Gui.F_Notes..minx(0)
+Gui.F_Notes..miny(0)
+Gui.F_Notes..position(0,0)
+Gui.F_Notes..event(UnLoad,f_notes_unload)
+Gui.F_Notes..alwaysontop(False)
+Gui.F_Notes..fontname("Arial")
+Gui.F_Notes..fontsize(8)
+Gui.F_Notes..forecolor(0)
+Gui.F_Notes..BackColor(-2147483633)
+Gui.F_Notes..controlbox(True)
+Gui.F_Notes..maxbutton(True)
+Gui.F_Notes..minbutton(True)
+Gui.F_Notes..mousepointer(0)
+Gui.F_Notes..moveable(True)
+Gui.F_Notes..sizeable(True)
+Gui.F_Notes..ShowInTaskBar(True)
+Gui.F_Notes..titlebar(True)
+Gui.F_Notes.gsfgNotes.create(gsflexgrid)
+Gui.F_Notes.gsfgNotes.visible(True)
+Gui.F_Notes.gsfgNotes.size(11385,4980)
+Gui.F_Notes.gsfgNotes.zorder(0)
+Gui.F_Notes.gsfgNotes.position(200,200)
+Gui.F_Notes.gsfgNotes.enabled(True)
+Gui.F_Notes.gsfgNotes.event(MouseUp,gsfgnotes_mouseup)
+Gui.F_Notes.gsfgNotes.FontName("Microsoft Sans Serif")
+Gui.F_Notes.gsfgNotes.FontSize(8.25)
+Gui.F_Notes.txtNotes.create(textboxm)
+Gui.F_Notes.txtNotes.visible(True)
+Gui.F_Notes.txtNotes.size(11385,1950)
+Gui.F_Notes.txtNotes.zorder(0)
+Gui.F_Notes.txtNotes.position(200,5390)
+Gui.F_Notes.txtNotes.enabled(True)
+Gui.F_Notes.txtNotes.fontname("Arial")
+Gui.F_Notes.txtNotes.fontsize(8)
+Gui.F_Notes.txtNotes.numericonly(0)
+Gui.F_Notes.txtNotes.BackColor(-2147483643)
+Gui.F_Notes.txtNotes.defaultvalue("")
+Gui.F_Notes.txtNotes.controlgroup(0)
+Gui.F_Notes.txtNotes.tabstop(True)
+Gui.F_Notes.txtNotes.tabindex(1)
+Gui.F_View..create(BaseForm)
+Gui.F_View..caption("View Previous Versions")
+Gui.F_View..size(12000,8175)
+Gui.F_View..minx(0)
+Gui.F_View..miny(0)
+Gui.F_View..position(0,0)
+Gui.F_View..event(Resize,f_view_resize)
+Gui.F_View..event(UnLoad,f_view_unload)
+Gui.F_View..alwaysontop(False)
+Gui.F_View..fontname("Arial")
+Gui.F_View..fontsize(8)
+Gui.F_View..forecolor(0)
+Gui.F_View..BackColor(-2147483633)
+Gui.F_View..controlbox(True)
+Gui.F_View..maxbutton(True)
+Gui.F_View..minbutton(False)
+Gui.F_View..mousepointer(0)
+Gui.F_View..moveable(True)
+Gui.F_View..sizeable(True)
+Gui.F_View..ShowInTaskBar(True)
+Gui.F_View..titlebar(True)
+Gui.F_View.gsfgView.create(gsflexgrid)
+Gui.F_View.gsfgView.visible(True)
+Gui.F_View.gsfgView.size(11385,4980)
+Gui.F_View.gsfgView.zorder(0)
+Gui.F_View.gsfgView.position(200,200)
+Gui.F_View.gsfgView.enabled(True)
+Gui.F_View.gsfgView.event(MouseUp,gsfgview_mouseup)
+Gui.F_View.gsfgView.event(CommandClick,gsfgview_commandclick)
+Gui.F_View.gsfgView.FontName("Microsoft Sans Serif")
+Gui.F_View.gsfgView.FontSize(8.25)
+Gui.F_View.txtView.create(textboxm)
+Gui.F_View.txtView.visible(True)
+Gui.F_View.txtView.size(11385,1950)
+Gui.F_View.txtView.zorder(0)
+Gui.F_View.txtView.position(200,5390)
+Gui.F_View.txtView.enabled(True)
+Gui.F_View.txtView.fontname("Arial")
+Gui.F_View.txtView.fontsize(8)
+Gui.F_View.txtView.numericonly(0)
+Gui.F_View.txtView.BackColor(-2147483643)
+Gui.F_View.txtView.defaultvalue("")
+Gui.F_View.txtView.controlgroup(0)
+Gui.F_View.txtView.tabstop(True)
+Gui.F_View.txtView.tabindex(1)
+Gui.f_Check..create(BaseForm)
+Gui.f_Check..caption("Document Change Notes")
+Gui.f_Check..size(6060,4095)
+Gui.f_Check..minx(0)
+Gui.f_Check..miny(0)
+Gui.f_Check..position(0,0)
+Gui.f_Check..event(UnLoad,f_check_unload)
+Gui.f_Check..alwaysontop(False)
+Gui.f_Check..fontname("Arial")
+Gui.f_Check..fontsize(8)
+Gui.f_Check..forecolor(0)
+Gui.f_Check..BackColor(-2147483633)
+Gui.f_Check..controlbox(False)
+Gui.f_Check..maxbutton(False)
+Gui.f_Check..minbutton(False)
+Gui.f_Check..mousepointer(0)
+Gui.f_Check..moveable(True)
+Gui.f_Check..sizeable(False)
+Gui.f_Check..ShowInTaskBar(True)
+Gui.f_Check..titlebar(True)
+Gui.f_Check.lbl1.create(label,"Please Enter Document Change Notes",True,2925,255,1,200,200,True,0,"Arial",8,-2147483633,0,0)
+Gui.f_Check.lbl1.defaultvalue("")
+Gui.f_Check.lbl1.controlgroup(0)
+Gui.f_Check.lbl1.BorderStyle(0)
+Gui.f_Check.txtNotes.create(textboxm)
+Gui.f_Check.txtNotes.visible(True)
+Gui.f_Check.txtNotes.size(5070,2205)
+Gui.f_Check.txtNotes.zorder(0)
+Gui.f_Check.txtNotes.position(200,500)
+Gui.f_Check.txtNotes.enabled(True)
+Gui.f_Check.txtNotes.fontname("Arial")
+Gui.f_Check.txtNotes.fontsize(8)
+Gui.f_Check.txtNotes.numericonly(0)
+Gui.f_Check.txtNotes.BackColor(-2147483643)
+Gui.f_Check.txtNotes.defaultvalue("")
+Gui.f_Check.txtNotes.controlgroup(0)
+Gui.f_Check.txtNotes.tabstop(True)
+Gui.f_Check.txtNotes.tabindex(1)
+Gui.f_Check.cmdSave.create(button)
+Gui.f_Check.cmdSave.caption("Save")
+Gui.f_Check.cmdSave.visible(True)
+Gui.f_Check.cmdSave.size(855,375)
+Gui.f_Check.cmdSave.zorder(0)
+Gui.f_Check.cmdSave.position(200,2800)
+Gui.f_Check.cmdSave.enabled(True)
+Gui.f_Check.cmdSave.fontname("Arial")
+Gui.f_Check.cmdSave.fontsize(8)
+Gui.f_Check.cmdSave.event(Click,cmdvmssave_click)
+Gui.f_Check.cmdSave.defaultvalue("")
+Gui.f_Check.cmdSave.controlgroup(0)
+Gui.f_Check.cmdSave.tabstop(True)
+Gui.f_Check.cmdSave.tabindex(2)
+Gui.f_Check.cmdCancel.create(button)
+Gui.f_Check.cmdCancel.caption("Cancel")
+Gui.f_Check.cmdCancel.visible(True)
+Gui.f_Check.cmdCancel.size(855,375)
+Gui.f_Check.cmdCancel.zorder(0)
+Gui.f_Check.cmdCancel.position(1145,2800)
+Gui.f_Check.cmdCancel.enabled(True)
+Gui.f_Check.cmdCancel.fontname("Arial")
+Gui.f_Check.cmdCancel.fontsize(8)
+Gui.f_Check.cmdCancel.event(Click,cmdcancel_click)
+Gui.f_Check.cmdCancel.defaultvalue("")
+Gui.f_Check.cmdCancel.controlgroup(0)
+Gui.f_Check.cmdCancel.tabstop(True)
+Gui.f_Check.cmdCancel.tabindex(3)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.sFile.Declare(String)
+
+Program.Sub.Definition.DefaultArgs("CovertURL","URL")
+Variable.global.iActiveLinkID.Declare(Long)
+Variable.Global.sType.Declare(String)
+Variable.Global.sGrps.Declare(String)
+
+Program.Sub.Definition.DefaultArgs("load_contacts","Key*!*Type")
+Variable.Global.bNoCopy.Declare(Boolean,False)
+Variable.Global.bViewComment.Declare(Boolean,False)
+Variable.Global.bExecute.Declare(Boolean,False)
+Variable.Global.bNoAdd.Declare(Boolean,False)
+Variable.Global.bRemove.Declare(Boolean,False)
+Variable.Global.bInvRevOn.Declare(Boolean,False)
+Variable.Global.sKey.Declare(String)
+Variable.Global.iExt.Declare(Long,0)
+Variable.Global.sPath.Declare(String)
+Variable.Global.sTemp.Declare(String)
+Variable.Global.bVMS.Declare(Boolean,False)
+Variable.Global.bExpand.Declare(Boolean,False)
+Variable.Global.bCompress.Declare(Boolean,False)
+Variable.UDT.uGroups.Define("GRP_ID",Long,GRP_ID)
+Variable.uGlobal.uGroups.Declare("uGroups")
+Variable.Global.sTempDir.Declare(String)
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+V.Local.stype.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.bTest.Declare(Boolean)
+V.Local.sMsg.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.bRet.Declare(Boolean)
+
+Gui.f_advance.htmlX.Silent(true)
+Gui.f_advance.cmdOpen.Enabled(False)
+
+'Function.Intrinsic.Debug.BenchmarkModeEnable
+
+f.Intrinsic.Control.If(v.Ambient.isGab1,=,False)
+
+	Gui.f_advance.trvData.Event("DRAGDROPFILE",Dragdrop)
+	Gui.f_add.txtFile.Event("DRAGDROPFILE",Dragdrop)
+
+F.Intrinsic.Control.EndIf
+
+Gui.f_vmsadd.txtFileName.Locked(True)
+
+F.Intrinsic.Control.If(V.caller.caller,=,"JB0986")
+	V.local.stype.Set(V.Passed.009000)
+F.Intrinsic.Control.Else
+	V.Local.stype.Set(V.passed.DATA-LINK-TYPE)
+F.Intrinsic.Control.endif
+
+
+
+F.Intrinsic.String.LPad(V.Local.stype,"0",5,V.global.stype)
+V.Local.sMsg.Set("")
+F.Intrinsic.String.Concat(V.Caller.PluginsDir,"\DocJPG.do",V.Local.sMsg)
+F.Intrinsic.file.Exists(V.Local.sMsg,V.Global.bExecute)
+
+Function.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'VMS Check
+F.Global.General.IsLicensedByModuleName("VMS",V.global.bVMS)
+F.Intrinsic.Debug.SetLA(V.Global.bVMS)
+F.Intrinsic.Control.If(V.Global.bVMS,=,False)
+	Gui.f_advance.cmdVMS.Visible(False)
+F.Intrinsic.Control.Else
+	F.ODBC.Connection!conX.TableExists("VMS_ACTIVE",V.Global.bVMS)
+	F.Intrinsic.Control.If(V.Global.bVMS,=,True)
+		Function.Intrinsic.IPM.GenericMenuIPM(11700,"402125*!*0*!*0*!*False",V.global.bCompress)
+		'F.Global.General.ReadOption("402125",0,False,V.Global.bCompress)
+	F.Intrinsic.Control.Else
+		Gui.f_advance.cmdVMS.Visible(False)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+'Disable buttons. Buttons will be enabled based on security settings in Check_security
+Gui.f_advance.cmdEdit.Enabled(false)
+Gui.f_advance.cmdRemove.Enabled(false)
+Gui.f_advance.cmdEmail.Enabled(false)
+Gui.f_advance.cmdSaveComment.Enabled(false)
+Gui.f_advance.cmdPrint.Enabled(false)
+Gui.f_advance.cmdAdd.Enabled(false)
+Gui.f_print.optComment.Enabled(false)
+Gui.f_add.chkRev.Visible(false)
+
+'Option for use revision level/engineering change
+Function.Intrinsic.IPM.GenericMenuIPM(11700,"070008*!*0*!*0*!*False",V.local.bRet)
+'F.Global.General.ReadOption("070008",1,"N",V.Local.squery)
+F.Intrinsic.Control.If(V.Local.bRet,=,True)
+	V.Global.bInvRevOn.Set(True)
+	F.Global.DocumentControl.revisionenable
+	F.Intrinsic.Control.If(V.Local.stype,=,30)
+		Gui.f_add.chkRev.Visible(true)
+	F.Intrinsic.Control.ElseIf(V.Local.stype,=,35)
+		Gui.f_add.chkRev.Visible(true)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+'Option for expanding the tree
+f.Intrinsic.Control.If(v.Caller.GSSVersion.long,=>,2013)
+	Function.Intrinsic.IPM.GenericMenuIPM(11700,"401997*!*0*!*0*!*False",V.Global.bExpand)
+	'F.Global.General.ReadOption("401997",0,"FALSE",V.Global.bExpand)
+F.Intrinsic.Control.EndIf
+
+'Adds field to ATG_DOC_ASSOC table
+'F.Intrinsic.Control.CallSub(Checktable)
+F.Intrinsic.UI.InvokeWaitDialog("Checking Security")
+
+F.Intrinsic.Control.CallSub(Check_security)
+
+F.Intrinsic.Control.CallSub(Load_grp_security)
+F.Intrinsic.UI.ChangeWaitStatus("Security Loaded",25,1,100)
+
+Gui.F_Advance.htmlX.Navigate("about:blank")
+F.Intrinsic.Control.CallSub(Create_link_advanced)
+F.Intrinsic.UI.ChangeWaitStatus("Link Checked",50,1,100)
+F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.global.iActiveLinkID," AND INV_NON_REV = 0 ORDER BY GRP_ID, FILE_TYPE, DESCRIPTION, FILE",V.Local.sQuery)
+
+
+F.Intrinsic.Control.CallSub(Load_tree,"sQuery",V.Local.sQuery,"sParentNode","","sParentRet","")
+F.Intrinsic.Control.If(V.Global.bInvRevOn,=,True)
+	F.Intrinsic.Control.CallSub(Loadnonrevdocs)
+F.Intrinsic.Control.endif
+
+F.Intrinsic.Control.CallSub(Populate_grp)
+
+F.Intrinsic.UI.ChangeWaitStatus("Tree Loaded",75,1,100)
+Gui.f_advance.tabx1.SetTab(0)
+
+F.Intrinsic.String.Concat(V.Caller.PluginsDir,"\DocCopy.do",V.Local.sQuery)
+F.Intrinsic.File.Exists(V.Local.sQuery,V.Local.bTest)
+F.Intrinsic.Control.If(V.Local.bTest,=,False)
+	V.Global.bNoCopy.Set(True)
+F.Intrinsic.Control.Else
+	V.Global.bNoCopy.Set(False)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(Load_comment)
+F.Intrinsic.UI.ChangeWaitStatus("Loading Comment",100,1,100)
+F.Intrinsic.UI.CloseWaitDialog
+
+gui.F_Advance..AlwaysOnTop(True)
+Gui.F_Advance..Show
+gui.F_Advance..AlwaysOnTop(False)
+
+Program.Sub.Main.End
+
+Program.Sub.cmdPrint_click.Start
+V.Local.sQuery.Declare(String)
+V.Local.shold.Declare(String)
+V.Local.sgrp.Declare(String)
+V.Local.bret.Declare(Boolean)
+
+Gui.f_print.lvw1.MultiSelect(true)
+Gui.f_print.lvw1.Checkboxes(true)
+Gui.f_print.lvw1.ClearItems
+
+Gui.f_print.optCurrent.Value(true)
+Gui.f_print.lvw1.Enabled(false)
+F.Intrinsic.Control.ErrorResume(True)
+F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.global.iActiveLinkID," ORDER BY GRP_ID, FILE_TYPE",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+F.Intrinsic.Control.dountil(V.odbc.conX!rst.EOF,=,True)
+
+	F.Intrinsic.Control.If(V.Caller.User,<>,"SUPERVSR")
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.FieldValLong!grp_ID,=,-1)
+			V.Local.bRet.Set(True)
+		F.Intrinsic.Control.ElseIf(V.Local.sGrp.long,<>,V.odbc.conX!rst.FieldVal!grp_ID)
+			V.Local.sGrp.Set(V.ODBC.conX!rst.FieldVal!grp_id)
+			F.Intrinsic.Control.CallSub(Check_grp_security,"group",V.Local.sGrp)
+			V.Local.bRet.Set(V.Args.bRet)
+		F.Intrinsic.Control.Else
+			V.Local.bRet.Set(True)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.ElseIf(V.Caller.User,=,"SUPERVSR")
+		V.Local.bRet.Set(True)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Local.bret,=,True,"AND",V.ODBC.conX!rst.FieldValTrim!FILE_TYPE,<>,"HTTP")
+		F.Intrinsic.Control.If(V.odbc.conX!rst.FieldValTrim!DESCRIPTION,<>,"")
+			Gui.f_print.lvw1.Addlistitem(V.odbc.conX!rst.FieldValtrim!FILE_NUM,V.odbc.conX!rst.FieldValtrim!DESCRIPTION)
+		F.Intrinsic.Control.Else
+			Gui.f_print.lvw1.Addlistitem(V.odbc.conX!rst.FieldValtrim!FILE_NUM,V.odbc.conX!rst.FieldValtrim!FILE)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.endif
+
+	F.odbc.conX!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conX!rst.Close
+F.Intrinsic.Control.ErrorResume(False)
+Gui.f_print..Show
+
+
+
+
+Program.Sub.cmdPrint_click.End
+
+Program.Sub.cmdedit_click.Start
+V.Local.skey.Declare(String)
+V.Local.shold.Declare(String)
+V.Local.igrp.Declare(Long)
+
+'added as flag to let me know if there is nothing to click
+F.Intrinsic.Control.ErrorResume(True)
+F.Intrinsic.Control.ClearErrors
+F.Intrinsic.String.Split(V.Screen.F_Advance!trvData.SelectedItemKey,"*!*",V.Local.skey)
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	F.Intrinsic.ui.Msgbox("No item is selected")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.endif
+F.Intrinsic.Control.ErrorResume(False)
+
+F.Intrinsic.control.if(V.Local.skey.UBound,=,5)
+	Gui.f_add.txtFileNum.Text(V.Local.skey(0))
+	F.Intrinsic.Control.CallSub(Populate_grp)
+	F.Intrinsic.Control.If(V.local.skey(3).ucase,<>,"HTTP")
+		Gui.f_add.optFile.Value(true)
+		F.Intrinsic.String.Right(V.Local.skey(1),1,V.Local.shold)
+		F.Intrinsic.Control.If(V.Local.shold,=,"\")
+			F.Intrinsic.String.Concat(V.Local.sKey(1),V.Local.sKey(2),V.Local.shold)
+		F.Intrinsic.Control.ElseIf(V.Local.shold,<>,"\")
+			F.Intrinsic.String.Concat(V.Local.sKey(1),"\",V.Local.sKey(2),V.Local.shold)
+		F.Intrinsic.Control.endif
+	F.Intrinsic.Control.Else
+		Gui.f_add.optLink.Value(true)
+		V.Local.shold.Set(V.Local.skey(2))
+	F.Intrinsic.Control.endif
+	Gui.f_add.txtFile.Text(V.Local.shold)
+
+	V.Local.igrp.Set(-1)
+	Gui.F_Advance.htmlX.Navigate("about:blank")
+	Gui.f_advance.tabx1.SetTab(0)
+	Gui.f_advance.tabx1.Caption("File: ")
+	F.Intrinsic.Control.If(V.Local.skey(5),=,True)
+		Gui.f_add.chkRev.Value(1)
+	F.Intrinsic.Control.Else
+		Gui.f_add.chkRev.Value(0)
+	F.Intrinsic.Control.EndIf
+	'Gui.f_add.txtFile.Enabled(False)
+	Gui.f_add.txtFile.Locked(True)
+	Gui.f_add.cmdBrowseFile.Enabled(False)
+	Gui.f_add.cmdBrowseFile.Visible(False)
+	Gui.f_add.optFile.Enabled(False)
+	Gui.f_add.optLink.Enabled(False)
+	Gui.f_add.txtFile.ForeColor(v.Color.White)
+	Gui.f_add.txtFile.Enabled(False)
+	
+	F.Intrinsic.string.Concat("SELECT DESCRIPTION, GRP_ID FROM ATG_DOC_ASSOC WHERE FILE_NUM = ",V.Local.skey(0),V.Local.shold)
+	F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.shold)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+		Gui.f_add.txtDescription.Text(V.ODBC.conX!rst.FieldValTrim!descRiption)
+		V.Local.igrp.Set(V.ODBC.conX!rst.FieldVal!GRP_ID)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.Close
+	F.Intrinsic.Control.If(V.Local.igrp,<>,-1)
+		F.Intrinsic.string.Concat("SELECT GRP_NAME FROM ATG_DOC_GRP WHERE GRP_ID = ",V.Local.igrp.String,V.Local.shold)
+		F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.shold)
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+			F.Intrinsic.string.Concat(V.Local.igrp.String," - ",V.ODBC.conX!rst.FieldValTrim!GRP_NAME,V.Local.shold)
+			Gui.f_add.dpGrp.text(V.Local.shold)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conX!rst.Close
+	F.Intrinsic.Control.EndIf
+	Gui.f_add..Show
+F.Intrinsic.Control.endif
+
+Program.Sub.cmdedit_click.End
+
+Program.Sub.cmdAdd_click.Start
+Gui.f_add.txtFileNum.Text("-1")
+Gui.F_Advance.htmlX.Navigate("about:blank")
+Gui.f_advance.tabx1.SetTab(0)
+Gui.f_add.cmdBrowseFile.Visible(True)
+Gui.f_add.txtDescription.Text("")
+Gui.f_add.txtFile.Text("")
+Gui.f_add.optFile.Value(true)
+Gui.f_add.chkRev.Value(0)
+Gui.f_add.txtFile.Enabled(True)
+Gui.f_add.txtFile.Locked(False)
+Gui.f_add.cmdBrowseFile.Enabled(True)
+Gui.f_add.optFile.Enabled(True)
+Gui.f_add.optLink.Enabled(True)
+
+Gui.f_add.txtFile.ForeColor(v.Color.Black)
+Gui.f_add.txtFile.Enabled(True)
+	
+'F.Intrinsic.Control.CallSub(Populate_grp)
+Gui.f_add..Show
+
+Program.Sub.cmdAdd_click.End
+
+Program.Sub.print_all.Start
+V.Local.sQuery.Declare(String)
+V.Local.shold.Declare(String)
+
+F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.global.iActiveLinkID," ORDER BY FILE_TYPE",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+F.Intrinsic.Control.dountil(V.odbc.conX!rst.EOF,=,True)
+	F.Intrinsic.String.Right(V.odbc.conX!rst.FieldValtrim!PATH,1,V.Local.shold)
+	F.Intrinsic.Control.If(V.Local.shold,=,"\")
+		F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValtrim!PATH,V.odbc.conX!rst.FieldValtrim!FILE,V.Local.shold)
+	F.Intrinsic.Control.ElseIf(V.Local.shold,<>,"\")
+		F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValtrim!PATH,"\",V.odbc.conX!rst.FieldValtrim!FILE,V.Local.shold)
+	F.Intrinsic.Control.endif
+	F.Global.DocumentControl.PrintDocument(V.Local.shold)
+	F.odbc.conX!rst.MoveNext
+F.Intrinsic.Control.Loop
+
+F.ODBC.conX!rst.Close
+
+Program.Sub.print_all.End
+
+Program.Sub.cmdremove_click.Start
+V.Local.skey.Declare(String)
+V.Local.shold.Declare(String)
+V.Local.sret.Declare(String)
+V.Local.squery.Declare(String)
+V.local.bRet.Declare(Boolean)
+V.Local.sGroupName.Declare(string)
+V.Local.sZippedFQP.Declare(string)
+V.Local.sFQP.Declare(string)
+V.Local.sFileName.Declare(string)
+V.Local.iFQPLength.Declare(long)
+V.Local.iFileLength.Declare(long)
+
+'skey values-
+'(0) - File_Num from ATG_DOC_ASSOC
+'(1) - Path
+'(2) - File
+'(3) - File extension
+'(4) - ?
+'(5) - ?
+
+'added as flag to let me know if there is nothing to click
+F.Intrinsic.Control.ErrorResume(True)
+F.Intrinsic.Control.ClearErrors
+F.Intrinsic.String.Split(V.Screen.F_Advance!trvData.SelectedItemKey,"*!*",V.Local.skey)
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	F.Intrinsic.ui.Msgbox("No item is selected")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.endif
+F.Intrinsic.Control.ErrorResume(False)
+
+F.Intrinsic.Control.If(V.Global.bVMS,=,True)
+
+	f.Global.VMS.isinvms(v.Local.skey(0),v.Local.bRet)
+	F.Intrinsic.Control.If(V.Local.bRet,=,True)
+		F.Intrinsic.UI.Msgbox("VMS Documents Must be Deleted from the VMS Dashboard","File is in VMS")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.control.if(V.Local.skey.UBound,=,5)
+	F.Intrinsic.String.Concat("Are you sure you want to remove the file: ",V.Local.skey(2)," ?",V.Local.shold)
+	F.Intrinsic.ui.Msgbox(V.Local.shold,"RemovingFile",4,V.Local.sret)
+	F.Intrinsic.Control.If(V.Local.sret,=,6)
+	
+		F.Intrinsic.String.Concat("SELECT UPPER(B.GRP_NAME) FROM ATG_DOC_ASSOC A LEFT JOIN ATG_DOC_GRP B ON A.GRP_ID = B.GRP_ID WHERE A.FILE_NUM = ", V.Local.skey(0), V.Local.sHold)
+		F.odbc.Connection!conX.ExecuteAndReturn(V.Local.shold, V.Local.sGroupName)
+		
+		F.Intrinsic.Control.If(V.Local.sGroupName.RTrim, =, "SECURE", AND, V.Local.skey(3), <>, "HTTP")
+			F.Intrinsic.String.Concat(V.Local.skey(1), V.Local.skey(2), ".zip", V.Local.sZippedFQP)
+			F.Intrinsic.String.Concat(V.Local.skey(1), V.Local.skey(2), V.Local.sFQP)
+			F.Intrinsic.File.GetFileNameFromFQN(V.Local.sFQP, V.Local.sFileName)
+			F.Intrinsic.String.Len(V.Local.sFileName, V.Local.iFileLength)
+			F.Intrinsic.String.Len(V.Local.sFQP, V.Local.iFQPLength)
+			F.Intrinsic.Math.Sub(V.Local.iFQPLength, V.Local.iFileLength, V.Local.iFileLength)
+			F.Intrinsic.String.Left(V.Local.sFQP, V.Local.iFileLength, V.Local.sFQP)
+			F.Intrinsic.File.Exists(V.Local.sZippedFQP, V.Local.bRet)
+			F.Intrinsic.Control.If(V.Local.bRet, =, True)
+				F.Intrinsic.Control.CallSub("DecryptDoc", "FQP", V.Local.sZippedFQP, "ExtractPath", V.Local.sFQP)
+				F.Intrinsic.File.DeleteFile(V.Local.sZippedFQP)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+		
+		F.Intrinsic.string.Concat("DELETE FROM ATG_DOC_ASSOC WHERE FILE_NUM = ",V.Local.skey(0),V.Local.shold)
+		F.odbc.Connection!conX.Execute(V.Local.shold)
+		Gui.F_Advance.htmlX.Navigate("about:blank")
+		Gui.f_advance.tabx1.SetTab(0)
+		Gui.f_advance.tabx1.Caption("File")
+		'it was duping nonrev document loads
+		F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.global.iActiveLinkID," And INV_NON_REV = '0' ORDER BY GRP_ID, FILE_TYPE, DESCRIPTION, FILE",V.Local.sQuery)
+		F.Intrinsic.Control.CallSub(Load_tree,"sQuery",V.Local.sQuery,"sParentNode","","sParentRet","")
+		F.Intrinsic.Control.CallSub(Loadnonrevdocs)
+	F.Intrinsic.Control.endif
+F.Intrinsic.Control.endif
+
+Program.Sub.cmdremove_click.End
+
+Program.Sub.create_link_advanced.Start
+V.Local.stype.Declare(String)
+V.Local.skey.Declare(String)
+V.Local.sDescription.Declare(String)
+v.Local.sVersion.Declare(String)
+
+'Get Key, Type, and Description based on passed data from hook
+F.Intrinsic.Control.If(V.caller.caller,=,"JB0986")
+	V.local.stype.Set(V.Passed.009000)
+	F.Intrinsic.control.If(V.Passed.009000.Long,=,30)
+		F.Intrinsic.String.Concat(V.Passed.009002,V.Passed.009003,V.Local.skey)
+		V.Local.sDescription.Set(V.Passed.009004)
+	F.Intrinsic.Control.ElseIf(V.Passed.009000.Long,=,25)
+		F.Intrinsic.String.Concat(V.Passed.009002,"-",V.Passed.009003,"-",V.Passed.009004,V.Local.sDescription)
+	F.Intrinsic.Control.ElseIf(V.Passed.009000.Long,=,37)
+		F.Intrinsic.String.Concat(V.Passed.009002,"-",V.Passed.009003,V.Local.sDescription)
+	F.Intrinsic.Control.ElseIf(V.Passed.009000.Long,=,20)
+		F.Intrinsic.String.Concat(V.Passed.009002,"-",V.Passed.009003,V.Local.sDescription)
+	F.Intrinsic.Control.ElseIf(V.Passed.009000.Long,=,41)
+		V.Local.sDescription.Set(V.Passed.009004)
+	F.Intrinsic.Control.ElseIf(V.Passed.009000.Long,=,62)
+		V.Local.sDescription.Set(V.Passed.009005)
+	F.Intrinsic.Control.ElseIf(V.Passed.009000.Long,<>,30)
+		V.Local.sDescription.Set(V.Passed.009003)
+	F.Intrinsic.Control.endif
+	V.Local.skey.Set(V.Passed.link-key)
+F.Intrinsic.Control.Else
+	V.Local.stype.Set(V.passed.DATA-LINK-TYPE)
+	V.Local.skey.Set(V.passed.DATA-LINK-KEY)
+	V.Local.sdescription.Set(V.passed.DATA-LINK-DESC)
+F.Intrinsic.Control.endif
+F.Intrinsic.String.LPad(V.Local.stype,"0",5,V.Local.stype)
+'F.Intrinsic.String.Replace(V.Local.skey,"'","''",V.Local.skey)
+V.Global.sType.Set(V.Local.stype)
+V.Global.skey.Set(V.Local.skey)
+
+f.Intrinsic.String.Split(v.Caller.GSSVersion,".",v.Local.sVersion)
+Function.Intrinsic.Control.If(v.Local.sVersion(0),=>,"2016")
+	f.Global.DocumentControl.GetLinkID(v.Global.sKey,v.Global.sType,v.Global.iActiveLinkID)
+f.Intrinsic.Control.Else
+	'Create reference will create a new record in the Link_Data table for the key and type, or return the existing ID.
+	F.Global.DocumentControl.CreateReference(V.Global.sKey,V.Global.sType,V.Global.iActiveLinkID)
+f.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Debug.SetLA("LinkID: ",v.Global.iActiveLinkID)
+'Update caption of the form
+F.Intrinsic.String.Concat("GSS Document Control: (",V.local.skey,")  ",V.local.sdescription,V.local.sdescription)
+Gui.F_Advance..Caption(V.Local.sDescription)
+
+Program.Sub.create_link_advanced.End
+
+Program.Sub.f_advance_resize.Start
+V.local.width.declare(Long)
+V.local.height.declare(Long)
+
+V.local.x.declare(Long)
+V.local.Y.declare(Long)
+
+Function.Intrinsic.Control.If(Variable.Screen.F_Advance.Width,<,9600)
+	Gui.F_Advance..Size(9600,Variable.Screen.F_Advance.Height)
+Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.If(Variable.Screen.F_Advance.height,<,6375)
+	Gui.F_Advance..Size(Variable.Screen.F_Advance.Width,6375)
+Function.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Math.Sub(Variable.Screen.F_Advance.Height,1445,Variable.Local.height)
+Function.Intrinsic.Math.Sub(Variable.Screen.F_Advance.Width,3615,Variable.Local.width)
+Gui.F_Advance.tabx1.Size(V.Local.width,V.local.height)
+
+
+Function.Intrinsic.Math.Sub(Variable.Screen.F_Advance!tabx1.height,535,Variable.Local.height)
+Function.Intrinsic.Math.Sub(V.Screen.F_Advance!tabx1.Width,150,Variable.Local.width)
+Gui.F_Advance.htmlX.Size(V.Local.width,V.Local.height)
+
+Function.Intrinsic.Math.Sub(V.local.height,V.Screen.f_advance!frmComment.Height,200,Variable.Local.height)
+Gui.F_Advance.TxtComent.Size(V.Local.width,V.Local.height)
+Function.Intrinsic.Math.add(V.Screen.f_advance!TxtComent.Height,50,Variable.Local.Y)
+V.Local.x.Set(50)
+Gui.f_advance.frmComment.Position(V.Local.x,V.Local.Y)
+Function.Intrinsic.Math.Sub(Variable.Screen.F_Advance.Height,2145,Variable.Local.height)
+V.Local.width.Set(V.Screen.F_Advance!trvData.Width)
+Gui.F_Advance.trvdata.Size(V.Local.width,V.Local.height)
+
+V.Local.x.Set(V.screen.F_Advance!frmX.Left)
+Function.Intrinsic.Math.Add(V.Screen.F_Advance!trvData.Height,505,Variable.Local.Y)
+Gui.F_Advance.frmX.Position(V.Local.x,V.Local.Y)
+Function.Intrinsic.Math.Add(V.Screen.F_Advance!frmX.Top,V.Screen.F_Advance!frmX.height,Variable.Local.Y)
+Gui.f_advance.lblloading.Position(V.Screen.f_advance!lblLoading.Left,V.Local.Y)
+
+F.Intrinsic.Math.Sub(V.Screen.f_advance.Width,2080,V.Local.x)
+F.Intrinsic.Math.Sub(V.Screen.f_advance.Height,1030,V.Local.Y)
+Gui.f_advance.cmdOpen.Position(V.Local.x,V.Local.Y)
+
+Program.Sub.f_advance_resize.End
+
+Program.Sub.f_advance_unload.Start
+V.Local.sQuery.Declare(String)
+V.Local.sid.Declare(String)
+V.Local.sDelete.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sEncryptionPath.Declare(string)
+v.Local.bDirectoryExists.Declare(boolean)
+
+V.Local.sDirList.Declare(string)
+V.Local.sFileList.Declare(string)
+V.Local.sPIDDir.Declare(String)
+V.Local.sFileFQP.Declare(string)
+V.Local.sError.Declare(string)
+V.Local.i.Declare(long)
+V.Local.j.Declare(long)
+V.Local.bLocked.Declare(boolean)
+
+Gui.f_advance..Visible(false)
+
+'F.Intrinsic.Control.If(V.Global.bRemove,=,True)
+	F.Intrinsic.string.Concat("SELECT FILE FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.Global.iActiveLinkID,V.Local.sQuery)
+	F.odbc.connection!conX.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,True)
+		F.Intrinsic.String.Concat("SELECT NOTE FROM LINK_NOTE WHERE LINK_ID='",V.global.iActiveLinkID,"'",V.Local.squery)
+		F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstY",V.Local.squery)
+		F.Intrinsic.Control.If(V.Odbc.conX!rstY.EOF,=,True)
+			F.Intrinsic.String.LPad(V.global.iActiveLinkID,"0",9,V.Local.sid)
+			F.Intrinsic.String.Concat("DELETE FROM LINK_DATA WHERE LINK_ID = '",V.local.sid,"'",V.Local.sQuery)
+			F.odbc.Connection!conX.execute(V.Local.sQuery)
+		F.Intrinsic.Control.endif
+		F.ODBC.conX!rstY.Close
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.close
+	F.ODBC.Connection!conX.Close
+'F.Intrinsic.control.Endif
+
+'Delete files in temp directory
+F.Intrinsic.Control.If(V.Global.sTemp.Trim,<>,"")
+	F.Intrinsic.String.Split(V.Global.sTemp,"*!*",V.Local.sDelete)
+	F.Intrinsic.String.RemoveArrayDuplicates(V.Local.sDelete,V.Local.sDelete)
+	F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sDelete.UBound,1)
+		F.Intrinsic.File.SetFileAttributes(V.Local.sDelete(v.Local.iC),0)
+		F.Intrinsic.File.DeleteFile(V.Local.sDelete(v.Local.iC))
+	F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.EndIf
+
+V.Local.iC.Set(0)
+F.Intrinsic.Control.If(V.Global.sTempDir.Trim,<>,"")
+	F.Intrinsic.String.Split(V.Global.sTempDir,"*!*",V.Local.sDelete)
+	F.Intrinsic.String.RemoveArrayDuplicates(V.Local.sDelete,V.Local.sDelete)
+	F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sDelete.UBound,1)
+		F.Intrinsic.File.SetFileAttributes(V.Local.sDelete(v.Local.iC),0)
+		F.Intrinsic.File.DeleteFile(V.Local.sDelete(v.Local.iC))
+	F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.EndIf
+
+
+'Delete any encrypted documents in temp.
+'This is a long work around due to the following:
+'For an unknown reason, if the user veiwed an encrypted pdf anytime during the process,
+'using DeleteDir function would crash. There are no file locks. Not knowing why this was,
+'we found that deleting the files from the directories worked fine, as did DeleteDir([directory], true)
+'SO LONG AS THE FILES WERE DELETED FIRST. This lead to the process...
+'For each directory in DCS, grab each file within, delete each file, then delete that directory.
+'Once all directories are deleted, delete DCS.
+F.Intrinsic.String.Build("{0}DCS\", V.Caller.LocalGSSTempDir, V.Local.sEncryptionPath)
+F.Intrinsic.File.DirExists(V.Local.sEncryptionPath, V.Local.bDirectoryExists)
+
+F.Intrinsic.Control.if(V.Local.bDirectoryExists)
+	Gui.f_advance.htmlX.Navigate("about:blank")
+	
+	F.Intrinsic.File.GetFileList(V.Local.sEncryptionPath, 16, V.Local.sDirList)
+	F.Intrinsic.String.Split(V.Local.sDirList, ":", V.Local.sDirList)
+	F.Intrinsic.Control.For(V.Local.i, 0, V.Local.sDirList.UBound, 1)
+		F.Intrinsic.String.Build("{0}{1}\",V.Local.sEncryptionPath, V.Local.sDirList(V.Local.i), V.Local.sPIDDir)
+		F.Intrinsic.File.GetFileList(V.Local.sPIDDir, , V.Local.sFileList)
+		F.Intrinsic.String.Split(V.Local.sFileList, ":", V.Local.sFileList)
+		F.Intrinsic.Control.For(V.Local.j, 0, V.Local.sFileList.UBound, 1)
+			F.Intrinsic.Control.If(V.Local.sFileList(V.Local.j), <>, "")
+				F.Intrinsic.String.Build("{0}{1}",V.Local.sPIDDir, V.Local.sFileList(V.Local.j), V.Local.sFileFQP)
+				
+				F.Intrinsic.Control.Try
+				
+					F.Intrinsic.File.IsFileLocked(V.Local.sFileFQP, V.Local.bLocked)
+					F.Intrinsic.Control.If(V.Local.bLocked, <>, True)
+						F.Intrinsic.File.DeleteFile(V.Local.sFileFQP)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.Catch
+					F.Intrinsic.String.Build("Could not delete file: {0}", V.Local.sFileFQP, V.Local.sError)
+					F.Intrinsic.Debug.SetLA(V.Local.sError)
+				F.Intrinsic.Control.EndTry
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.If(V.Local.sFileList.UBound, =, V.Local.j)
+				F.Intrinsic.Control.Try
+					F.Intrinsic.File.DeleteDir(V.Local.sPIDDir)
+				F.Intrinsic.Control.Catch
+					F.Intrinsic.String.Build("Could not delete directory: {0}", V.Local.sPIDDir, V.Local.sError)
+					F.Intrinsic.Debug.SetLA(V.Local.sError)
+				F.Intrinsic.Control.Endtry	
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.j)
+	F.Intrinsic.Control.Next(V.Local.i)
+	
+	F.Intrinsic.Control.Try
+		F.Intrinsic.File.DeleteDir(V.Local.sEncryptionPath)
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Could not delete directory: {0}", V.Local.sEncryptionPath, V.Local.sError)
+		F.Intrinsic.Debug.SetLA(V.Local.sError)
+	F.Intrinsic.Control.EndTry
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.End
+
+Program.Sub.f_advance_unload.End
+
+Program.Sub.trvdata_nodeclick.Start
+V.Local.skey.Declare(String)
+V.Local.iTab.Declare(Long)
+V.Local.iTemp.Declare(Long)
+V.Local.sFile.Declare(String)
+V.Local.shold.Declare(String)
+V.Local.sRight.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sInfo.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.local.bRet.Declare(Boolean)
+V.Local.iRet.Declare(Long)
+V.Local.bCompressed.Declare(Boolean)
+V.Local.sZipped.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.sTempDir.Declare(String)
+V.Local.sUser.Declare(String)
+V.Local.iSecurity.Declare(Long)
+V.Local.sGroupName.Declare(string)
+V.Local.bUseEncryption.Declare(boolean)
+V.Local.sPassword.Declare(string)
+V.Local.sExtractPath.Declare(string)
+V.Local.sZipFileName.Declare(string)
+V.Local.sZippedFQP.Declare(string)
+v.Local.iGrpId.Declare(long)
+
+'skey values-
+'(0) - File_Num from ATG_DOC_ASSOC
+'(1) - Path
+'(2) - File
+'(3) - File extension
+'(4) - ?
+'(5) - ?
+
+Gui.f_advance.lblLoading.caption("Loading Document...")
+Gui.F_Advance.htmlX.Navigate("about:blank")
+
+f.Intrinsic.Control.If(v.Ambient.isGab1,=,True)
+	F.Intrinsic.String.Split(V.Args.nodekey,"*!*",V.Local.skey)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Args.key,"*!*",V.Local.skey)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.control.if(V.Local.skey.UBound,=,5)
+	'Re-enable Edit/VMS buttons that possibly were disabled from previous selection
+'	Gui.f_advance.cmdVMS.Enabled(True)
+'	Gui.f_advance.cmdEdit.Enabled(True)
+	
+	'disable form until event finishes
+	'Gui.f_advance..Enabled(false)
+
+	V.Global.sFile.Set(V.Local.skey(2))
+
+	F.Intrinsic.Control.If(V.Global.bVMS,=,True)
+		F.Intrinsic.String.Concat("Select * From VMS_FILE_TYPE where Extension='",V.Local.skey(3).ucase,"'",V.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+			V.Global.iExt.set(V.ODBC.conx!rst.FieldVal!TID)
+		F.Intrinsic.Control.Else
+			V.Global.iExt.Set(0)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rst.Close
+
+		V.Local.itemp.set(V.Local.skey(0))
+		'Check to see if doc control file is in VMS
+		f.Global.VMS.IsInVMS(v.local.iTemp,v.Local.bRet)
+	F.Intrinsic.Control.Else
+		V.Local.bRet.Set(False)
+	F.Intrinsic.Control.EndIf
+	
+	
+	'if file is in VMS
+	F.Intrinsic.Control.If(V.Local.bRet,=,True)
+		'Check Security for the file type
+		F.Global.Security.GetUserID(V.Caller.User,V.Caller.CompanyCode,V.Local.sUser)
+		F.Intrinsic.String.Split(V.Local.sUser,"*!*",V.Local.sUser)
+		F.Intrinsic.control.If(V.local.sUser(0),<>,"***NORETURN***")
+			V.Local.sUser.Set(V.Local.sUser(0))
+		F.Intrinsic.control.Else
+			V.Local.sUser.Set(V.Local.sUser(0))
+		F.Intrinsic.control.EndIf
+		
+		
+		
+		
+		F.Intrinsic.Debug.SetLA("Extension ID:",V.Global.iExt," Link Type:",V.Global.sType.Long," User ID:",V.Local.sUser.Long)
+		F.Global.VMS.GetSecurity(V.Global.iExt,V.Global.sType.Long,V.Local.sUser.Long,V.Local.iSecurity)
+		F.Intrinsic.Debug.SetLA("Return: ",V.Local.iSecurity)
+		F.Intrinsic.Control.If(V.Local.iSecurity,>,0)
+			Gui.f_advance.cmdVMS.Enabled(True)
+		F.Intrinsic.Control.Else
+			Gui.f_advance.cmdVMS.Enabled(False)
+		F.Intrinsic.Control.EndIf
+
+
+		F.Intrinsic.UI.Msgbox("Do you want to open a Read Only copy of this file?","VMS File",4,V.Local.iRet)
+		
+		
+		'yes
+		F.Intrinsic.Control.If(V.Local.iRet,=,6)
+			'Get the Shadow Dir
+			F.global.vms.getshadowdirectory(v.Local.skey(3),v.Local.sFile)
+			
+			
+			F.Intrinsic.Control.If(V.Local.sFile.Trim,<>,"")
+				F.Intrinsic.String.Trim(V.Local.sFile,V.Local.sFile)
+				F.Intrinsic.String.Right(V.Local.sFile,1,V.Local.shold)
+				
+				
+				F.Intrinsic.Control.If(V.Local.shold,=,"\")
+					F.Intrinsic.String.Concat(V.Local.shold,V.Local.sKey(2),V.Local.shold)
+				F.Intrinsic.Control.ElseIf(V.Local.shold,<>,"\")
+					F.Intrinsic.String.Concat(V.Local.shold,"\",V.Local.sKey(2),V.Local.shold)
+				F.Intrinsic.Control.endif
+				
+				
+				F.Intrinsic.File.Exists(V.Local.shold,V.Local.bExists)
+				F.Intrinsic.Control.If(V.Local.bExists,=,True)
+					V.local.sfile.set(V.local.shold)
+					V.Global.sPath.Set(V.Local.shold)
+				F.Intrinsic.Control.Else
+					V.Local.sFile.Set("")
+				
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+			
+			
+			
+			F.Intrinsic.Control.If(V.Local.sFile.Trim,=,"")
+				'Save blob2file and open in read only
+				f.Intrinsic.String.Concat(v.Caller.LocalGSSTempDir,v.Local.skey(2),v.Local.shold)
+				'Check to make sure the file doesn't already exist in the temp dir
+				F.Intrinsic.File.Exists(V.Local.shold,V.Local.bExists)
+				
+				
+				F.Intrinsic.Control.If(V.Local.bExists,=,False)
+					F.Intrinsic.String.Concat("Select File, Compressed from VMS_ACTIVE where FID='",V.Local.skey(0),"'",V.Local.sSQL)
+					F.ODBC.Connection!conX.OpenLocalRecordsetRW("rstVMS",V.Local.sSQL)
+					
+					
+					F.Intrinsic.Control.If(V.ODBC.conX!rstVMS.EOF,=,False)
+						F.Intrinsic.Control.If(V.ODBC.conx!rstVMS.FieldVal!Compressed,=,True)
+							F.Intrinsic.String.Concat(V.Local.sHold,".zip",V.Local.sZipped)
+							V.local.bCompressed.Set(True)
+							f.ODBC.conX!rstVMS.SaveBLOBtoFile("FILE",v.Local.sZipped)
+						F.Intrinsic.Control.Else
+							f.ODBC.conX!rstVMS.SaveBLOBtoFile("FILE",v.Local.sHold)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf
+					F.ODBC.conX!rstVMS.Close
+					
+					
+					'Compressed
+					F.Intrinsic.Control.If(V.Local.bCompressed,=,True)
+						F.Automation.Zip.UnZip(V.Local.sZipped,V.Local.sHold)
+						V.Local.sTempDir.Set(V.Local.shold)
+						F.Intrinsic.String.Concat(V.Local.shold,"\",V.Local.skey(2),V.Local.shold)
+						F.Intrinsic.File.Exists(V.Local.sHold,V.Local.bExists)
+						F.Intrinsic.Control.If(V.Local.bExists,=,True)
+							'Delete Zipped File
+							F.Intrinsic.File.DeleteFile(V.Local.sZipped)
+						F.Intrinsic.Control.Else
+							'Unzip not successful
+							F.Intrinsic.UI.Msgbox("File Failed to Unzip")
+							Gui.f_advance.lblLoading.caption("")
+							F.Intrinsic.Control.ExitSub
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf
+
+					
+					F.Intrinsic.File.SetFileAttributes(V.Local.shold,1)
+					'Add to array of temp files
+					F.Intrinsic.Control.If(V.Global.sTemp,<>,"")
+						F.Intrinsic.String.Concat(V.Global.sTemp,"*!*",V.Local.shold,V.Global.sTemp)
+					F.Intrinsic.Control.Else
+						V.Global.sTemp.Set(V.Local.shold)
+					F.Intrinsic.Control.EndIf
+					
+					
+					F.Intrinsic.Control.If(V.Local.sTempDir,<>,"")
+						F.Intrinsic.Control.If(V.Global.sTempDir,<>,"")
+							F.Intrinsic.String.Concat(V.Global.sTempDir,"*!*",V.Local.sTempDir,V.Global.sTempDir)
+						F.Intrinsic.Control.Else
+							V.Global.sTempDir.Set(V.Local.sTempDir)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf
+					
+					
+				F.Intrinsic.Control.EndIf
+				V.Local.sFile.Set(V.Local.shold)
+			F.Intrinsic.Control.EndIf
+			'DRH
+			Gui.f_advance.cmdOpen.enabled(True)
+			'DRH
+			V.Global.sPath.Set(V.Local.sFile)
+		
+		'No
+		F.Intrinsic.Control.Else
+			'DRH
+			Gui.f_advance.cmdOpen.enabled(False)
+			Gui.f_advance.lblLoading.caption("")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+
+	
+	'File is not in VMS
+	F.Intrinsic.Control.Else
+
+		'Open as usual
+		Gui.f_advance.cmdOpen.enabled(True)
+		
+		'if not HTTP
+		F.Intrinsic.Control.If(V.Local.skey(3).ucase,<>,"HTTP")
+			
+			'create FQP for file and store in sHold
+			F.Intrinsic.String.Right(V.Local.skey(1),1,V.Local.shold)
+			F.Intrinsic.Control.If(V.Local.shold,=,"\")
+				F.Intrinsic.String.Concat(V.Local.sKey(1),V.Local.sKey(2),V.Local.shold)
+			F.Intrinsic.Control.ElseIf(V.Local.shold,<>,"\")
+				F.Intrinsic.String.Concat(V.Local.sKey(1),"\",V.Local.sKey(2),V.Local.shold)
+			F.Intrinsic.Control.endif
+			
+			F.Intrinsic.IPM.GenericMenuIPM(11800,"400805*!*0*!*0*!*0",V.Local.bUseEncryption)
+			'F.Global.General.ReadOptionCommon(400805, 0, 0, 0, false, V.Local.bUseEncryption)
+			
+			F.Intrinsic.Control.If(V.Local.bUseEncryption)
+				'Check if Group is Secure
+				'F.Intrinsic.String.Build("SELECT UPPER(GRP_NAME) AS GRP_NAME FROM ATG_DOC_GRP A LEFT JOIN ATG_DOC_ASSOC B ON A.GRP_ID = B.GRP_ID WHERE B.FILE_NUM = {0}", V.Local.skey(0), V.Local.sSQL)
+				F.Intrinsic.String.Build("SELECT GRP_ID FROM ATG_DOC_ASSOC WHERE FILE_NUM = {0}", V.Local.skey(0), V.Local.sSQL)
+				F.ODBC.Connection!conX.ExecuteAndReturn(V.Local.sSQL, V.Local.iGrpId)
+				F.Intrinsic.String.Build("SELECT UPPER(GRP_NAME) AS GRP_NAME FROM ATG_DOC_GRP WHERE GRP_ID = {0}", V.Local.iGrpId, V.Local.sSQL)				
+				F.ODBC.Connection!conX.ExecuteAndReturn(V.Local.sSQL, V.Local.sGroupName)
+				
+				F.Intrinsic.String.Concat(V.Local.shold, ".zip", V.Local.sZipFileName)
+				F.Intrinsic.File.Exists(V.Local.sZipFileName, V.Local.bExists)
+				
+				F.Intrinsic.Control.If(V.Local.sGroupName.Rtrim, =, "SECURE", AND, V.Local.bExists, =, True)
+					Gui.f_advance.cmdVMS.Enabled(False)
+					Gui.f_advance.cmdEdit.Enabled(False)
+					
+					F.Intrinsic.String.Build("{0}DCS\{1}", V.Caller.LocalGSSTempDir, V.Ambient.PID, V.Local.sExtractPath)
+					F.Intrinsic.String.Build("{0}.zip", V.Local.shold, V.Local.sZippedFQP)
+					F.Intrinsic.Control.CallSub("DecryptDoc", "FQP", V.Local.sZippedFQP, "ExtractPath", V.Local.sExtractPath)
+				
+					'Set sKey Path and sHold to the new unzipped location (Temp/GSS/[PID]) for further processing
+					V.Local.skey(1).Set(V.Local.sExtractPath)
+					
+					'remake sHold FQP with new sKey Values
+					F.Intrinsic.String.Right(V.Local.skey(1),1,V.Local.shold)
+					F.Intrinsic.Control.If(V.Local.shold,=,"\")
+						F.Intrinsic.String.Concat(V.Local.sKey(1),V.Local.sKey(2),V.Local.shold)
+					F.Intrinsic.Control.ElseIf(V.Local.shold,<>,"\")
+						F.Intrinsic.String.Concat(V.Local.sKey(1),"\",V.Local.sKey(2),V.Local.shold)
+					F.Intrinsic.Control.endif
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+			
+			
+			V.local.sfile.set(V.local.shold)
+			V.Global.sPath.Set(V.Local.shold)
+		
+		'if HTTP
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Left(V.Local.skey(2),4,V.Local.shold)
+			F.Intrinsic.Control.If(V.Local.shold.Ucase,<>,"HTTP")
+				F.Intrinsic.string.Concat("http://",V.Local.skey(2),V.Local.skey(2))
+			F.Intrinsic.Control.endif
+			V.Global.sPath.Set("")
+			V.local.sfile.set(V.local.skey(2))
+		F.Intrinsic.Control.endif
+	F.Intrinsic.Control.EndIf
+
+
+	Gui.f_advance.tabx1.SetTab(0)
+	F.Intrinsic.String.Replace(V.Local.skey(2),"&","&&",V.Local.shold)
+	F.Intrinsic.String.Concat("File: ",V.Local.shold,V.Local.shold)
+	Gui.f_advance.tabx1.Caption(V.Local.shold)
+	Gui.f_advance.tabx1.Visible(true)
+
+	F.Intrinsic.Control.If(V.local.skey(3),<>,"HTTP")
+
+		F.Intrinsic.Control.If(V.Local.skey(3),<>,"","and",v.Local.skey(3),<>,"DIR")
+
+			F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+			F.Intrinsic.Control.If(V.local.bExists,=,False)
+				F.Intrinsic.Debug.SetLA(V.Local.sFile)
+				F.Intrinsic.UI.Msgbox("Could not navigate to file. File does not exist.")
+				Gui.f_advance.lblLoading.caption("")
+				Gui.f_advance..Enabled(true)
+				F.Intrinsic.Control.ExitSub
+			F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.Else
+
+			F.Intrinsic.File.DirExists(V.Local.sFile,V.Local.bExists)
+			F.Intrinsic.Control.If(V.local.bExists,=,False)
+				F.Intrinsic.Debug.SetLA(V.Local.sFile)
+				F.Intrinsic.UI.Msgbox("Could not navigate to directory. Directory does not exist.")
+				Gui.f_advance.lblLoading.caption("")
+				Gui.f_advance..Enabled(true)
+				F.Intrinsic.Control.ExitSub
+			F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Debug.SetLA(V.Ambient.GABVersion)
+
+	F.Intrinsic.Control.If(V.Global.bExecute,=,False)
+		F.Intrinsic.Debug.SetLA(V.Local.sFile)
+		f.Intrinsic.Control.If(v.Ambient.isGab1,=,True)
+			F.Intrinsic.Control.If(V.Ambient.GABVersion,=>,"1000703")
+				Gui.f_advance.htmlX.Navigate(V.local.sfile,False)
+			F.Intrinsic.Control.Else
+				Gui.f_advance.htmlX.Navigate(V.local.sfile)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Else
+			Gui.f_advance.htmlX.Navigate(V.local.sfile,False)
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Right(V.local.sFile,3,V.Local.sRight)
+		F.Intrinsic.Control.If(V.Local.sRight.Ucase,=,"JPG")
+		F.Intrinsic.Debug.SetLA(V.Local.sFile)
+			F.Intrinsic.task.ShellExec(V.Caller.Handle,"OPEN",V.Local.sFile.StrLit,"","",5)
+		F.Intrinsic.Control.Else
+		F.Intrinsic.Debug.SetLA(V.Local.sFile)
+			F.Intrinsic.Control.If(V.Ambient.GABVersion,=>,"1000703")
+				Gui.f_advance.htmlX.Navigate(V.local.sfile,False)
+			F.Intrinsic.Control.Else
+				Gui.f_advance.htmlX.Navigate(V.local.sfile)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.control.Endif
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.endif
+
+Gui.f_advance..Enabled(true)
+Gui.f_advance.lblLoading.caption("")
+
+
+Program.Sub.trvdata_nodeclick.End
+
+Program.Sub.DecryptDoc.Start
+'Takes Arguments: FQP, ExtractToPath
+V.Local.sExtension.Declare(string)
+V.Local.sPassword.Declare(string)
+
+F.Intrinsic.Control.Try
+	F.Intrinsic.String.Right(V.Args.FQP, 4, V.Local.sExtension)
+	F.Intrinsic.Control.If(V.Local.sExtension.UCase, <>, ".ZIP")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.IPM.GenericMenuIPM(11800,"400805*!*0*!*1*!*1",V.Local.sPassword)
+	'F.Global.General.ReadOptionCommon(400805, 0, 1, 1, "", V.Local.sPassword
+	F.Intrinsic.Control.If(V.Local.sPassword, <>, "-1")
+		F.Automation.ZIPPro.SetProperty("ARCHIVEFILE", 0, V.Args.FQP)
+		F.Automation.ZIPPro.SetProperty("PASSWORD", 0, V.Local.sPassword)
+		F.Automation.ZIPPro.SetProperty("ExtractToPath", 0, V.Args.ExtractPath)
+		F.Automation.ZIPPro.ExtractAll()
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.UI.Msgbox("Could not decrypt file.")
+F.Intrinsic.Control.EndTry
+
+Program.Sub.DecryptDoc.End
+
+Program.Sub.load_tree.Start
+V.Local.sQuery.Declare(String)
+V.Local.sType.Declare(String)
+V.Local.sTypeKey.Declare(String)
+V.Local.sGrpType.Declare(String)
+V.Local.shold.Declare(String)
+V.Local.sKey.Declare(String)
+V.Local.sGrp.Declare(String)
+V.Local.bRet.Declare(Boolean)
+V.Local.sGrpAdded.Declare(String)
+V.Local.sgrpkey.Declare(String)
+V.Local.sTitle.Declare(String)
+
+'Gui.f_advance.trvData.Visible(False)
+
+V.Local.sGrpHold.Declare(String)
+V.Local.iRet.Declare(Long)
+F.Intrinsic.Control.ErrorResume(True)
+F.Intrinsic.Control.If(V.Args.sParentNode,=,"")
+	Gui.F_Advance.trvData.ClearItems
+F.Intrinsic.Control.EndIf
+
+V.Local.sQuery.Set(V.Args.squery)
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.local.sQuery)
+
+
+F.Intrinsic.Control.dountil(V.odbc.conX!rst.EOF,=,True)
+
+	F.Intrinsic.Debug.SetLA(V.odbc.conX!rst.FieldValLong!grp_ID)
+	F.Intrinsic.Debug.SetLA(V.Local.sGrp.Long)
+'	
+	F.Intrinsic.Control.If(V.Caller.User,<>,"SUPERVSR")
+
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.FieldValLong!grp_ID,=,-1)
+			V.Local.bRet.Set(True)
+		F.Intrinsic.Control.ElseIf(V.Local.sGrp.Long,<>,V.odbc.conX!rst.FieldValLong!grp_ID)
+			V.Local.sGrp.Set(V.ODBC.conX!rst.FieldValLong!grp_id)
+			F.Intrinsic.Control.CallSub(Check_grp_security,"group",V.Local.sGrp)
+			V.Local.bRet.Set(V.Args.bRet)
+		F.Intrinsic.Control.Else
+			V.Local.bRet.Set(V.Args.bRet)
+		F.Intrinsic.Control.endif
+	F.Intrinsic.Control.ElseIf(V.Caller.User,=,"SUPERVSR")
+		V.Local.bRet.Set(True)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Local.bRet,=,True)
+		F.Intrinsic.String.Concat("SELECT GRP_NAME FROM ATG_DOC_GRP WHERE GRP_ID = ",V.ODBC.conX!rst.FieldValtrim!Grp_ID,V.Local.sQuery)
+		F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstM",V.Local.squery)
+		F.Intrinsic.Control.If(V.ODBC.conX!rstM.EOF,=,False)
+			F.Intrinsic.Control.If(V.Local.sgrpType,<>,V.ODBC.conX!rstM.FieldValtrim!GRP_Name)
+				V.Local.sGrpType.Set(V.ODBC.conX!rstM.FieldValtrim!Grp_name)
+				F.Intrinsic.String.UCase(V.Local.sGrpType,V.Local.sGrpType)
+				F.Intrinsic.String.Concat("'",V.Local.sGrpType,"'",V.Local.sGrpHold)
+				F.Intrinsic.String.Instr(V.Local.sGrpAdded,V.Local.sGrpHold,V.Local.iRet)
+				F.Intrinsic.Control.If(V.Local.iRet,=,0)
+					F.intrinsic.string.concat(V.Local.sGrpType,"!",V.args.sparentnode,V.Local.sGrpKey)
+					F.Intrinsic.Control.If(V.Args.sparentnode.trim,=,"")
+						Gui.F_Advance.trvData.AddNode(V.Args.sParentNode,"",V.Local.sgrpkey,V.Local.sgrpType.ucase,V.global.bExpand)
+					F.Intrinsic.Control.Else
+						Gui.F_Advance.trvData.AddNode("NON_REV",4,V.Local.sgrpkey,V.Local.sgrpType.ucase,V.global.bExpand)
+					F.Intrinsic.Control.endif
+					F.Intrinsic.String.Concat(V.Local.sGrpAdded,V.Local.sGrpHold,V.Ambient.Tab,V.Local.sGrpAdded)
+				F.intrinsic.control.endif
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.If(V.Local.sgrpType,<>,"No Group Associated")
+
+				V.local.sgrpType.Set("No Group Associated")
+				F.Intrinsic.String.Concat("'",V.Local.sGrpType,"'",V.Local.sGrpHold)
+				F.Intrinsic.String.Instr(V.Local.sGrpAdded,V.Local.sGrpHold,V.Local.iRet)
+				F.Intrinsic.Control.If(V.Local.iRet,=,0)
+					F.intrinsic.string.concat(V.Local.sGrpType,"!",V.args.sparentnode,V.Local.sGrpKey)
+					F.Intrinsic.Control.If(V.Args.sparentnode.trim,=,"")
+						Gui.F_Advance.trvData.AddNode(V.Args.sParentNode,"",V.Local.sgrpkey,V.Local.sgrpType.ucase,V.global.bExpand)
+					F.Intrinsic.Control.Else
+						Gui.F_Advance.trvData.AddNode("NON_REV",4,V.Local.sgrpkey,V.Local.sgrpType.ucase,V.global.bExpand)
+					F.Intrinsic.Control.endif
+					F.Intrinsic.String.Concat(V.Local.sGrpAdded,V.Local.sGrpHold,V.Ambient.Tab,V.Local.sGrpAdded)
+				F.intrinsic.control.endif
+			F.Intrinsic.Control.endif
+		F.Intrinsic.Control.EndIf
+		F.odbc.conX!rstM.Close
+
+		F.Intrinsic.Control.If(V.Local.sType,<>,V.ODBC.conX!rst.FieldValTrim!file_type)
+			V.Local.sType.Set(V.ODBC.conX!rst.FieldValtrim!FILE_type)
+			F.Intrinsic.String.UCase(V.Local.sType,V.Local.sType)
+		F.Intrinsic.Control.endif
+
+		F.Intrinsic.string.Concat(V.Local.sType,"*!*",V.Local.sGrpkey,V.Local.shold)
+		F.Intrinsic.Control.If(V.Local.sTypeKey,<>,V.Local.shold)
+			F.Intrinsic.string.Concat(V.Local.sType,"*!*",V.Local.sGrpkey,V.Local.sTypeKey)
+			Gui.F_Advance.trvData.AddNode(V.Local.sGrpkey,4,V.Local.stypeKey,V.Local.sType.ucase,V.global.bExpand)
+		F.Intrinsic.Control.EndIf
+
+
+		F.Intrinsic.string.Concat(V.odbc.conX!rst.FieldValTrim!FILE_NUM,"*!*",V.odbc.conX!rst.FieldValtrim!PATH,"*!*",V.ODBC.conX!rst.FieldValTrim!FILE,"*!*",V.ODBC.conX!rst.FieldValTrim!FILE_TYPE,"*!*",V.args.sparentnode,"*!*",V.ODBC.conX!rst.FieldVal!INV_NON_REV,V.Local.sKey)
+
+
+		F.Intrinsic.Control.If(V.Global.bVMS,=,True)
+			f.Global.VMS.isinvms(V.odbc.conX!rst.FieldValTrim!FILE_NUM,v.local.bRet)
+		F.Intrinsic.Control.Else
+			V.Local.bRet.set(False)
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.If(V.Local.bRet,=,True)
+			F.Intrinsic.Control.CallSub(Vms_info,"iFID",V.odbc.conX!rst.FieldValTrim!FILE_NUM)
+			F.Intrinsic.Variable.ArgExists("sStat",V.Local.bRet)
+			F.Intrinsic.Control.If(V.Local.bRet,=,True)
+				V.Local.sTitle.Set(V.Args.sStat)
+			F.Intrinsic.Control.Else
+				V.Local.sTitle.Set("")
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Else
+			V.Local.sTitle.Set("")
+		F.Intrinsic.Control.EndIf
+
+
+
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.FieldValTrim!DESCRIPTION,<>,"")
+			F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValTrim!Description,V.Local.sTitle,V.Local.sTitle)
+			Gui.F_Advance.trvData.AddNode(V.Local.sTypeKey,4,V.Local.sKey,V.Local.sTitle,V.global.bExpand)
+			F.Intrinsic.Debug.SetLA("Type:",V.Local.sTypeKey," Mode:4 Key:",V.Local.sKey," Title:",V.Local.sTitle," Expand:",V.global.bExpand)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.ODBC.conX!rst.FieldValTrim!FILE,V.Local.sTitle,V.Local.sTitle)
+			Gui.F_Advance.trvData.AddNode(V.Local.sTypeKey,4,V.Local.sKey,V.Local.sTitle,V.global.bExpand)
+			F.Intrinsic.Debug.SetLA("Type:",V.Local.sTypeKey," Mode:4 Key:",V.Local.sKey," Title:",V.Local.sTitle," Expand:",V.global.bExpand)
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.endif
+	F.odbc.conX!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.Intrinsic.Control.ErrorResume(False)
+
+F.ODBC.conX!rst.Close
+
+'Gui.f_advance.trvData.Visible(True)
+
+
+Program.Sub.load_tree.End
+
+Program.Sub.f_print_unload.Start
+Gui.f_print..Visible(false)
+
+Program.Sub.f_print_unload.End
+
+Program.Sub.print_current.Start
+V.Local.sret.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iRet.Declare(Long)
+V.Local.skey.Declare(String)
+V.Local.shold.Declare(String)
+F.Intrinsic.Control.ErrorResume(True)
+
+f.Intrinsic.Control.If(v.Global.sPath,<>,"")
+	F.Global.DocumentControl.PrintDocument(V.Global.spath)
+Function.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Screen.F_Advance!trvData.SelectedItemKey,"*!*",V.Local.skey)
+	F.Intrinsic.Control.ErrorResume(False)
+	F.Intrinsic.control.if(V.Local.skey.UBound,>=,3)
+		F.Intrinsic.String.Right(V.Local.skey(1),1,V.Local.shold)
+		F.Intrinsic.Control.If(V.Local.shold,=,"\")
+			F.Intrinsic.String.Concat(V.Local.sKey(1),V.Local.sKey(2),V.Local.shold)
+		F.Intrinsic.Control.ElseIf(V.Local.shold,<>,"\")
+			F.Intrinsic.String.Concat(V.Local.sKey(1),"\",V.Local.sKey(2),V.Local.shold)
+		F.Intrinsic.Control.endif
+		F.Intrinsic.String.Left(V.Local.shold,4,V.Local.shold)
+		F.Intrinsic.Control.If(V.Local.skey(3).UCase,=,"HTTP")
+			Gui.f_advance.htmlX.ExecWB(6,2)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.Local.sKey(1),"\",V.Local.sKey(2),V.Local.shold)
+			F.Global.DocumentControl.PrintDocument(V.local.shold)
+		F.Intrinsic.Control.endif
+	F.Intrinsic.Control.endif
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.print_current.End
+
+Program.Sub.cmdprintfiles_click.Start
+F.Intrinsic.Control.CallSub("EnableScreens", "isEnabled", False)
+
+F.Intrinsic.Control.If(V.Screen.f_print!optAll.Value,=,True)
+	F.Intrinsic.Control.CallSub(Print_all)
+F.Intrinsic.Control.ElseIf(V.Screen.f_print!optCurrent.value,=,True)
+	F.Intrinsic.Control.CallSub(Print_current)
+F.Intrinsic.Control.ElseIf(V.Screen.f_print!optPrintSelected.value,=,True)
+	F.Intrinsic.Control.CallSub(Print_selected)
+F.Intrinsic.Control.ElseIf(V.Screen.f_print!optComment.Value,=,True)
+
+	f.Intrinsic.Control.CallSub(cmdprintlinkcomment_click)
+
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub("EnableScreens", "isEnabled", True)
+Program.Sub.cmdprintfiles_click.End
+
+Program.Sub.print_selected.Start
+V.Local.iRet.Declare(Long)
+V.Local.sret.Declare(String)
+V.Local.squery.Declare(String)
+V.Local.bret.Declare(Boolean)
+V.Local.iC.Declare(Long)
+Gui.f_print.lvw1.RetrieveCheckedListItems(V.Local.sret)
+F.Intrinsic.Control.If(V.Local.sret,<>,"***NORETURN***")
+
+	F.Intrinsic.String.Split(V.Local.sret,"*!*",V.Local.sret)
+	F.Intrinsic.Control.For(V.Local.iC,V.Local.sret.LBound,V.Local.sret.UBound,1)
+		F.Intrinsic.String.Concat("SELECT PATH, FILE FROM ATG_DOC_ASSOC WHERE FILE_NUM = ",V.Local.sret(v.Local.iC),V.Local.squery)
+		F.odbc.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.squery)
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+			F.Intrinsic.String.Right(V.ODBC.conX!rst.FieldValtrim!PATH,1,V.Local.sret)
+			F.Intrinsic.Control.If(V.Local.sret,<>,"\")
+				F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValTrim!PATH,"\",V.ODBC.conX!rst.FieldValTrim!FILE,V.Local.sRet)
+			F.Intrinsic.Control.Elseif(V.Local.sret,=,"\")
+				F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValTrim!PATH,V.ODBC.conX!rst.FieldValTrim!FILE,V.Local.sRet)
+			F.Intrinsic.Control.endif
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conX!rst.Close
+		F.Global.DocumentControl.PrintDocument(V.Local.sret)
+	F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.EndIf
+
+Program.Sub.print_selected.End
+
+Program.Sub.cmdsavefile_click.Start
+V.Local.sCopy.Declare(String)
+V.Local.sFIle.Declare(String)
+V.Local.shold.Declare(String)
+V.Local.shold.Redim(0,3)
+V.Local.iPos.Declare(Long)
+V.Local.squery.Declare(String)
+V.Local.sret.Declare(String)
+V.Local.bTest.Declare(Boolean)
+V.Local.bCopy.Declare(Boolean)
+V.Local.sPath.Declare(String)
+V.Local.bRev.Declare(Boolean)
+
+v.Local.bExists.Declare(Boolean)
+
+v.Local.sfilename.Declare
+v.Local.sSQL.Declare
+v.Local.snewPath.Declare
+
+V.Local.sFIle.Set(V.Screen.f_add!txtFile.Text)
+
+F.Intrinsic.Control.If(V.Local.sFIle.Trim,<>,"")
+	F.Intrinsic.Control.If(V.Screen.f_add!optFile.value,=,True)
+		f.Intrinsic.File.GetFileAttributes(v.Local.sFIle,v.Local.iPos)
+		f.Intrinsic.Variable.longtobitarray(v.Local.iPos,v.Local.bTest)
+		f.Intrinsic.Control.If(v.Local.bTest(4),=,True)
+			v.Local.shold(2).Set("DIR")
+			v.Local.shold(3).Set(v.Local.sFile)
+		f.Intrinsic.Control.Else
+			F.Intrinsic.String.InstrRev(V.Local.sFIle,"\",V.Local.iPos)
+			F.Intrinsic.Control.If(V.Local.iPos,<>,0)
+				F.Intrinsic.String.Left(V.Local.sFIle,V.local.ipos,V.Local.shold(0))
+				F.Intrinsic.Math.Add(V.Local.iPos,1,V.Local.iPos)
+				F.Intrinsic.String.Mid(V.Local.sFIle,V.Local.ipos,V.Local.shold(1))
+				F.Intrinsic.String.instrrev(V.Local.sHold(1),".",V.Local.iPos)
+				F.Intrinsic.Control.If(V.Local.iPos,<>,0)
+					F.Intrinsic.math.Add(V.Local.iPos,1,V.Local.iPos)
+					F.Intrinsic.String.Mid(V.Local.shold(1),V.Local.iPos,V.Local.shold(2))
+				f.Intrinsic.Control.Else
+					v.Local.shold(2).Set("DIR")
+					v.Local.shold(3).Set(v.Local.sFile)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Control.ExitSub
+			F.Intrinsic.Control.EndIf
+			V.Local.shold(3).Set(V.Screen.f_add!txtFile.Text)
+		f.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		V.Local.sPath.Set("")
+		V.Local.shold(1).Set(V.Screen.f_add!txtFile.Text)
+		F.Intrinsic.String.Replace(V.Local.shold(1),"'","''",V.Local.shold(3))
+		V.Local.shold(2).Set("HTTP")
+	F.Intrinsic.Control.endif
+	
+	
+	
+		'get grp id
+	F.Intrinsic.String.Split(V.Screen.f_add!dpGrp.text," - ",V.Local.sret)
+	F.Intrinsic.Control.If(V.Local.sret(0).Trim,=,"")
+		V.Local.sret(0).Set(-1)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Screen.f_add!chkRev.Value,=,0)
+		V.Local.bRev.Set(False)
+	F.Intrinsic.Control.Else
+		V.Local.bRev.Set(True)
+	F.Intrinsic.Control.EndIf
+	
+	'make sure Link_ID exists within Link_Data table. Running into issues where this is being removed from link-data and they are still adding a record to atg_Doc_Assoc with a missing link_data record, when it's being launched twice.
+    F.Global.DocumentControl.CreateReference(V.Global.sKey,V.Global.sType,V.Global.iActiveLinkID)
+
+    f.ODBC.Connection!con.OpenCompanyConnection
+	 	f.Intrinsic.String.Build("Select top 1 path from ATG_DOC_PATH where pathid = '{0}'", v.Local.sret(0), v.Local.sSQL)
+	 	f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL, v.Local.snewPath)
+	f.ODBC.Connection!con.Close
+	f.Intrinsic.String.Build("{0}\{1}", v.Local.snewPath.Trim, v.Local.shold(1), v.Local.snewPath)
+	
+'	f.Intrinsic.File.Exists(v.Local.shold(1), v.Local.bExists)
+'	f.Intrinsic.Control.If(v.Local.bExists)
+'		f.Intrinsic.File.CopyOpenFile(v.Local.shold(3), v.Local.snewPath)
+'	f.Intrinsic.Control.Else
+	
+'	f.Intrinsic.Control.EndIf
+	
+	
+	F.Global.DocumentControl.AddDocument(V.Global.iActiveLinkID, V.Local.shold(3), V.Screen.f_add!txtDescription.Text, V.Local.sret(0).Trim,V.Caller.User,V.local.sHold(2),False,V.Local.bRev)
+	'F.Global.DocumentControl.AddDocument(V.Global.iActiveLinkID, V.Local.snewPath, V.Screen.f_add!txtDescription.Text, V.Local.sret(0).Trim,V.Caller.User,V.local.sHold(2),False,V.Local.bRev)
+	Gui.f_add..Visible(false)
+	
+	f.Intrinsic.File.Exists(v.Local.shold(1), v.Local.bExists)
+	f.Intrinsic.Control.If(v.Local.bExists)
+		f.Intrinsic.File.CopyOpenFile(v.Local.shold(3), v.Local.snewPath)
+		f.Intrinsic.File.Exists(v.Local.snewPath, v.Local.bExists)
+		
+		f.Intrinsic.Control.If(v.Local.bExists.Not)
+			f.Intrinsic.File.CopyOpenFile(v.Local.shold(3), v.Local.snewPath)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.global.iActiveLinkID," AND INV_NON_REV = 0 ORDER BY GRP_ID, FILE_TYPE, DESCRIPTION, FILE",V.Local.sQuery)
+	F.Intrinsic.Control.CallSub(Load_tree,"sQuery",V.Local.sQuery,"sParentNode","","sParentRet","")
+	F.Intrinsic.Control.CallSub(Loadnonrevdocs)
+
+	
+F.Intrinsic.Control.endif
+
+
+Program.Sub.cmdsavefile_click.End
+
+Program.Sub.f_add_unload.Start
+Gui.f_add..Visible(false)
+
+Program.Sub.f_add_unload.End
+
+Program.Sub.cmdbrowsefile_click.Start
+V.Local.sfile.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.f_add!optFile.Value,=,True)
+	F.Intrinsic.UI.ShowOpenFileDialog("","","",V.Local.sFIle)
+	F.Intrinsic.Control.If(V.Local.sfile,<>,"***CANCEL***")
+		Gui.f_add.txtFile.Text(V.Local.sfile)
+	F.Intrinsic.Control.endif
+F.Intrinsic.Control.Else
+	F.Intrinsic.task.ShellExec(V.Caller.Handle,"OPEN",V.screen.f_add!txtFile.text,"","",5)
+
+F.Intrinsic.Control.endif
+
+Program.Sub.cmdbrowsefile_click.End
+
+Program.Sub.populate_grp.Start
+V.Local.shold.Declare(String)
+V.Local.bRet.Declare(Boolean)
+
+Gui.f_add.dpGrp.ClearItems
+Gui.f_add.dpGrp.AddItem(" ")
+
+'F.odbc.Connection!conX.OpenLocalRecordsetRO("rst","SELECT * FROM ATG_DOC_GRP ORDER BY GRP_ID")
+F.odbc.Connection!conX.OpenLocalRecordsetRO("rst","SELECT * FROM GCG_6186_DirMaint ORDER BY GROUPNAME")
+F.Intrinsic.Control.dountil(V.ODBC.conX!rst.EOF,=,True)
+	F.Intrinsic.Control.If(V.Caller.User,<>,"SUPERVSR")
+		F.Intrinsic.Control.CallSub(Check_grp_security,"group",V.ODBC.conX!rst.FieldValTrim!GRP_ID)
+		V.Local.bRet.Set(V.Args.bRet)
+	F.Intrinsic.Control.Else
+		V.Local.bRet.Set(True)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Local.bRet,=,True)
+		F.Intrinsic.String.Concat(V.ODBC.conX!rst.FieldValTrim!GRP_ID," - ",V.odbc.conX!rst.FieldValTrim!GROUPNAME,V.Local.shold)
+		Gui.f_add.dpGrp.AddItem(V.Local.shold)
+	F.Intrinsic.Control.endif
+	F.ODBC.Conx!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.Conx!rst.Close
+
+Program.Sub.populate_grp.End
+
+Program.Sub.Check_grp_security.Start
+V.Local.sgrp.Declare(String)
+V.Local.ic.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sgrp.Set(V.Args.group)
+
+'
+'
+
+F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uGroups!GRP_ID,V.Local.sgrp.long,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"")
+	F.Intrinsic.Variable.AddRV("bRet",True)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Variable.AddRV("bRet",False)
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.Control.For(V.Local.ic,V.Global.sGrps.LBound,V.Global.sGrps.UBound,1)
+'	F.Intrinsic.Control.If(V.Local.sgrp.lcase,=,V.Global.sGrps(v.Local.ic).LCase)
+'		F.Intrinsic.Variable.AddRV("bRet",True)
+'		F.Intrinsic.Control.ExitSub
+'	F.Intrinsic.Control.endif
+'F.Intrinsic.Control.Next(V.Local.ic)
+
+Program.Sub.Check_grp_security.End
+
+Program.Sub.load_grp_security.Start
+V.Local.sGroups.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iGrp.Declare(Long)
+V.Local.squery.Declare(String)
+V.Local.iLen.Declare(Long)
+V.Local.sRet.Declare(String)
+
+
+F.Intrinsic.String.Concat("SELECT GRP_ID FROM ATG_DOC_SEC WHERE SEC_TYPE = 'U' AND USR_GRP = '",V.Caller.User,"' AND PERMISSION=1",V.Local.squery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstX",V.Local.squery)
+F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstX","uglobal.uGroups",False)
+F.ODBC.conX!rstX.close
+
+F.Intrinsic.Debug.SetLA(V.uGlobal.uGroups.UBound)
+
+V.Local.squery.Set("")
+F.Global.Security.GetUserGroups(V.Caller.User,V.Caller.CompanyCode,V.Local.sGroups)
+F.Intrinsic.String.Left(V.Local.sGroups,3,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"*!*")
+	F.Intrinsic.String.Len(V.Local.sGroups,V.Local.iLen)
+	F.Intrinsic.Math.Sub(V.Local.iLen,3,V.Local.iLen)
+	F.Intrinsic.String.Right(V.Local.sGroups,V.local.iLen,V.Local.sGroups)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Split(V.Local.sGroups,"*!*",V.Local.sGroups)
+F.Intrinsic.Control.For(V.Local.iC,V.Local.sGroups.LBound,V.Local.sGroups.UBound,1)
+	F.Intrinsic.Control.If(V.Local.sGroups(v.Local.iC),<>,"")
+		F.Intrinsic.Control.If(V.Local.iC,=,0)
+			F.Intrinsic.String.Concat(" AND (USR_GRP='",V.Local.sGroups(v.Local.iC),"'",V.Local.squery)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.Local.squery," OR USR_GRP='",V.Local.sGroups(v.Local.iC),"'",V.Local.squery)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.If(V.Local.squery,<>,"")
+	F.Intrinsic.String.Concat("SELECT GRP_ID FROM ATG_DOC_SEC WHERE PERMISSION=1  AND SEC_TYPE = 'G'",V.Local.squery,")",V.Local.squery)
+	F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstX",V.Local.squery)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstX","uglobal.uGroups",True)
+	F.ODBC.conX!rstX.close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA(V.uGlobal.uGroups.UBound)
+
+F.Intrinsic.Variable.UDTMultiFlagDuplicates(V.uGlobal.uGroups!GRP_ID)
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uGroups)
+
+F.Intrinsic.Debug.SetLA(V.uGlobal.uGroups.UBound)
+
+Program.Sub.load_grp_security.End
+
+Program.Sub.cmdemail_click.Start
+V.Local.sQuery.Declare(String)
+V.Local.shold.Declare(String)
+V.Local.sgrp.Declare(String)
+V.Local.bret.Declare(Boolean)
+
+Gui.f_email.lvw1.MultiSelect(true)
+Gui.f_email.lvw1.Checkboxes(true)
+Gui.f_email.lvw1.ClearItems
+
+Gui.f_email.optCurrent.Value(true)
+
+F.Intrinsic.Control.ErrorResume(True)
+'Security settings by group check needs to be added
+F.Global.Security.GetUserEmail(V.Caller.User,V.Caller.CompanyCode,V.Local.shold)
+Gui.f_email.txtSender.Text(V.Local.shold)
+
+F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.global.iActiveLinkID," ORDER BY GRP_ID, FILE_TYPE",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+F.Intrinsic.Control.dountil(V.odbc.conX!rst.EOF,=,True)
+
+	F.Intrinsic.Control.If(V.Caller.User,<>,"SUPERVSR")
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.FieldValLong!grp_ID,=,-1)
+			V.Local.bRet.Set(True)
+		F.Intrinsic.Control.ElseIf(V.Local.sGrp.long,<>,V.odbc.conX!rst.FieldVal!grp_ID)
+			V.Local.sGrp.Set(V.ODBC.conX!rst.FieldVal!grp_id)
+			F.Intrinsic.Control.CallSub(Check_grp_security,"group",V.Local.sGrp)
+			V.Local.bRet.Set(V.Args.bRet)
+		F.Intrinsic.Control.Else
+			V.Local.bRet.Set(True)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.ElseIf(V.Caller.User,=,"SUPERVSR")
+		V.Local.bRet.Set(True)
+	F.Intrinsic.Control.EndIf
+
+
+
+	F.Intrinsic.Control.If(V.Local.bret,=,True,"AND",V.ODBC.conX!rst.FieldValTrim!FILE_TYPE,<>,"HTTP")
+		F.Intrinsic.Control.If(V.odbc.conX!rst.FieldValTrim!DESCRIPTION,<>,"")
+			Gui.f_email.lvw1.Addlistitem(V.odbc.conX!rst.FieldValtrim!FILE_NUM,V.odbc.conX!rst.FieldValtrim!DESCRIPTION)
+		F.Intrinsic.Control.Else
+			Gui.f_email.lvw1.Addlistitem(V.odbc.conX!rst.FieldValtrim!FILE_NUM,V.odbc.conX!rst.FieldValtrim!FILE)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.endif
+
+	F.odbc.conX!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conX!rst.Close
+F.Intrinsic.Control.ErrorResume(False)
+Gui.f_email..Show
+
+Program.Sub.cmdemail_click.End
+
+Program.Sub.cmdemailfiles_click.Start
+F.Intrinsic.Control.If(V.Screen.f_email!optAll.Value,=,True)
+	F.Intrinsic.Control.CallSub(Email_all)
+F.Intrinsic.Control.ElseIf(V.Screen.f_email!optCurrent.value,=,True)
+	F.Intrinsic.Control.CallSub(Email_current)
+F.Intrinsic.Control.ElseIf(V.Screen.f_email!optEmailSelected.value,=,True)
+	F.Intrinsic.Control.CallSub(Email_selected)
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdemailfiles_click.End
+
+Program.Sub.f_email_unload.Start
+Gui.f_email..Visible(false)
+
+Program.Sub.f_email_unload.End
+
+Program.Sub.email_all.Start
+V.Local.sname.Declare(String)
+V.Local.sSubject.Declare(String)
+V.Local.sBody.Declare(String)
+V.Local.shold.Declare(String)
+V.Local.srep.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.sret.Declare(String)
+V.Local.squery.Declare(String)
+V.Local.bret.Declare(Boolean)
+V.Local.iC.Declare(Long)
+
+Gui.f_email.lvw1.RetrieveallListItems(V.Local.sret)
+
+F.Global.Security.GetFullName(V.Caller.User,V.Local.sname)
+F.Intrinsic.Control.If(V.Local.sret,<>,"***NORETURN***")
+	F.Intrinsic.String.Split(V.Local.sret,"*!*",V.Local.sret)
+	F.Intrinsic.String.Concat("The file attached has been sent from the GSS Document Control System.",V.Ambient.NewLine,V.Ambient.NewLine,V.Local.sBody)
+	F.intrinsic.string.concat(V.local.sbody,"PLEASE NOTE: The information contained in this message is privileged and confidential. ",V.local.sbody)
+	F.intrinsic.string.concat(V.local.sbody,"You are hereby notified that any distribution, dissemination or copying of this communication ",V.local.sbody)
+	F.intrinsic.string.concat(V.local.sbody,"is strictly prohibited. If you have received this communication in error you should immediately ",V.local.sbody)
+	F.intrinsic.string.concat(V.local.sbody,"delete this message. ",V.ambient.newline,V.local.sbody)
+
+	F.Intrinsic.Control.For(V.Local.iC,V.Local.sret.LBound,V.Local.sret.UBound,1)
+		'Gui.f_print.lvw1.RetrieveItemOrdinal(V.Local.sret(v.Local.iC),V.Local.iRet)
+		F.Intrinsic.String.Concat("SELECT PATH, FILE FROM ATG_DOC_ASSOC WHERE FILE_NUM = ",V.Local.sret(v.Local.iC),V.Local.squery)
+		F.odbc.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.squery)
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+			F.Intrinsic.String.Right(V.ODBC.conX!rst.FieldValtrim!PATH,1,V.Local.shold)
+			F.Intrinsic.Control.If(V.Local.shold,<>,"\")
+				F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValTrim!PATH,"\",V.ODBC.conX!rst.FieldValTrim!FILE,V.Local.shold)
+			F.Intrinsic.Control.Elseif(V.Local.shold,=,"\")
+				F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValTrim!PATH,V.ODBC.conX!rst.FieldValTrim!FILE,V.Local.shold)
+			F.Intrinsic.Control.endif
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.If(V.Screen.f_email!txtRecipient.Text,<>,"")
+			F.Intrinsic.string.Replace(V.Screen.f_email!txtRecipient.Text,",","*!*",V.Local.sRep)
+			F.Intrinsic.String.Concat("GSS File Sent From Document Control System: ",V.ODBC.conX!rst.FieldValTrim!File,V.Local.sSubject)
+			F.Global.Messaging.CreateEMMessage(V.Local.srep,V.local.srep,V.Screen.f_email!txtSender.Text,V.local.sname,V.Local.sSubject,V.Local.sbody,V.Local.shold)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conX!rst.Close
+	F.Intrinsic.Control.Next(V.Local.iC)
+	F.Intrinsic.UI.Msgbox("File(s) Emailed")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.email_all.End
+
+Program.Sub.email_current.Start
+V.Local.sname.Declare(String)
+V.Local.sSubject.Declare(String)
+V.Local.sBody.Declare(String)
+
+F.Intrinsic.Control.If(V.Global.sPath,<>,"")
+	F.Intrinsic.Control.If(V.Screen.f_email!txtRecipient.Text,<>,"")
+		F.Global.Security.GetFullName(V.Caller.User,V.Local.sname)
+		F.Intrinsic.String.Concat("GSS File Sent From Document Control System: ",V.Global.sFile,V.Local.sSubject)
+		F.Intrinsic.String.Concat("The file attached has been sent from the GSS Document Control System.",V.Ambient.NewLine,V.Ambient.NewLine,V.Local.sBody)
+		F.intrinsic.string.concat(V.local.sbody,"PLEASE NOTE: The information contained in this message is privileged and confidential. ",V.local.sbody)
+		F.intrinsic.string.concat(V.local.sbody,"You are hereby notified that any distribution, dissemination or copying of this communication ",V.local.sbody)
+		F.intrinsic.string.concat(V.local.sbody,"is strictly prohibited. If you have received this communication in error you should immediately ",V.local.sbody)
+		F.intrinsic.string.concat(V.local.sbody,"delete this message. ",V.ambient.newline,V.local.sbody)
+		F.Global.Messaging.CreateEMMessage(V.Screen.f_email!txtRecipient.Text,V.Screen.f_email!txtRecipient.Text,V.Screen.f_email!txtSender.Text,V.local.sname,V.Local.sSubject,V.Local.sbody,V.Global.sPath)
+		F.Intrinsic.UI.Msgbox("File Emailed")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.endif
+
+
+Program.Sub.email_current.End
+
+Program.Sub.email_selected.Start
+V.Local.sname.Declare(String)
+V.Local.sSubject.Declare(String)
+V.Local.sBody.Declare(String)
+V.Local.shold.Declare(String)
+
+V.Local.iRet.Declare(Long)
+V.Local.sret.Declare(String)
+V.Local.squery.Declare(String)
+V.Local.bret.Declare(Boolean)
+V.Local.iC.Declare(Long)
+
+F.Intrinsic.String.Concat("The file attached has been sent from the GSS Document Control System.",V.Ambient.NewLine,V.Ambient.NewLine,V.Local.sBody)
+F.intrinsic.string.concat(V.local.sbody,"PLEASE NOTE: The information contained in this message is privileged and confidential. ",V.local.sbody)
+F.intrinsic.string.concat(V.local.sbody,"You are hereby notified that any distribution, dissemination or copying of this communication ",V.local.sbody)
+F.intrinsic.string.concat(V.local.sbody,"is strictly prohibited. If you have received this communication in error you should immediately ",V.local.sbody)
+F.intrinsic.string.concat(V.local.sbody,"delete this message. ",V.ambient.newline,V.local.sbody)
+
+
+Gui.f_email.lvw1.RetrieveCheckedListItems(V.Local.sret)
+F.Intrinsic.String.Split(V.Local.sret,"*!*",V.Local.sret)
+F.Intrinsic.Control.If(V.Local.sret,<>,"***NORETURN***")
+	F.Global.Security.GetFullName(V.Caller.User,V.Local.sname)
+	F.Intrinsic.Control.For(V.Local.iC,V.Local.sret.LBound,V.Local.sret.UBound,1)
+		F.Intrinsic.String.Concat("SELECT PATH, FILE FROM ATG_DOC_ASSOC WHERE FILE_NUM = ",V.Local.sret(v.Local.iC),V.Local.squery)
+		F.odbc.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.squery)
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,False)
+			F.Intrinsic.String.Right(V.ODBC.conX!rst.FieldValtrim!Path,1,V.Local.shold)
+			F.Intrinsic.Control.If(V.Local.shold,<>,"\")
+				F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValTrim!PATH,"\",V.ODBC.conX!rst.FieldValTrim!FILE,V.Local.shold)
+			F.Intrinsic.Control.Elseif(V.Local.shold,=,"\")
+				F.Intrinsic.String.Concat(V.odbc.conX!rst.FieldValTrim!PATH,V.ODBC.conX!rst.FieldValTrim!FILE,V.Local.shold)
+			F.Intrinsic.Control.endif
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Screen.f_email!txtRecipient.Text,<>,"")
+			F.Intrinsic.String.Concat("GSS File Sent From Document Control System: ",V.ODBC.conX!rst.FieldValTrim!FILE,V.Local.sSubject)
+
+			F.Global.Messaging.CreateEMMessage(V.Screen.f_email!txtRecipient.Text,V.Screen.f_email!txtRecipient.Text,V.Screen.f_email!txtSender.Text,V.local.sname,V.Local.sSubject,V.Local.sbody,V.Local.shold)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conX!rst.Close
+	F.Intrinsic.Control.Next(V.Local.iC)
+	F.Intrinsic.UI.Msgbox("File(s) Emailed")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.email_selected.End
+
+Program.Sub.check_security.Start
+V.Local.squery.Declare(String)
+V.Local.iSecurity.Declare(Long,0)
+V.Local.iSecurityUser.Declare(Long,0)
+V.Local.iSecurityGrp.Declare(Long,0)
+V.Local.iSecurityGrpAll.Declare(Long,0)
+V.Local.shold.Declare(String)
+V.Local.sGrpCondition.Declare(String)
+V.Local.sSplit.Declare(String)
+V.Local.sSplit.Redim(0,1)
+V.Local.sgrps.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sSecurity.Declare(String)
+V.Local.sSecurity.Redim(0,1)
+V.Local.iUser.Declare(Long)
+
+F.Global.Security.getuserid(V.Caller.User,V.Caller.CompanyCode,V.Local.iUser)
+
+F.Intrinsic.string.LPad(V.global.stype,"0",5,V.global.stype)
+
+F.intrinsic.control.If(V.Caller.User,<>,"SUPERVSR")
+
+	F.Intrinsic.Control.If(V.Global.bVMS,=,True)
+		F.Global.VMS.GetSecurity(0,V.Global.sType.Long,V.Local.iUser,V.Local.iSecurity)
+		F.Intrinsic.Debug.SetLA("VMS Security Check Return: ",V.Local.iSecurity)
+
+		F.Intrinsic.Control.If(V.Local.iSecurity,=,0)
+			Gui.f_advance.cmdVMS.Enabled(False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.Global.DocumentControl.CheckUserLinkSecurity(V.Global.sType.Long,V.Caller.User,V.Local.iSecurity)
+	F.Intrinsic.Debug.SetLA("Security Check Return: ",V.Local.iSecurity)
+
+	F.Intrinsic.Control.If(V.Local.iSecurity,=,0)
+		F.Intrinsic.Control.CallSub(F_advance_unload)
+	F.Intrinsic.Control.EndIf
+	V.Local.sSecurity.Set(V.Local.iSecurity)
+	F.Intrinsic.Control.If(V.Local.sSecurity(0).Length,>=,2)
+		F.Intrinsic.String.Right(V.Local.sSecurity(0),1,V.Local.sSecurity(1))
+		F.Intrinsic.Math.Sub(V.Local.sSecurity(0).Length,1,V.Local.ic)
+		F.Intrinsic.String.Mid(V.Local.sSecurity(0),V.Local.ic,1,V.Local.sSecurity(0))
+		Gui.f_advance.cmdPrint.Enabled(true)
+		F.Intrinsic.Control.CallSub(Setprintsecurity,"bVal",False)
+
+		F.Intrinsic.Control.If(V.local.sSecurity(0),=,5)
+			F.Intrinsic.Control.CallSub(Setprintsecurity,"bVal",True)
+			Gui.f_advance.cmdEdit.Enabled(true)
+			Gui.f_advance.cmdRemove.Enabled(true)
+			V.Global.bRemove.Set(True)
+			Gui.f_advance.cmdAdd.Enabled(true)
+			Gui.f_advance.cmdEmail.Enabled(true)
+		F.Intrinsic.Control.ElseIf(V.local.sSecurity(0),=,4)
+			F.Intrinsic.Control.CallSub(Setprintsecurity,"bVal",True)
+			Gui.f_advance.cmdEdit.Enabled(true)
+			Gui.f_advance.cmdAdd.Enabled(true)
+			Gui.f_advance.cmdEmail.Enabled(true)
+		F.Intrinsic.Control.ElseIf(V.local.sSecurity(0),=,3)
+			F.Intrinsic.Control.CallSub(Setprintsecurity,"bVal",True)
+			Gui.f_advance.cmdEmail.Enabled(true)
+			V.Global.bNoAdd.Set(True)
+		F.Intrinsic.Control.ElseIf(V.local.sSecurity(0),=,2)
+			F.Intrinsic.Control.CallSub(Setprintsecurity,"bVal",True)
+			V.Global.bNoAdd.Set(True)
+		F.Intrinsic.Control.EndIf
+
+
+		F.Intrinsic.Control.If(V.Local.sSecurity(1),>=,2)
+			Gui.f_advance.cmdPrint.Enabled(true)
+			Gui.f_print.cmdPrintFiles.Enabled(true)
+			Gui.f_print.optComment.Value(true)
+		F.Intrinsic.Control.endif
+		F.Intrinsic.Control.If(V.local.sSecurity(1),=,4)
+			Gui.f_print.optComment.Enabled(true)
+			Gui.f_advance.cmdSaveComment.Enabled(true)
+			V.Global.bViewComment.Set(True)
+		F.Intrinsic.Control.ElseIf(V.local.sSecurity(1),=,2)
+			Gui.f_print.optComment.Enabled(true)
+			V.Global.bViewComment.Set(True)
+		F.Intrinsic.Control.ElseIf(V.local.sSecurity(1),=,1)
+			V.Global.bViewComment.Set(True)
+		F.Intrinsic.Control.ElseIf(V.Local.sSecurity(1),=,0)
+			V.Global.bViewComment.Set(False)
+			Gui.f_advance.txtComent.Enabled(false)
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("Invalid Security Permissions")
+		F.Intrinsic.Control.CallSub(F_advance_unload)
+	F.Intrinsic.Control.EndIf
+
+F.intrinsic.control.elseIf(V.Caller.User,=,"SUPERVSR")
+
+	Gui.f_print.optComment.Enabled(true)
+	Gui.f_advance.cmdSaveComment.Enabled(true)
+	V.Global.bViewComment.Set(True)
+	v.Global.bRemove.Set(True)
+	F.Intrinsic.Control.CallSub(Setprintsecurity,"bVal",True)
+	Gui.f_advance.cmdPrint.Enabled(true)
+	Gui.f_advance.cmdEdit.Enabled(true)
+	Gui.f_advance.cmdRemove.Enabled(true)
+	Gui.f_advance.cmdAdd.Enabled(true)
+	Gui.f_advance.cmdEmail.Enabled(true)
+F.Intrinsic.Control.endif
+
+
+
+Program.Sub.check_security.End
+
+Program.Sub.cmdbrowserecp_click.Start
+V.Local.sID.Declare(String)
+V.Local.sType.Declare(String)
+
+Gui.f_recp.lvwAddress.ClearItems
+Gui.f_recp.lvwAddress.Checkboxes(true)
+V.Local.sID.Set("NONE")
+Gui.f_recp.optCust.Value(true)
+F.Intrinsic.Control.If(V.caller.caller,=,"JB0986")
+	F.Intrinsic.Control.If(V.Passed.009000,=,10)
+		V.Local.sID.Set("009002")
+		V.Local.sType.Set("V")
+	F.Intrinsic.Control.ElseIf(V.Passed.009000,=,15)
+		V.Local.sID.Set("009002")
+		V.Local.sType.Set("C")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.Variable.findidfromname("cust",V.Local.sID)
+	F.Intrinsic.Control.If(V.Local.sID,=,"NONE")
+		F.Intrinsic.Variable.findidfromname("vendor-num",V.Local.sID)
+		F.Intrinsic.Control.If(V.Local.sID,=,"NONE")
+			'more can be set as I find them
+		F.Intrinsic.Control.Else
+			V.Local.sType.Set("V")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		V.Local.sType.Set("C")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+Gui.f_recp..Visible(true)
+
+
+F.Intrinsic.Control.If(V.Local.sID.ucase,<>,"NONE")
+	Gui.f_recp.txtCustomer.Text(v.passed.[v.local.sid])
+	F.Intrinsic.Control.CallSub(Load_contacts,"Key",V.Passed.[v.local.sid],Type,V.Local.stype)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.cmdbrowserecp_click.End
+
+Program.Sub.cmdsaverecp_click.Start
+V.Local.sret.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.ssplit.Declare(String)
+
+V.Local.sHOLD.Declare(String)
+V.Local.iC.Declare(Long)
+Gui.f_recp.lvwAddress.RetrieveCheckedListItems(V.Local.sret)
+
+F.Intrinsic.Control.If(V.Local.sret,<>,"***NORETURN***")
+
+	F.Intrinsic.String.Split(V.Local.sret,"*!*",V.Local.sret)
+	F.Intrinsic.Control.For(V.Local.iC,V.Local.sret.LBound,V.Local.sret.UBound,1)
+		Gui.f_recp.lvwAddress.RetrieveItemOrdinal(V.Local.sret(v.Local.iC),V.Local.iRet)
+		F.Intrinsic.String.Split(V.Screen.f_recp!lvwAddress.ListItemTextExtended(V.Local.iret),"*!*",V.Local.ssplit)
+		F.Intrinsic.Control.If(V.Local.iC,=,0)
+			V.local.shold.set(V.Local.sSplit(1))
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.Local.shold,",",V.Local.sSplit(1),V.Local.sHOLD)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iC)
+
+	Gui.f_email.txtRecipient.Text(V.Local.sHOLD)
+F.Intrinsic.Control.EndIf
+
+Gui.f_recp..Visible(false)
+
+Program.Sub.cmdsaverecp_click.End
+
+Program.Sub.cmdbwrcustvend_click.Start
+V.Local.sCol.Declare(String)
+V.Local.sWidth.Declare(String)
+
+V.Local.sret.Declare(String)
+V.Local.squery.Declare(String)
+V.Local.stype.Declare(String)
+
+V.Local.shold.Declare(String)
+F.Intrinsic.String.Split("2000*!*2000","*!*",V.Local.swidth)
+
+F.Intrinsic.Control.If(V.Screen.f_recp!optCust.Value,=,True)
+	F.Intrinsic.String.Split("Customer*!*Name","*!*",V.Local.sCol)
+	V.Local.stype.Set("C")
+	V.Local.squery.Set("SELECT DISTINCT CUSTOMER, NAME_CUSTOMER FROM V_CUSTOMER_MASTER ORDER BY CUSTOMER")
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split("Vendor*!*Name","*!*",V.Local.sCol)
+	V.Local.stype.Set("V")
+	V.Local.squery.Set("SELECT DISTINCT VENDOR, NAME_VENDOR FROM V_VENDOR_MASTER ORDER BY VENDOR")
+F.Intrinsic.Control.EndIf
+
+F.intrinsic.UI.Browser("Select Source","conx",V.Local.squery,V.Local.sCol,V.Local.sWidth,V.Local.sret)
+F.Intrinsic.Control.If(V.Local.sret,<>,"***CANCEL***")
+	F.Intrinsic.string.Split(V.Local.sret,"*!*",V.Local.sRet)
+	Gui.f_recp.txtCustomer.Text(V.Local.sret(0))
+
+	F.Intrinsic.Control.CallSub(Load_contacts,"Key",V.Local.sret(0),"Type",V.Local.stype)
+F.Intrinsic.Control.endif
+
+Program.Sub.cmdbwrcustvend_click.End
+
+Program.Sub.load_contacts.Start
+V.Local.sQuery.Declare(String)
+V.Local.ic.Declare(Long)
+
+Gui.f_recp.lvwAddress.ClearItems
+
+V.Local.ic.Set(1)
+F.Intrinsic.String.Concat("SELECT NAME, EMAIL1 FROM CONTACT WHERE CUST = '",V.args.key,"' AND  TYPE = '",V.Args.type,"'",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+F.Intrinsic.Control.dountil(V.ODBC.conX!rst.EOF,=,True)
+	Gui.f_recp.lvwAddress.Addlistitem(V.Local.ic,V.odbc.conX!rst.FieldValtrim!Name)
+	Gui.f_recp.lvwAddress.SetListItemSubItemText(V.Local.ic,1,V.ODBC.conX!rst.FieldValTrim!EMAIL1)
+	F.Intrinsic.math.Add(V.Local.ic,1,V.Local.ic)
+	F.ODBC.Conx!rst.MoveNext
+F.Intrinsic.Control.Loop
+
+F.ODBC.conX!rst.Close
+
+
+Program.Sub.load_contacts.End
+
+Program.Sub.cmdclose_click.Start
+Gui.F_Advance.htmlX.Navigate("about:blank")
+Gui.f_advance.tabx1.SetTab(0)
+Gui.f_advance.tabx1.Visible(false)
+
+Program.Sub.cmdclose_click.End
+
+Program.Sub.f_recp_unload.Start
+Gui.f_recp..Visible(false)
+
+Program.Sub.f_recp_unload.End
+
+Program.Sub.optlink_click.Start
+'F.Intrinsic.Control.If(V.Screen.f_add!optFile.Value,=,True)
+'	Gui.f_add.cmdBrowseFile.Caption("^")
+'F.Intrinsic.Control.Else
+'	Gui.f_add.cmdBrowseFile.Caption("Test")
+'F.Intrinsic.Control.EndIf
+
+Program.Sub.optlink_click.End
+
+Program.Sub.Load_comment.Start
+V.Local.squery.Declare(String)
+V.Local.shold.Declare(String)
+
+F.Intrinsic.Control.If(V.Global.bViewComment,=,True)
+	F.Intrinsic.String.Concat("SELECT NOTE FROM LINK_NOTE WHERE LINK_ID='",V.global.iActiveLinkID,"'",V.Local.squery)
+	F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstY",V.Local.squery)
+	F.Intrinsic.Control.If(V.Odbc.conX!rstY.EOF,=,False)
+		V.Local.shold.Set(V.Odbc.conX!rstY.FieldValrtrim!note)
+		Gui.f_advance.txtComent.Text(V.Local.shold)
+	F.Intrinsic.Control.endif
+	F.ODBC.conX!rstY.Close
+F.Intrinsic.Control.endif
+
+Program.Sub.Load_comment.End
+
+Program.Sub.cmdPrintLinkcomment_click.Start
+'----ADDED FROM LINKV4 -------	
+'F.Intrinsic.Printer.SelectPrinterDialog
+'F.Intrinsic.Printer.PrintRet(V.Screen.f_advance!txtComent.Text)
+'F.Intrinsic.Printer.Finished
+'--------------------------------------------
+
+v.Local.bExists.Declare(Boolean)
+v.Local.sFile.Declare(String)
+
+f.Intrinsic.String.Concat(Variable.Caller.LocalGSSTempDir,"\",v.Global.sKey,".txt",v.Local.sFile)
+f.Intrinsic.File.Exists(v.Local.sFile,v.Local.bExists)
+f.Intrinsic.Control.If(v.Local.bExists,=,True)
+	f.Intrinsic.File.DeleteFile(v.Local.sFile)
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.File.String2File(v.Local.sFile,v.Screen.f_advance!TxtComent.Text)
+
+f.Intrinsic.File.Exists(v.Local.sFile,v.Local.bExists)
+f.Intrinsic.Control.If(v.Local.bExists,=,True)
+	F.Global.DocumentControl.PrintDocument(V.local.sFile)
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.sTemp,<>,"")
+	F.Intrinsic.String.Concat(V.Global.sTemp,"*!*",V.Local.sFile,V.Global.sTemp)
+F.Intrinsic.Control.Else
+	V.Global.sTemp.Set(V.Local.sFile)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.cmdPrintLinkcomment_click.End
+
+Program.Sub.cmdsavecomment_click.Start
+'----ADDED FROM LINKV4 -------	
+V.Local.stype.Declare(String)
+V.Local.skey.Declare(String)
+V.Local.squery.Declare(String)
+
+F.Intrinsic.String.Concat("SELECT * FROM LINK_NOTE WHERE LINK_ID='",V.global.iActiveLinkID,"'",V.Local.squery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRw("rst",V.Local.squery)
+F.Intrinsic.Control.If(V.Odbc.conX!rst.EOF,=,True)
+	F.Odbc.Conx!Rst.Addnew
+	F.ODBC.conX!rst.Set!LINK_ID(V.global.iActiveLinkID)
+	F.ODBC.conX!rst.Set!Note(" ")
+	F.ODBC.ConX!rst.Set!INFO0("")
+	F.ODBC.ConX!rst.Set!INFO1("")
+	F.ODBC.ConX!rst.Set!INFO2("")
+	F.ODBC.ConX!rst.Set!INFO3("")
+	F.ODBC.ConX!rst.Set!INFO4("")
+	F.ODBC.ConX!rst.Set!INFO5("")
+	F.ODBC.ConX!rst.Set!INFO6("")
+	F.ODBC.ConX!rst.Set!INFO7("")
+	F.Odbc.Conx!Rst.Update
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+
+f.Intrinsic.String.Build("Update LINK_NOTE SET NOTE = ? WHERE LINK_ID='{0}'",v.Global.iActiveLinkID,v.Local.squery)
+F.ODBC.Connection!ConX.SaveStringToLongVarChar(V.Local.sQuery,"P1",V.Screen.f_advance!txtComent.text)
+
+F.Intrinsic.UI.Msgbox("Comment Saved","Comment Saved")
+
+'---------------------------------------------------
+
+Program.Sub.cmdsavecomment_click.End
+
+Program.Sub.optcomment_click.Start
+Gui.f_print.lvw1.Enabled(false)
+
+Program.Sub.optcomment_click.End
+
+Program.Sub.optprintselected_click.Start
+Gui.f_print.lvw1.Enabled(True)
+
+Program.Sub.optprintselected_click.End
+
+Program.Sub.setPrintSecurity.Start
+Gui.f_print.optAll.Enabled(V.Args.bval)
+Gui.f_print.optCurrent.Enabled(V.Args.bval)
+Gui.f_print.optPrintSelected.Enabled(V.Args.bval)
+Gui.f_print.cmdPrintFiles.Enabled(V.Args.bval)
+Gui.f_advance.cmdPrint.Enabled(V.Args.bval)
+
+Program.Sub.setPrintSecurity.End
+
+Program.Sub.CheckTable.Start
+V.Local.bret.Declare(Boolean)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstT","SELECT * FROM ATG_DOC_ASSOC")
+F.odbc.conX!rstT.FieldExists("INV_NON_REV",V.Local.bRet)
+F.ODBC.conX!rstt.Close
+
+F.Intrinsic.Control.If(V.Local.bret,=,False)
+	F.ODBC.Connection!conX.Execute("ALTER TABLE ATG_DOC_ASSOC( ADD COLUMN INV_NON_REV BIT)")
+
+F.Intrinsic.Control.EndIf
+
+Program.Sub.CheckTable.End
+
+Program.Sub.LoadNonRevDocs.Start
+'Get Link IDS of all the parts that are
+F.Intrinsic.Control.If(V.global.bInvRevOn,=,False)
+	F.Intrinsic.Control.If(V.Global.sType,<>,30)
+		F.Intrinsic.Control.If(V.Global.sType,<>,35)
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+V.Local.sQuery.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.bAdded.Declare(Boolean)
+
+
+F.Intrinsic.String.Left(V.global.sKey,17,V.Local.sPart)
+'then right pad
+F.Intrinsic.String.RPad(V.Local.sPart, " ", 17, V.Local.sPart)
+
+Gui.F_Advance.trvData.AddNode("","","NON_REV","Non-Rev Specific",V.global.bExpand)
+
+
+' in order to deal with '
+
+F.Intrinsic.String.Replace(V.Local.sPart,"'","''",V.Local.sPart)
+
+
+F.Intrinsic.String.Concat("SELECT LINK_ID FROM LINK_DATA WHERE ID like '",V.Local.sPart,"%' AND TYPE = '",V.Global.sType,"'",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstNonRev",V.Local.sQuery)
+F.Intrinsic.Control.DoUntil(V.ODBC.conX!rstNonRev.EOF,=,True)
+
+	F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.ODBC.conX!rstNonRev.FieldValLong!LINK_ID," AND INV_NON_REV = 1  ORDER BY GRP_ID, FILE_TYPE, DESCRIPTION, FILE",V.Local.sQuery)
+	F.Intrinsic.Control.CallSub(Load_tree,"sQuery",V.Local.sQuery,"sParentNode","NON_REV","sParentRet","4")
+	F.ODBC.conX!rstNonRev.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conX!rstNonRev.Close
+
+Program.Sub.LoadNonRevDocs.End
+
+Program.Sub.cmdvms_click.Start
+'Check to see if the file is in VMS
+V.Local.iRet.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.iSecurity.Declare(Long,0)
+V.Local.sUser.Declare(String)
+V.Local.iID.Declare(Long)
+V.Local.bRet.Declare(Boolean)
+V.Local.sRet.Declare(String)
+V.Local.bCheckOut.Declare(Boolean)
+V.Local.bSeePrevious.Declare(Boolean)
+V.Local.bDelete.Declare(Boolean)
+
+F.Intrinsic.Control.If(V.Global.sFile,<>,"")
+
+	F.Global.Security.GetUserID(V.Caller.User,V.Caller.CompanyCode,V.Local.sUser)
+	F.Intrinsic.String.Split(V.Local.sUser,"*!*",V.Local.sUser)
+	F.Intrinsic.control.If(V.local.sUser(0),<>,"***NORETURN***")
+		V.Local.sUser.Set(V.Local.sUser(0))
+	F.Intrinsic.control.Else
+		V.Local.sUser.Set(V.Local.sUser(0))
+	F.Intrinsic.control.EndIf
+	F.Intrinsic.Debug.SetLA("Extension ID:",V.Global.iExt," Link Type:",V.Global.sType.Long," User ID:",V.Local.sUser.Long)
+	F.Global.VMS.GetSecurity(V.Global.iExt,V.Global.sType.Long,V.Local.sUser.Long,V.Local.iSecurity)
+	F.Intrinsic.Debug.SetLA("Return: ",V.Local.iSecurity)
+
+	F.Intrinsic.Debug.SetLA("Get Document ID for Link ID ",V.Global.iActiveLinkID," and file name ",V.Global.sFile)
+	F.Global.DocumentControl.GetDocumentID(V.Global.iActiveLinkID,V.Global.sFile,V.Local.sRet)
+	F.Intrinsic.Debug.SetLA(V.Local.sRet)
+
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	V.Local.iRet.Set(V.Local.sRet(0))
+
+	f.Global.VMS.isinvms(v.local.iRet,v.Local.bRet)
+	F.Intrinsic.Control.If(V.Local.bRet,=,False)
+		'File not in VMS
+		F.Intrinsic.Control.If(V.Local.iSecurity,=,0)
+			'Error message?
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.If(V.local.iSecurity,>=,16)
+			Gui.f_vmsadd.txtFileName.Text(V.Global.sPath)
+			Gui.f_vmsadd..Show
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Else
+		'File already in VMS
+
+		F.Intrinsic.String.Concat("Select GSUSER from VMS_ACTIVE where FID='",V.Local.iRet,"'",V.Local.sQuery)
+		F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstVMS",V.Local.sQuery)
+		V.Local.iID.Set(V.ODBC.conX!rstVMS.FieldVal!GSUSER)
+		F.ODBC.conX!rstVMS.Close
+
+
+		F.Intrinsic.Control.If(V.Local.iSecurity,=,0)
+			'Error message?
+		F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.If(V.Local.iSecurity,=,62)
+
+			V.Local.bCheckOut.Set(True)
+			V.Local.bDelete.set(True)
+			V.Local.bSeePrevious.Set(True)
+
+		F.Intrinsic.Control.else
+
+			F.Intrinsic.Control.If(V.Local.iSecurity,=>,32)
+				V.Local.bDelete.Set(True)
+				F.Intrinsic.Math.Sub(V.Local.iSecurity,32,V.Local.iSecurity)
+			F.Intrinsic.Control.endif
+
+			F.Intrinsic.Control.If(V.local.iSecurity,>=,16)
+				F.Intrinsic.Math.Sub(V.Local.iSecurity,16,V.Local.iSecurity)
+			F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Control.If(V.local.iSecurity,>=,8)
+			'User can checkin/out
+				V.Local.bCheckOut.Set(True)
+				F.Intrinsic.Math.Sub(V.Local.iSecurity,8,V.Local.iSecurity)
+			F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Control.If(V.local.iSecurity,>=,4)
+			'User can see previous verisons
+				V.Local.bSeePrevious.set(True)
+				F.Intrinsic.Math.Sub(V.Local.iSecurity,4,V.Local.iSecurity)
+			F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Control.If(V.Local.bCheckOut,=,True)
+				F.Intrinsic.Control.If(V.Local.iID,=,-1)
+					Gui.f_vmsopt.dlstOptions.AddItem("Check Out",1)
+				F.Intrinsic.Control.Elseif(V.Local.iID,=,V.Local.sUser.Long)
+					Gui.f_vmsopt.dlstOptions.AddItem("Check In",2)
+					Gui.f_vmsopt.dlstOptions.AddItem("Cancel Check Out",3)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Control.If(V.Local.bSeePrevious,=,True)
+				Gui.f_vmsopt.dlstOptions.AddItem("See Previous Versions",4)
+				Gui.f_vmsopt.dlstOptions.AddItem("See Change Notes",5)
+			F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Control.If(V.Local.bDelete,=,True)
+				F.Intrinsic.Control.If(V.Local.iID,=,-1)
+					Gui.f_vmsopt.dlstOptions.AddItem("Remove File",6)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+
+			Gui.f_vmsopt..Show
+
+	F.Intrinsic.Control.Endif
+F.Intrinsic.Control.EndIf
+
+
+
+
+
+Program.Sub.cmdvms_click.End
+
+Program.Sub.f_vmsadd_unload.Start
+Gui.f_vmsadd.chkDelete.Value(0)
+Gui.f_vmsadd.txtFileName.Text("")
+Gui.f_vmsadd.txtNotes.Text("")
+
+Gui.f_vmsadd..Visible(False)
+
+
+Program.Sub.f_vmsadd_unload.End
+
+Program.Sub.cmdvmsadd_click.Start
+'Adds file to VMS, possibly deletes source file
+V.Local.iFile.Declare(Long)
+V.Local.sQuery.Declare(String)
+
+F.Global.DocumentControl.GetDocumentID(V.Global.iActiveLinkID,V.Global.sFile,V.Local.iFile)
+
+F.Global.VMS.AddFile(V.Local.iFile,V.Global.bCompress)
+
+'Double check to make sure file is in VMS before deleting source file
+F.Intrinsic.String.Concat("Select * From VMS_ACTIVE where FID='",V.Local.iFile,"'",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstVMS",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conX!rstVMS.EOF,=,False)
+
+	'Add Initial Notes
+	F.ODBC.Connection!conX.OpenLocalRecordsetRW("rstAddNT","Select * From VMS_NOTES")
+	F.ODBC.conX!rstAddNT.AddNew
+	F.ODBC.conX!rstAddNT.Set!FHID(-1)
+	F.ODBC.conX!rstAddNT.Set!FileNotes(V.Screen.f_vmsadd!txtNotes.Text)
+	F.ODBC.conX!rstAddNT.Set!NoteDT(V.Ambient.Now)
+	F.ODBC.conX!rstAddNT.Set!FID(V.Local.iFile)
+	F.ODBC.conX!rstAddNT.Update
+	F.ODBC.conX!rstAddNT.Close
+
+	F.Intrinsic.Control.If(V.Screen.f_vmsadd!chkDelete.Value,=,1)
+		'clear this out from the nav pane then give it a sec then delete the file, gab just too fast.
+		Gui.f_advance.htmlX.Navigate("about:blank")
+		f.Intrinsic.UI.Sleep(1)
+		F.Intrinsic.File.DeleteFile(V.Global.sPath)
+
+		F.Intrinsic.String.Concat("VMS::",V.Local.iFile,V.Local.sQuery)
+		F.Intrinsic.String.Concat("Update ATG_DOC_ASSOC Set PATH='",V.Local.sQuery,"' Where FILE_NUM='",V.Local.iFile,"'",V.Local.sQuery)
+		F.ODBC.Connection!conX.Execute(V.Local.sQuery)
+
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rstVMS.Close
+
+Gui.f_vmsadd..Visible(False)
+
+	F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.global.iActiveLinkID," AND INV_NON_REV = 0 ORDER BY GRP_ID, FILE_TYPE, DESCRIPTION, FILE",V.Local.sQuery)
+	F.Intrinsic.Control.CallSub(Load_tree,"sQuery",V.Local.sQuery,"sParentNode","","sParentRet","")
+	F.Intrinsic.Control.CallSub(Loadnonrevdocs)
+
+F.Intrinsic.Control.ExitSub
+
+
+
+Program.Sub.cmdvmsadd_click.End
+
+Program.Sub.f_vmsopt_unload.Start
+Gui.f_vmsopt.dlstOptions.ClearItems
+Gui.f_vmsopt..Visible(False)
+
+Program.Sub.f_vmsopt_unload.End
+
+Program.Sub.cmd_vmsok_click.Start
+V.Local.sQuery.Declare(String)
+V.Local.iFID.Declare(Long)
+
+F.Global.DocumentControl.GetDocumentID(V.Global.iActiveLinkID,V.Global.sFile,V.Local.iFID)
+
+F.Intrinsic.Control.SelectCase(V.Screen.f_vmsopt!dlstOptions.ItemData)
+
+'Check Out
+F.Intrinsic.Control.Case(1)
+
+F.Intrinsic.Control.CallSub(F_vmsopt_unload)
+
+gui.f_Check.cmdSave.SetMetaData("0")
+
+Gui.f_Check..Show
+
+
+'Check In
+F.Intrinsic.Control.Case(2)
+
+F.Intrinsic.Control.CallSub(F_vmsopt_unload)
+
+gui.f_Check.cmdSave.SetMetaData("1")
+
+F.Intrinsic.String.Concat("Select Reason From VMS_ACTIVE where FID='",V.Local.iFID,"'",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstVMS",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conX!rstVMS.EOF,=,False)
+
+	Gui.f_Check.txtNotes.Text(V.ODBC.conX!rstVMS.FieldValRTrim!Reason)
+
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rstVMS.Close
+
+Gui.f_Check..Show
+
+
+'Cancel Check Out
+F.Intrinsic.Control.Case(3)
+F.Global.vms.cancelcheckout(V.Local.iFID)
+
+'See Previous Versions
+F.Intrinsic.Control.Case(4)
+
+	F.Intrinsic.Control.CallSub(Prevversions,"iFID",V.Local.iFID)
+
+'See Change Notes
+F.Intrinsic.Control.Case(5)
+
+	F.Intrinsic.Control.CallSub(Change_notes,"iFID",V.Local.iFID)
+
+F.Intrinsic.Control.Case(6)
+
+	F.Intrinsic.Control.CallSub(Remove_file,"iFID",V.Local.iFID)
+
+F.Intrinsic.Control.CaseElse
+
+	F.Intrinsic.Control.CallSub(F_vmsopt_unload,"iFID",V.Local.iFID)
+
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.CallSub(F_vmsopt_unload)
+
+
+Program.Sub.cmd_vmsok_click.End
+
+Program.Sub.f_notes_unload.Start
+Gui.F_Notes.gsfgNotes.Rows(1)
+Gui.F_Notes..Visible(False)
+
+
+
+Program.Sub.f_notes_unload.End
+
+Program.Sub.f_view_unload.Start
+Gui.F_View.gsfgView.Rows(1)
+Gui.F_View..Visible(False)
+
+Program.Sub.f_view_unload.End
+
+Program.Sub.f_view_resize.Start
+Program.Sub.f_view_resize.End
+
+Program.Sub.f_vmsnotes_unload.Start
+V.uGlobal.uNotes.Redim(-1,-1)
+Gui.F_Notes.gsfgNotes.Rows(1)
+
+Gui.F_Notes..Visible(False)
+Gui.F_Main.gsflex_VMS.Enabled(True)
+
+Program.Sub.f_vmsnotes_unload.End
+
+Program.Sub.gsfgnotes_mouseup.Start
+V.Local.iRow.Declare(Long)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Args.mouserow,>,0)
+
+	Gui.F_Notes.txtNotes.Text("")
+
+	V.Local.iRow.set(V.Args.mouserow)
+
+	Gui.F_Notes.gsfgNotes.GetTextMatrix(2,V.Local.iRow,V.local.sRet)
+
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+		Gui.F_Notes.txtNotes.Text(V.Local.sRet)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.EndIf
+
+Program.Sub.gsfgnotes_mouseup.End
+
+Program.Sub.gsfgNotes_buildstyle.Start
+Gui.F_Notes.gsfgNotes.Cols(3)
+Gui.F_Notes.gsfgNotes.Rows(2)
+Gui.F_Notes.gsfgNotes.FixedRows(1)
+
+Gui.F_Notes.gsfgNotes.SetColumnPercentages("0:.15:.85")
+
+'Note Date
+Gui.F_Notes.gsfgNotes.TextMatrix(1,0,"Note Date")
+Gui.F_Notes.gsfgNotes.BuildStyle(1,1,"Type","Locked",True)
+Gui.F_Notes.gsfgNotes.BuildStyle(1,1,"Format","Alignment",4)
+Gui.F_Notes.gsfgNotes.BuildStyle(2,1,"Type","Locked",True)
+Gui.F_Notes.gsfgNotes.BuildStyle(2,1,"Format","Alignment",2)
+
+
+'Note
+Gui.F_Notes.gsfgNotes.TextMatrix(2,0,"Note")
+Gui.F_Notes.gsfgNotes.BuildStyle(1,2,"Type","Locked",True)
+Gui.F_Notes.gsfgNotes.BuildStyle(1,2,"Format","Alignment",4)
+Gui.F_Notes.gsfgNotes.BuildStyle(2,2,"Type","Locked",True)
+Gui.F_Notes.gsfgNotes.BuildStyle(2,2,"Format","Alignment",2)
+
+
+Program.Sub.gsfgNotes_buildstyle.End
+
+Program.Sub.Change_Notes.Start
+V.Local.sQuery.Declare(String)
+V.Local.sUser.Declare(String)
+V.Local.iFID.Declare(Long)
+
+V.local.iFID.Set(V.Args.iFID)
+
+F.Intrinsic.Control.CallSub(Gsfgnotes_buildstyle)
+
+F.Intrinsic.String.Concat("Select FNID, NoteDT, FileNotes from VMS_NOTES where FID='",V.Local.iFID,"' order by NoteDT",V.Local.sQuery)
+F.ODBC.Connection!conx.OpenLocalRecordsetRW("rst",V.Local.sQuery)
+Gui.F_Notes.gsfgNotes.LoadRecordset("conx!rst",2)
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Control.If(V.Screen.F_Notes!gsfgNotes.Rows,=,1)
+	Gui.F_Notes.gsfgNotes.Rows(1)
+	Gui.F_Notes.gsfgNotes.Rows(2)
+	Gui.F_Notes.gsfgNotes.FixedRows(1)
+	Gui.F_Notes.gsfgNotes.ApplyStyle(1,2)
+F.Intrinsic.Control.EndIf
+
+Gui.F_Notes..Show
+
+
+Program.Sub.Change_Notes.End
+
+Program.Sub.gsfgview_mouseup.Start
+V.Local.iRow.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sNotes.Declare(String)
+
+F.Intrinsic.Control.If(V.Args.mouserow,>,0)
+
+	Gui.F_View.txtView.Text("")
+
+	V.Local.iRow.set(V.Args.mouserow)
+
+	Gui.F_View.gsfgView.GetTextMatrix(5,V.Local.iRow,V.local.sRet)
+
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+		Gui.F_View.txtView.Text(V.Local.sRet)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+Program.Sub.gsfgview_mouseup.End
+
+Program.Sub.gsfgView_buildstyle.Start
+Gui.F_View.gsfgView.Cols(7)
+Gui.F_View.gsfgView.Rows(2)
+Gui.F_View.gsfgView.FixedRows(1)
+
+Gui.F_View.gsfgView.SetColumnPercentages("0:.0:.10:.20:.20:.40:.10")
+
+'Rev
+Gui.F_View.gsfgView.TextMatrix(2,0,"Revision")
+Gui.F_View.gsfgView.BuildStyle(1,2,"Type","Locked",True)
+Gui.F_View.gsfgView.BuildStyle(1,2,"Format","Alignment",4)
+Gui.F_View.gsfgView.BuildStyle(2,2,"Type","Locked",True)
+
+'Checkin Date
+Gui.F_View.gsfgView.TextMatrix(3,0,"Check-In Date")
+Gui.F_View.gsfgView.BuildStyle(1,3,"Type","Locked",True)
+Gui.F_View.gsfgView.BuildStyle(1,3,"Format","Alignment",4)
+Gui.F_View.gsfgView.BuildStyle(2,3,"Type","Locked",True)
+
+'Checkin User
+Gui.F_View.gsfgView.TextMatrix(4,0,"Check-In User")
+Gui.F_View.gsfgView.BuildStyle(1,4,"Type","Locked",True)
+Gui.F_View.gsfgView.BuildStyle(1,4,"Format","Alignment",4)
+Gui.F_View.gsfgView.BuildStyle(2,4,"Type","Locked",True)
+
+'Notes
+Gui.F_View.gsfgView.TextMatrix(5,0,"Notes")
+Gui.F_View.gsfgView.BuildStyle(1,5,"Type","Locked",True)
+Gui.F_View.gsfgView.BuildStyle(1,5,"Format","Alignment",4)
+Gui.F_View.gsfgView.BuildStyle(2,5,"Type","Locked",True)
+
+'Button
+Gui.F_View.gsfgView.TextMatrix(6,0,"")
+Gui.F_View.gsfgView.BuildStyle(1,6,"Type","Locked",True)
+Gui.F_View.gsfgView.BuildStyle(1,6,"Format","Alignment",4)
+Gui.F_View.gsfgView.BuildStyle(2,6,"Type","Command","Open")
+Gui.F_View.gsfgView.BuildStyle(2,6,"Format","Alignment",4)
+
+Program.Sub.gsfgView_buildstyle.End
+
+Program.Sub.PrevVersions.Start
+V.Local.sQuery.Declare(String)
+V.Local.iFID.Declare(Long)
+V.Local.sUser.Declare(String)
+V.Local.iUB.Declare(Long)
+V.Local.iRows.Declare(Long)
+
+F.Intrinsic.Control.CallSub(Gsfgview_buildstyle)
+
+
+'
+'
+
+
+V.Local.iFID.Set(V.Args.iFID)
+
+F.Intrinsic.String.Concat("Select HIST.FHID, HIST.FID, HIST.REV, HIST.LASTCHGDT, HIST.GSUSER, NOTES.FILENOTES From VMS_HISTORY HIST FULL JOIN VMS_NOTES NOTES ON HIST.FHID=NOTES.FHID WHERE HIST.FID='",V.local.iFID,"' order by HIST.Rev",V.Local.sQuery)
+F.ODBC.Connection!conx.OpenLocalRecordsetRW("rst",V.Local.sQuery)
+Gui.F_View.gsfgView.LoadRecordset("conx!rst",2)
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Math.Sub(V.Screen.F_View!gsfgView.Rows,1,V.Local.iRows)
+
+F.Intrinsic.control.For(V.Local.iUB,1,V.Local.iRows,1)
+		Gui.F_View.gsfgView.GetTextMatrix(4,V.Local.iUB,V.Local.sUser)
+		F.Intrinsic.Control.If(V.Local.sUser.Trim,<>,"")
+			F.Global.Security.GetUsernameFromID(V.Local.sUser.Long,V.Local.sUser)
+			F.Intrinsic.String.Split(V.Local.sUser,"*!*",V.Local.sUser)
+			F.Intrinsic.control.If(V.local.sUser(0),<>,"***NORETURN***")
+				Gui.F_View.gsfgView.TextMatrix(4,V.Local.iUB,V.Local.sUser)
+			F.Intrinsic.control.Else
+				Gui.F_View.gsfgView.TextMatrix(4,V.Local.iUB,"")
+			F.Intrinsic.control.EndIf
+		F.Intrinsic.Control.EndIf
+F.Intrinsic.control.next(V.local.iUB)
+
+F.Intrinsic.Control.If(V.Screen.F_View!gsfgView.Rows,=,1)
+	Gui.F_View.gsfgView.Rows(1)
+	Gui.F_View.gsfgView.Rows(2)
+	Gui.F_View.gsfgView.FixedRows(1)
+	Gui.F_View.gsfgView.ApplyStyle(1,2)
+F.Intrinsic.Control.Else
+	Gui.F_View.gsfgView.FixedRows(1)
+F.Intrinsic.Control.EndIf
+
+
+Gui.F_View..Show
+
+Program.Sub.PrevVersions.End
+
+Program.Sub.ViewOnly.Start
+V.Local.sSQL.Declare(String)
+V.Local.sFileName.Declare(String)
+V.Local.sPath.Declare(String)
+V.Local.sUnzip.Declare(String)
+V.Local.sDir.Declare(String)
+V.Local.sUser.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.iHnd.Declare(Long)
+V.Local.iFID.Declare(Long)
+
+V.Local.iFID.Set(V.Args.iFID)
+
+'Recordset to get file name
+F.Intrinsic.String.concat("Select * From ATG_DOC_ASSOC Where File_Num = '",V.local.iFID,"'",V.Local.sSQL)
+F.ODBC.connection!conx.OpenLocalRecordsetRO("rstA",V.Local.sSQL)
+'Recordset to see if there is a shadow dir, or blob2file
+F.Intrinsic.Control.If(V.ODBC.conx!rstA.eof,=,False)
+	F.Intrinsic.String.Concat("Select * From VMS_ACTIVE where FID='",V.Local.iFID,"'",V.Local.sSQL)
+	F.ODBC.Connection!conX.OpenLocalRecordsetRW("rstB",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conX!rstB.EOF,=,False)
+	F.Intrinsic.Control.AndIf(V.ODBC.conX!rstB.FieldValTrim!ShadowDir,<>,"")
+	F.Intrinsic.Control.AndIf(V.ODBC.conX!rstB.FieldValTrim!ShadowDir,<>,"0")
+		'Open from Shadow Dir
+		F.Intrinsic.String.Right(V.ODBC.conX!rstVMS.FieldValTrim!ShadowDir,1,V.Local.sPath)
+		F.Intrinsic.Control.If(V.Local.sPath,=,"\")
+			F.Intrinsic.String.Concat(V.ODBC.conX!rstB.FieldValTrim!ShadowDir,V.ODBC.conX!rstA.FieldValTrim!FILE,V.Local.sPath)
+		F.Intrinsic.Control.ElseIf(V.Local.sPath,<>,"\")
+			F.Intrinsic.String.Concat(V.ODBC.conX!rstB.FieldValTrim!ShadowDir,"\",V.ODBC.conX!rstA.FieldValTrim!FILE,V.Local.sPath)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		'Save blob2file and open in read only
+		f.Intrinsic.String.Concat(v.Caller.LocalGSSTempDir,V.ODBC.conX!rstA.FieldValTrim!FILE,v.Local.sPath)
+		'Check to make sure the file doesn't already exist in the temp dir
+		F.Intrinsic.File.Exists(V.Local.sPath,V.Local.bExists)
+		F.Intrinsic.Control.If(V.Local.bExists,=,False)
+			f.ODBC.conX!rstVMS.SaveBLOBtoFile("FILE",v.Local.sPath)
+			F.Intrinsic.File.SetFileAttributes(V.Local.sPath,1)
+			'Add to array of temp files
+			F.Intrinsic.Control.If(V.Global.sTemp,<>,"")
+				F.Intrinsic.String.Concat(V.Global.sTemp,"*!*",V.Local.sPath,V.Global.sTemp)
+			F.Intrinsic.Control.Else
+				V.Global.sTemp.Set(V.Local.sPath)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rstB.Close
+
+	F.Intrinsic.File.Exists(V.Local.sPath,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Intrinsic.File.SetFileAttributes(V.Local.sPath,1)
+		F.Intrinsic.Task.ShellExec(V.Caller.Handle,"Open",V.Local.sPath,"","",5)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstA.Close
+
+Program.Sub.ViewOnly.End
+
+Program.Sub.VMS_Info.Start
+V.Local.iFID.Declare(Long)
+V.Local.sQuery.Declare(String)
+V.Local.sStat.Declare(String)
+V.Local.sUser.Declare(String)
+
+V.Local.iFID.Set(V.Args.iFID)
+
+F.Intrinsic.String.Concat("Select * From VMS_ACTIVE where FID='",V.Local.iFID,"'",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rstVMS",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conX!rstVMS.EOF,=,False)
+
+	V.Local.sStat.Set(" (VMS")
+
+	F.Intrinsic.Control.If(V.ODBC.conX!rstVMS.FieldVal!GSUser,>,-1)
+		F.Global.Security.GetUsernameFromID(V.ODBC.conX!rstVMS.FieldVal!GSUser,V.Local.sUser)
+		F.Intrinsic.String.Split(V.Local.sUser,"*!*",V.Local.sUser)
+		F.Intrinsic.control.If(V.local.sUser(0),<>,"***NORETURN***")
+			F.Intrinsic.String.Concat(V.Local.sStat," - ",V.Local.sUser(0),")",V.Local.sStat)
+		F.Intrinsic.control.Else
+			F.Intrinsic.String.Concat(V.Local.sStat,")",V.Local.sStat)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.control.Else
+		F.Intrinsic.String.Concat(V.Local.sStat,")",V.Local.sStat)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rstVMS.Close
+
+F.Intrinsic.Variable.AddRV("sStat",V.Local.sStat)
+
+
+
+
+Program.Sub.VMS_Info.End
+
+Program.Sub.dlstoptions_change.Start
+Program.Sub.dlstoptions_change.End
+
+Program.Sub.f_check_unload.Start
+Program.Sub.f_check_unload.End
+
+Program.Sub.cmdvmssave_click.Start
+V.Local.sQuery.Declare(String)
+V.Local.iFID.Declare(Long)
+
+'
+
+
+
+
+F.Global.DocumentControl.GetDocumentID(V.Global.iActiveLinkID,V.Global.sFile,V.Local.iFID)
+
+
+F.Intrinsic.Control.SelectCase(V.Screen.f_Check!cmdSave.MetaData0)
+
+F.Intrinsic.Control.Case(0)
+'Check Out
+
+F.Global.VMS.CheckOut(V.Local.iFID,"",V.Screen.f_Check!txtNotes.Text,V.Global.bCompress)
+
+F.Intrinsic.Control.Case(1)
+'Check In
+
+F.Global.VMS.AddToHistory(V.Local.iFID,V.Screen.f_Check!txtNotes.Text)
+F.Global.VMS.CheckIn(V.local.iFID,"")
+
+
+F.Intrinsic.Control.CaseElse
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.global.iActiveLinkID," AND INV_NON_REV = 0 ORDER BY GRP_ID, FILE_TYPE, DESCRIPTION, FILE",V.Local.sQuery)
+
+
+
+Gui.f_advance.trvData.ClearItems
+
+F.Intrinsic.Control.CallSub(Load_tree,"sQuery",V.Local.sQuery,"sParentNode","","sParentRet","")
+F.Intrinsic.Control.If(V.Global.bInvRevOn,=,True)
+	F.Intrinsic.Control.CallSub(Loadnonrevdocs)
+F.Intrinsic.Control.endif
+
+
+Gui.f_Check.cmdSave.ClearMetaData
+Gui.f_Check.txtNotes.Text("")
+Gui.f_Check..Visible(False)
+
+
+Program.Sub.cmdvmssave_click.End
+
+Program.Sub.cmdcancel_click.Start
+Gui.f_Check..Visible(false)
+
+Program.Sub.cmdcancel_click.End
+
+Program.Sub.gsfgview_commandclick.Start
+F.Intrinsic.Control.SetErrorHandler("gsfgview_commandclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sPath.Declare(String)
+V.Local.sUnzip.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.iRow.Declare(Long)
+V.Local.sRet.Declare(String)
+
+V.Local.iRow.set(V.Args.key)
+
+'FHID
+Gui.F_View.gsfgView.GetTextMatrix(0,V.Local.iRow,V.local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+	'Save blob2file and open in read only
+	f.Intrinsic.String.Concat(v.Caller.LocalGSSTempDir,v.Local.sRet,"-",V.Global.sFile,v.Local.sPath)
+	'Check to make sure the file doesn't already exist in the temp dir
+	F.Intrinsic.File.Exists(V.Local.sPath,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Intrinsic.File.GetFileAttributes(V.Local.sPath,V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet,=,1)
+			F.Intrinsic.UI.Msgbox("File is already open","Cannot Open File")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.File.DeleteFile(V.Local.sPath)
+	F.Intrinsic.Control.Endif
+
+	F.Intrinsic.String.Concat("Select File from VMS_HISTORY where FHID='",V.Local.sRet,"'",V.Local.sSQL)
+	F.ODBC.Connection!conX.OpenLocalRecordsetRW("rstVMS",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstVMS.EOF,=,False)
+		f.ODBC.conX!rstVMS.SaveBLOBtoFile("FILE",v.Local.sPath)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rstVMS.Close
+	F.Intrinsic.File.SetFileAttributes(V.Local.sPath,1)
+	'Add to array of temp files
+	F.Intrinsic.Control.If(V.Global.sTemp,<>,"")
+		F.Intrinsic.String.Concat(V.Global.sTemp,"*!*",V.Local.sPath,V.Global.sTemp)
+	F.Intrinsic.Control.Else
+		V.Global.sTemp.Set(V.Local.sPath)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.File.Exists(V.Local.sPath,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Intrinsic.File.SetFileAttributes(V.Local.sPath,1)
+		F.Intrinsic.Task.ShellExec(V.Caller.Handle,"Open",V.Local.sPath,"","",5)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgview_commandclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_DocumentControl.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.gsfgview_commandclick.End
+
+Program.Sub.Remove_File.Start
+V.Local.sDir.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.sQuery.Declare(String)
+
+F.Intrinsic.UI.Msgbox("Warning: Removing a file from VMS will also remove any previous versions or notes associated with the file. Are you sure you would like to remove this file from VMS?","Remove File Warning",3,V.Local.iRet)
+
+F.Intrinsic.Control.If(V.Local.iRet,=,6)
+	F.Intrinsic.Control.CallSub(F_vmsopt_unload)
+
+	F.Intrinsic.UI.FolderBrowser("Select a Save Location",V.Local.sDir)
+	F.Intrinsic.Control.If(V.Local.sDir,<>,"***CANCEL***")
+		F.Global.VMS.removefile(V.args.iFID,V.Local.sDir)
+
+		F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID = ",V.global.iActiveLinkID," AND INV_NON_REV = 0 ORDER BY GRP_ID, FILE_TYPE, DESCRIPTION, FILE",V.Local.sQuery)
+		F.Intrinsic.Control.CallSub(Load_tree,"sQuery",V.Local.sQuery,"sParentNode","","sParentRet","")
+		F.Intrinsic.Control.CallSub(Loadnonrevdocs)
+
+
+	F.Intrinsic.Control.Endif
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Remove_File.End
+
+Program.Sub.DragDrop.Start
+v.Local.sFiles.Declare(String)
+v.Local.i.Declare(Long)
+v.Static.bBusy.Declare(Boolean)
+
+f.Intrinsic.Control.If(V.Static.bBusy,=,True)
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+v.Static.bBusy.set(True)
+
+f.Intrinsic.String.Split(v.Args.Files,"*!*",v.Local.sFiles)
+
+f.Intrinsic.Control.For(v.Local.i,0,v.Local.sFiles.UBound,1)
+
+	Gui.f_add.txtFileNum.Text("-1")
+	Gui.F_Advance.htmlX.Navigate("about:blank")
+	Gui.f_advance.tabx1.SetTab(0)
+	Gui.f_add.txtDescription.Text("")
+	Gui.f_add.txtFile.Text(v.Local.sFiles(v.Local.i))
+	Gui.f_add.optFile.Value(true)
+	Gui.f_add.chkRev.Value(0)
+	Gui.f_add.txtFile.Enabled(True)
+	Gui.f_add.cmdBrowseFile.Enabled(True)
+	Gui.f_add.optFile.Enabled(True)
+	Gui.f_add.optLink.Enabled(True)
+
+	Gui.f_add..Show
+
+	f.Intrinsic.Control.DoUntil(V.Screen.f_add.Visible,=,False)
+		f.Intrinsic.UI.Sleep(1)
+	f.Intrinsic.Control.Loop
+
+f.Intrinsic.Control.Next(V.Local.i)
+
+v.Static.bBusy.set(False)
+Program.Sub.DragDrop.End
+
+Program.Sub.cmdopen_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdopen_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Global.sPath,=,"")
+	V.Global.sPath.Set(V.Global.sFile)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.task.ShellExec(V.Caller.Handle,"OPEN",V.global.sPath.StrLit,"","",5)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdopen_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_DocumentControl.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdopen_click.End
+
+Program.Sub.EnableScreens.Start
+Gui.f_advance..Enabled(V.Args.isEnabled)
+Gui.f_print..Enabled(V.Args.isEnabled)
+Program.Sub.EnableScreens.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+${$5$}$2.0.0.0$}$2
+${$6$}$aanazco$}$20201223113426063$}$7aQAV3Tor/tR9bkuakHbuzQlHVuXCGOzDcjMueDtm6LsU/LdZXrsHiUaZalfXt/DlvTSHyfdeSA=
+Program.Sub.Comments.End
